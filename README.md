@@ -1,1 +1,3 @@
-# herbaria-config-digilib.phil.muni.cz
+# digitalia-config-herbaria.phil.muni.cz
+
+Drupal config export for the Digitalia platforma Herbaria
