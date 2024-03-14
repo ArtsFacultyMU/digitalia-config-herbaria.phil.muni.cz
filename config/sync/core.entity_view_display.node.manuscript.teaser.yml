@@ -1,0 +1,52 @@
+uuid: 6f204f07-6d64-4da9-9443-0beeec047894
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.manuscript.field_created_after
+    - field.field.node.manuscript.field_created_before
+    - field.field.node.manuscript.field_dating
+    - field.field.node.manuscript.field_institution
+    - field.field.node.manuscript.field_link
+    - field.field.node.manuscript.field_note
+    - field.field.node.manuscript.field_private_note
+    - field.field.node.manuscript.field_provenance
+    - field.field.node.manuscript.field_scribe
+    - field.field.node.manuscript.layout_builder__layout
+    - node.type.manuscript
+  module:
+    - user
+id: node.manuscript.teaser
+targetEntityType: node
+bundle: manuscript
+mode: teaser
+content:
+  field_dating:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_institution:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_created_after: true
+  field_created_before: true
+  field_link: true
+  field_note: true
+  field_private_note: true
+  field_provenance: true
+  field_scribe: true
+  langcode: true
+  layout_builder__layout: true
+  links: true
+  search_api_excerpt: true

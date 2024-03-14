@@ -1,0 +1,79 @@
+uuid: 13f7a7bc-223f-4fc1-8de7-d512f86e9e25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.instituce.field_city
+    - field.field.node.instituce.field_country
+    - field.field.node.instituce.field_link
+    - field.field.node.instituce.field_member_of
+    - field.field.node.instituce.field_model
+    - node.type.instituce
+  module:
+    - link
+    - path
+id: node.instituce.default
+targetEntityType: node
+bundle: instituce
+mode: default
+content:
+  field_city:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_country:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_member_of:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_model: true
+  langcode: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

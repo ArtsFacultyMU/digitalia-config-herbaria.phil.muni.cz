@@ -1,0 +1,40 @@
+uuid: 4be1a010-776e-438e-8868-646769bf0bb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.work.field_note_on_references
+    - field.field.taxonomy_term.work.field_reference
+    - taxonomy.vocabulary.work
+  module:
+    - text
+id: taxonomy_term.work.default
+targetEntityType: taxonomy_term
+bundle: work
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_note_on_references:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_reference:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

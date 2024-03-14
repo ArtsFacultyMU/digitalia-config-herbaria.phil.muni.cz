@@ -1,0 +1,9 @@
+display:
+  default:
+    display_title: Rukopisy
+    display_options:
+      title: Rukopisy
+  herbaria_all_manuscripts:
+    display_options:
+      menu:
+        title: Rukopisy

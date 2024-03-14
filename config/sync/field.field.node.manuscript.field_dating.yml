@@ -1,0 +1,19 @@
+uuid: 627a9619-d762-4339-b7a6-92d77756b954
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dating
+    - node.type.manuscript
+id: node.manuscript.field_dating
+field_name: field_dating
+entity_type: node
+bundle: manuscript
+label: Dating
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

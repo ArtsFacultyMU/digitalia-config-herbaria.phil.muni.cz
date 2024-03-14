@@ -1,0 +1,11 @@
+uuid: 8bcab4e5-05f2-4501-b732-ec65cf4caafc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.work
+id: taxonomy_term.work
+target_entity_type_id: taxonomy_term
+target_bundle: work
+default_langcode: zxx
+language_alterable: false

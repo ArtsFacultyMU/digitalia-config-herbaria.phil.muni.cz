@@ -1,0 +1,33 @@
+uuid: 2cf9d9db-b0ea-4962-b02c-c182dc3d09e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_model
+    - node.type.work_in_manuscript
+    - taxonomy.vocabulary.islandora_models
+  content:
+    - 'taxonomy_term:islandora_models:7b68b58c-8f68-4633-8f51-b078ba664f92'
+id: node.work_in_manuscript.field_model
+field_name: field_model
+entity_type: node
+bundle: work_in_manuscript
+label: Model
+description: 'Works can be a copy of each other'
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 7b68b58c-8f68-4633-8f51-b078ba664f92
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      islandora_models: islandora_models
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: 79cf45b8-5d38-4a42-b613-ddf06b740908
+langcode: en
+status: true
+dependencies: {  }
+name: 'German name'
+vid: german_name
+description: Herbaria
+weight: 0

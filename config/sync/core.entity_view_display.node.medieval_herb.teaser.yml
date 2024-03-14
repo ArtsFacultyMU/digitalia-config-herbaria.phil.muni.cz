@@ -1,0 +1,121 @@
+uuid: 085ad527-39db-4267-a36d-0b2a3814d864
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.medieval_herb.field_czech_identification
+    - field.field.node.medieval_herb.field_german_name
+    - field.field.node.medieval_herb.field_latin_name
+    - field.field.node.medieval_herb.field_note
+    - field.field.node.medieval_herb.field_possible_botanical_identif
+    - field.field.node.medieval_herb.field_private_note
+    - node.type.medieval_herb
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          deb434d0-e24c-4ca3-af76-798bc8b94307:
+            uuid: deb434d0-e24c-4ca3-af76-798bc8b94307
+            region: content
+            configuration:
+              id: 'field_block:node:medieval_herb:field_czech_identification'
+              label: 'Czech identification'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          5b474172-88c5-4c6e-9eff-00d2d71a4c44:
+            uuid: 5b474172-88c5-4c6e-9eff-00d2d71a4c44
+            region: content
+            configuration:
+              id: 'field_block:node:medieval_herb:field_german_name'
+              label: 'German name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          3bc4824f-7ed7-4421-b1d1-54087a5d38a3:
+            uuid: 3bc4824f-7ed7-4421-b1d1-54087a5d38a3
+            region: content
+            configuration:
+              id: 'field_block:node:medieval_herb:field_latin_name'
+              label: 'Latin name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+id: node.medieval_herb.teaser
+targetEntityType: node
+bundle: medieval_herb
+mode: teaser
+content:
+  field_czech_identification:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_german_name:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_latin_name:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_note: true
+  field_possible_botanical_identif: true
+  field_private_note: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

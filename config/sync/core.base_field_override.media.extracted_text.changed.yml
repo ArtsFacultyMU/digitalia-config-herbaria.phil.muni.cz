@@ -1,0 +1,18 @@
+uuid: 8105e9d9-36e1-435e-a7c7-0013ae1ddd93
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.extracted_text
+id: media.extracted_text.changed
+field_name: changed
+entity_type: media
+bundle: extracted_text
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

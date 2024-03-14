@@ -1,0 +1,309 @@
+uuid: 54b92c3d-e4d8-4a21-bb76-dd425ba5a913
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.manuscript.field_created_after
+    - field.field.node.manuscript.field_created_before
+    - field.field.node.manuscript.field_dating
+    - field.field.node.manuscript.field_institution
+    - field.field.node.manuscript.field_link
+    - field.field.node.manuscript.field_note
+    - field.field.node.manuscript.field_private_note
+    - field.field.node.manuscript.field_provenance
+    - field.field.node.manuscript.field_scribe
+    - field.field.node.manuscript.layout_builder__layout
+    - node.type.manuscript
+    - views.view.herbaria_display_works_in_manuscript
+  module:
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          f0543148-9ac2-405e-8b06-b66f2218895d:
+            uuid: f0543148-9ac2-405e-8b06-b66f2218895d
+            region: content
+            configuration:
+              id: 'field_block:node:manuscript:field_institution'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          0c80f271-6bf6-478f-ab6b-6b2280448c33:
+            uuid: 0c80f271-6bf6-478f-ab6b-6b2280448c33
+            region: content
+            configuration:
+              id: 'field_block:node:manuscript:field_link'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: inline
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          af397045-cb9c-4110-83d4-ba896bdce1a0:
+            uuid: af397045-cb9c-4110-83d4-ba896bdce1a0
+            region: content
+            configuration:
+              id: 'field_block:node:manuscript:field_dating'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          db49b61c-542f-4396-a14d-d32211d44141:
+            uuid: db49b61c-542f-4396-a14d-d32211d44141
+            region: content
+            configuration:
+              id: 'field_block:node:manuscript:field_scribe'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          b40363d8-fa31-4a9f-9e76-65d55242805c:
+            uuid: b40363d8-fa31-4a9f-9e76-65d55242805c
+            region: content
+            configuration:
+              id: 'field_block:node:manuscript:field_provenance'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          74d84b5e-4368-4280-981b-acbeeaeab937:
+            uuid: 74d84b5e-4368-4280-981b-acbeeaeab937
+            region: content
+            configuration:
+              id: 'field_block:node:manuscript:field_note'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          108f2e4a-e7c0-449a-903f-926674c0455e:
+            uuid: 108f2e4a-e7c0-449a-903f-926674c0455e
+            region: content
+            configuration:
+              id: 'field_block:node:manuscript:field_private_note'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          483694db-30da-4f65-b63d-91ad29ea0bf0:
+            uuid: 483694db-30da-4f65-b63d-91ad29ea0bf0
+            region: content
+            configuration:
+              id: 'extra_field_block:node:manuscript:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 9
+            additional: {  }
+          5b8d4cc9-5a31-492a-9b16-0fa4a372c930:
+            uuid: 5b8d4cc9-5a31-492a-9b16-0fa4a372c930
+            region: content
+            configuration:
+              id: 'views_block:herbaria_display_works_in_manuscript-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 10
+            additional: {  }
+          27713c5f-f2a7-445c-8972-bb5eef523c37:
+            uuid: 27713c5f-f2a7-445c-8972-bb5eef523c37
+            region: content
+            configuration:
+              id: 'views_block:herbaria_display_works_in_manuscript-block_herbaria_manuscript_parts'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 11
+            additional: {  }
+          d880755f-f847-4173-b1eb-8e9223852c49:
+            uuid: d880755f-f847-4173-b1eb-8e9223852c49
+            region: content
+            configuration:
+              id: 'field_block:node:manuscript:field_created_after'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          a455cfdc-9b6a-4090-b667-42b986322a4e:
+            uuid: a455cfdc-9b6a-4090-b667-42b986322a4e
+            region: content
+            configuration:
+              id: 'field_block:node:manuscript:field_created_before'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }
+id: node.manuscript.default
+targetEntityType: node
+bundle: manuscript
+mode: default
+content:
+  field_created_after:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_created_before:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_dating:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_institution:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_note:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_private_note:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_provenance:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_scribe:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

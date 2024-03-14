@@ -1,0 +1,29 @@
+uuid: 1725b2ad-129a-4946-88e7-62b7b10898b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_czech_identification
+    - node.type.medieval_herb
+    - taxonomy.vocabulary.czech_name
+id: node.medieval_herb.field_czech_identification
+field_name: field_czech_identification
+entity_type: node
+bundle: medieval_herb
+label: 'Czech name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      czech_name: czech_name
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

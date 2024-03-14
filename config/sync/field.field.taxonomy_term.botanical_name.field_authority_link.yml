@@ -1,0 +1,27 @@
+uuid: d4938bbd-e1dd-4ffa-8bed-623e56d13ad9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_authority_link
+    - taxonomy.vocabulary.botanical_name
+  module:
+    - controlled_access_terms
+id: taxonomy_term.botanical_name.field_authority_link
+field_name: field_authority_link
+entity_type: taxonomy_term
+bundle: botanical_name
+label: Links
+description: 'Add a link to https://powo.science.kew.org/ and to https://pladias.cz/taxon/'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  authority_sources:
+    powo: 'Plants of the World Online'
+    pladias: 'Pladias (Databáze české flóry a vegetace)'
+    ipni: 'International Plant Names Index'
+  title: 1
+  link_type: 16
+field_type: authority_link

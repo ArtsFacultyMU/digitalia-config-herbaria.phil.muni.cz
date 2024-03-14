@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      title: 'Zmíněno v herbářích'
+      fields:
+        title:
+          label: 'Název v textu'
+        field_herbal:
+          label: Herbář
+      header:
+        result:
+          content: 'Frekvence: @total'

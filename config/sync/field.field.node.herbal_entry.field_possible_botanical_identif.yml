@@ -1,0 +1,29 @@
+uuid: aeea8a92-5e9d-4610-9af0-289179d98699
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_possible_botanical_identif
+    - node.type.herbal_entry
+    - taxonomy.vocabulary.botanical_name
+id: node.herbal_entry.field_possible_botanical_identif
+field_name: field_possible_botanical_identif
+entity_type: node
+bundle: herbal_entry
+label: 'Possible other botanical identification'
+description: 'Use this field if the medieval herb identification is not correct by modern botanical standards. <b>Give more detail on your justification in the comments and sign your name.</b>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      botanical_name: botanical_name
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

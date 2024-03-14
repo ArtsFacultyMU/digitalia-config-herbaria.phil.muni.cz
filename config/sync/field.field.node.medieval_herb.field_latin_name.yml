@@ -1,0 +1,29 @@
+uuid: c2ba1fd0-c015-4dd4-bf41-1522432e8a20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_latin_name
+    - node.type.medieval_herb
+    - taxonomy.vocabulary.latin_name
+id: node.medieval_herb.field_latin_name
+field_name: field_latin_name
+entity_type: node
+bundle: medieval_herb
+label: 'Latin name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      latin_name: latin_name
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 04052cfc-2e59-4e34-9e12-afa1ea0ab444
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_created_before
+    - node.type.manuscript
+id: node.manuscript.field_created_before
+field_name: field_created_before
+entity_type: node
+bundle: manuscript
+label: 'Created before'
+description: 'The latest estimated of the year the manuscript was created'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,11 @@
+uuid: 27fa8126-bca0-4016-bfac-18ec40171387
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.german_name
+id: taxonomy_term.german_name
+target_entity_type_id: taxonomy_term
+target_bundle: german_name
+default_langcode: und
+language_alterable: false

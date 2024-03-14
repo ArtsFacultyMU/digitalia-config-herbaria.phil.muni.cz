@@ -1,0 +1,8 @@
+uuid: a080940f-7074-4700-b9ab-9885ad852a2e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Czech name'
+vid: czech_name
+description: 'Herbaria: Herb name in (old) Czech'
+weight: 0

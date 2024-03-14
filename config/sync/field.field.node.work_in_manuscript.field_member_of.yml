@@ -1,0 +1,28 @@
+uuid: d93cdef3-5265-439d-9569-7cb1a42d4bf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_member_of
+    - node.type.work_in_manuscript
+id: node.work_in_manuscript.field_member_of
+field_name: field_member_of
+entity_type: node
+bundle: work_in_manuscript
+label: 'Was likely copied from'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      work_in_manuscript: work_in_manuscript
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: instituce
+field_type: entity_reference

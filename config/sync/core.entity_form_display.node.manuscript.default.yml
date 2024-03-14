@@ -1,0 +1,130 @@
+uuid: f0bff35b-3a35-4926-9266-e07e9733f740
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.manuscript.field_created_after
+    - field.field.node.manuscript.field_created_before
+    - field.field.node.manuscript.field_dating
+    - field.field.node.manuscript.field_institution
+    - field.field.node.manuscript.field_link
+    - field.field.node.manuscript.field_note
+    - field.field.node.manuscript.field_private_note
+    - field.field.node.manuscript.field_provenance
+    - field.field.node.manuscript.field_scribe
+    - field.field.node.manuscript.layout_builder__layout
+    - node.type.manuscript
+  module:
+    - link
+    - path
+    - text
+id: node.manuscript.default
+targetEntityType: node
+bundle: manuscript
+mode: default
+content:
+  field_created_after:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_created_before:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_dating:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_institution:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_note:
+    type: text_textarea
+    weight: 9
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_private_note:
+    type: string_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_provenance:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_scribe:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  layout_builder__layout: true
+  promote: true
+  sticky: true
+  uid: true

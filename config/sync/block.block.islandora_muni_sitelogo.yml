@@ -1,0 +1,28 @@
+uuid: 0c10688f-29b5-47b1-8b8d-8d23556c7964
+langcode: cs
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.site_logo
+  module:
+    - islandora
+    - simple_block
+  theme:
+    - islandora_muni
+id: islandora_muni_sitelogo
+theme: islandora_muni
+region: header
+weight: 0
+provider: null
+plugin: 'simple_block:site_logo'
+settings:
+  id: 'simple_block:site_logo'
+  label: 'Site logo'
+  label_display: visible
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

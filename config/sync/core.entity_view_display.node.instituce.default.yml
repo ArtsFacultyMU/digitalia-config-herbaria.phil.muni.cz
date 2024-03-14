@@ -1,0 +1,187 @@
+uuid: 705a5696-b5f5-4905-8f89-c89eba909252
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.instituce.field_city
+    - field.field.node.instituce.field_country
+    - field.field.node.instituce.field_link
+    - field.field.node.instituce.field_member_of
+    - field.field.node.instituce.field_model
+    - node.type.instituce
+    - views.view.herbaria_manuscripts_by_institution
+    - views.view.herbaria_subinstitutions
+  module:
+    - layout_builder
+    - layout_discovery
+    - link
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          20cdaf1f-cabe-471b-849f-5467c89e5910:
+            uuid: 20cdaf1f-cabe-471b-849f-5467c89e5910
+            region: content
+            configuration:
+              id: 'field_block:node:instituce:field_member_of'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          510e911d-90f6-4b3e-8b28-1596d8c9454f:
+            uuid: 510e911d-90f6-4b3e-8b28-1596d8c9454f
+            region: content
+            configuration:
+              id: 'field_block:node:instituce:field_city'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          a8a5d76a-855a-45e8-b098-170cb8ab458d:
+            uuid: a8a5d76a-855a-45e8-b098-170cb8ab458d
+            region: content
+            configuration:
+              id: 'field_block:node:instituce:field_country'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: inline
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          d1b292c1-ecf8-4648-b9e8-70a432fdf1af:
+            uuid: d1b292c1-ecf8-4648-b9e8-70a432fdf1af
+            region: content
+            configuration:
+              id: 'field_block:node:instituce:field_link'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: inline
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          1a90ddd9-2a0c-4785-a40c-1eabacc9e9bd:
+            uuid: 1a90ddd9-2a0c-4785-a40c-1eabacc9e9bd
+            region: content
+            configuration:
+              id: 'extra_field_block:node:instituce:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 4
+            additional: {  }
+          38c96cbb-7c4b-4043-8de4-53048cfe245b:
+            uuid: 38c96cbb-7c4b-4043-8de4-53048cfe245b
+            region: content
+            configuration:
+              id: 'views_block:herbaria_subinstitutions-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 5
+            additional: {  }
+          9c6d8ce9-5576-4e4e-a983-31355d109a66:
+            uuid: 9c6d8ce9-5576-4e4e-a983-31355d109a66
+            region: content
+            configuration:
+              id: 'views_block:herbaria_manuscripts_by_institution-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 6
+            additional: {  }
+        third_party_settings: {  }
+id: node.instituce.default
+targetEntityType: node
+bundle: instituce
+mode: default
+content:
+  field_city:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_country:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_member_of:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_model: true
+  islandora_fits_checksum: true
+  langcode: true
+  search_api_excerpt: true
