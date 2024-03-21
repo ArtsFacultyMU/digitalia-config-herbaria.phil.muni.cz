@@ -1,6 +1,6 @@
 uuid: c2c46a2a-1c1f-4169-85de-891e5905e168
-langcode: en
-status: true
+langcode: cs
+status: false
 dependencies:
   module:
     - taxonomy
@@ -17,7 +17,7 @@ base_field: tid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Nadřízené
     display_plugin: default
     position: 0
     display_options:
@@ -91,13 +91,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Použít
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Řadit dle'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
       access:
         type: perm
         options:

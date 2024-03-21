@@ -1,5 +1,5 @@
 uuid: af8211c8-bff1-4f20-9bef-0d75284032be
-langcode: en
+langcode: cs
 status: true
 dependencies:
   module:
@@ -18,7 +18,7 @@ base_field: cid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Výchozí
     display_plugin: default
     position: 0
     display_options:

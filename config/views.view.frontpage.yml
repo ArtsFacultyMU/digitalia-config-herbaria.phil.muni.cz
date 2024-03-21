@@ -1,5 +1,5 @@
 uuid: 9cd75bac-f165-4fc7-a82a-49157ade6186
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -20,7 +20,7 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Výchozí
     display_plugin: default
     position: 0
     display_options:
@@ -50,13 +50,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Použít
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Řadit dle'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
       access:
         type: perm
         options:

@@ -1,5 +1,5 @@
 uuid: 958ce406-eaf2-4049-bcec-8dbaba35eccb
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: dlg33d7K_CnBjAljzvxsN6z_URTCpFONnT7MlRyhUR8
 id: taxonomy_term.temporal_subjects

@@ -1,5 +1,5 @@
 uuid: e1a132b0-f5bf-4fb5-a230-f40de9816d3e
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ bundle: extracted_text
 label: 'MIME type'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: text/plain

@@ -1,5 +1,5 @@
 uuid: 7d285773-5440-4cd0-b283-7363b5cd2ccf
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -31,7 +31,7 @@ base_field: mid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Výchozí
     display_plugin: default
     position: 0
     display_options:
@@ -87,7 +87,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Action
+          action_title: Akce
           include_exclude: exclude
           selected_actions: {  }
         thumbnail__target_id:
@@ -215,7 +215,7 @@ display:
           entity_type: media
           entity_field: bundle
           plugin_id: field
-          label: Type
+          label: Typ
           exclude: false
           alter:
             alter_text: false
@@ -408,7 +408,7 @@ display:
           entity_type: media
           entity_field: status
           plugin_id: field
-          label: Status
+          label: Stav
           exclude: false
           alter:
             alter_text: false
@@ -475,7 +475,7 @@ display:
           entity_type: media
           entity_field: changed
           plugin_id: field
-          label: Updated
+          label: Aktualizováno
           exclude: false
           alter:
             alter_text: false
@@ -550,7 +550,7 @@ display:
           admin_label: ''
           entity_type: media
           plugin_id: entity_operations
-          label: Operations
+          label: Operace
           exclude: false
           alter:
             alter_text: false
@@ -808,10 +808,10 @@ display:
           submit_button: Filter
           reset_button: true
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Řadit dle'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
       access:
         type: perm
         options:
@@ -908,7 +908,7 @@ display:
           exposed: true
           expose:
             operator_id: bundle_op
-            label: Type
+            label: Typ
             description: ''
             use_operator: false
             operator: bundle_op
@@ -951,7 +951,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'True'
+            label: 'Pravda (True)'
             description: null
             use_operator: false
             operator: status_op
@@ -1038,7 +1038,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Jazyk
             description: ''
             use_operator: false
             operator: langcode_op

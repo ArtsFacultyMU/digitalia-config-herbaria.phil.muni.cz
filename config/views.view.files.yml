@@ -1,5 +1,5 @@
 uuid: 103a797e-dd1b-401e-b0a6-65576b0c71e6
-langcode: en
+langcode: cs
 status: true
 dependencies:
   module:
@@ -17,7 +17,7 @@ base_field: fid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Výchozí
     display_plugin: default
     position: 0
     display_options:
@@ -66,7 +66,7 @@ display:
           entity_type: file
           entity_field: filename
           plugin_id: field
-          label: Name
+          label: Jméno
           exclude: false
           alter:
             alter_text: false
@@ -181,7 +181,7 @@ display:
           entity_type: file
           entity_field: filesize
           plugin_id: field
-          label: Size
+          label: Velikost
           exclude: false
           alter:
             alter_text: false
@@ -233,7 +233,7 @@ display:
           entity_type: file
           entity_field: status
           plugin_id: field
-          label: Status
+          label: Stav
           exclude: false
           alter:
             alter_text: false
@@ -490,10 +490,10 @@ display:
           submit_button: Filter
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Řadit dle'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
       access:
         type: perm
         options:
@@ -612,7 +612,7 @@ display:
           exposed: true
           expose:
             operator_id: status_op
-            label: Status
+            label: Stav
             description: ''
             use_operator: false
             operator: status_op
@@ -1084,7 +1084,7 @@ display:
           exception:
             value: all
             title_enable: false
-            title: All
+            title: Vše
           title_enable: true
           title: 'File usage information for {{ arguments.fid }}'
           default_argument_type: fixed

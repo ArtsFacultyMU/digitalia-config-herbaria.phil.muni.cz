@@ -1,5 +1,5 @@
 uuid: 00485647-e99d-4744-81d1-a04ba1b59f0e
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ bundle: fits_technical_metadata
 label: Complete
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

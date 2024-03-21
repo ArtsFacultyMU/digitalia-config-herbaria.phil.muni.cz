@@ -1,5 +1,5 @@
 uuid: 362b237c-1acb-4da3-abf3-dcc71e01523d
-langcode: en
+langcode: cs
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: Okz8QMYRGvq95nqLGYjp8gLiy93DKoMEzEVZVwEeg4M
 id: language
-label: Language
+label: Jazyk
 module: language
 routes:
   -

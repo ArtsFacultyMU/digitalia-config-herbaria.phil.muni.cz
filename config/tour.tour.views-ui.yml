@@ -1,5 +1,5 @@
 uuid: 75b0da91-50f9-4812-ab50-df98448fa350
-langcode: en
+langcode: cs
 status: true
 dependencies:
   module:
@@ -39,7 +39,7 @@ tips:
   views-ui-format:
     id: views-ui-format
     plugin: text
-    label: 'Output format'
+    label: 'Výstupní formát'
     weight: 4
     selector: .views-ui-display-tab-bucket.format
     body: "Choose how to output results. E.g., choose <em>Content</em> to output each item completely, using your configured display settings. Or choose <em>Fields</em>, which allows you to output only specific fields for each result. Additional formats can be added by installing modules to <em>extend</em> Drupal's base functionality."

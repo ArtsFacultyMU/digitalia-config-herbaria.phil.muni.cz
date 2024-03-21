@@ -1,5 +1,5 @@
 uuid: b6961a19-ffd2-4860-ba33-3b5c9d14c6b8
-langcode: en
+langcode: cs
 status: true
 dependencies:
   module:
@@ -17,7 +17,7 @@ base_field: wid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Výchozí
     display_plugin: default
     position: 0
     display_options:
@@ -179,7 +179,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: Type
+          label: Typ
           exclude: false
           alter:
             alter_text: false
@@ -228,7 +228,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: date
-          label: Date
+          label: Datum
           exclude: false
           alter:
             alter_text: false
@@ -395,7 +395,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: dblog_operations
-          label: Operations
+          label: Operace
           exclude: false
           alter:
             alter_text: false
@@ -460,10 +460,10 @@ display:
           submit_button: Filter
           reset_button: true
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Řadit dle'
           expose_sort_order: false
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
       access:
         type: perm
         options:
@@ -513,7 +513,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Type
+            label: Typ
             description: ''
             use_operator: false
             operator: type_op

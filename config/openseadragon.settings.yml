@@ -1,5 +1,6 @@
 _core:
   default_config_hash: SodgIAY6XQHkm493PQ-sLrnBtM2PoP9g8agJU-HM-U8
+langcode: cs
 default_options:
   fit_to_aspect_ratio: false
   tabIndex: 0

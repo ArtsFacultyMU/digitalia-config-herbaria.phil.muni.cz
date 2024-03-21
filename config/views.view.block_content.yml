@@ -1,5 +1,5 @@
 uuid: 9a1cb863-fa75-4612-a643-10c8ad39f5be
-langcode: en
+langcode: cs
 status: true
 dependencies:
   module:
@@ -17,7 +17,7 @@ base_field: id
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Výchozí
     display_plugin: default
     position: 0
     display_options:
@@ -163,7 +163,7 @@ display:
           entity_type: block_content
           entity_field: changed
           plugin_id: field
-          label: Updated
+          label: Aktualizováno
           exclude: false
           alter:
             alter_text: false
@@ -227,7 +227,7 @@ display:
           admin_label: ''
           entity_type: block_content
           plugin_id: entity_operations
-          label: Operations
+          label: Operace
           exclude: false
           alter:
             alter_text: false
@@ -290,13 +290,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Použít
           reset_button: true
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Řadit dle'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
       access:
         type: perm
         options:

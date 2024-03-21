@@ -1,5 +1,6 @@
 _core:
   default_config_hash: ZdPdgeYPxAPoTIlcCxW_tRoExm87onUdOjF3ZY2gfto
+langcode: cs
 rest_oai_pmh:
   entity_type: node
 view_displays:

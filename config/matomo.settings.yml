@@ -1,5 +1,6 @@
 _core:
   default_config_hash: mKwnhF-0ryfftZZP6jyqW8q9MEo9glyRkvRzSddrc0k
+langcode: cs
 site_id: '1'
 url_http: 'http://localhost:8000/matomo/'
 url_https: 'https://localhost:8000/matomo/'

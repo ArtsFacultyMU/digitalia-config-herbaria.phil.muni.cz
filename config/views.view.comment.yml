@@ -1,5 +1,5 @@
 uuid: 9ef3d340-d220-404f-9c22-b5712f16268b
-langcode: en
+langcode: cs
 status: true
 dependencies:
   module:
@@ -17,7 +17,7 @@ base_field: cid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Výchozí
     display_plugin: default
     position: 0
     display_options:
@@ -73,7 +73,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Action
+          action_title: Akce
           include_exclude: include
           selected_actions:
             - comment_delete_action
@@ -347,7 +347,7 @@ display:
           entity_type: comment
           entity_field: changed
           plugin_id: field
-          label: Updated
+          label: Aktualizováno
           exclude: false
           alter:
             alter_text: false
@@ -422,7 +422,7 @@ display:
           admin_label: ''
           entity_type: comment
           plugin_id: entity_operations
-          label: Operations
+          label: Operace
           exclude: false
           alter:
             alter_text: false
@@ -556,10 +556,10 @@ display:
           submit_button: Filter
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Řadit dle'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
       access:
         type: perm
         options:
@@ -739,7 +739,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Jazyk
             description: ''
             use_operator: false
             operator: langcode_op
@@ -960,7 +960,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Action
+          action_title: Akce
           include_exclude: include
           selected_actions:
             - comment_delete_action
@@ -1234,7 +1234,7 @@ display:
           entity_type: comment
           entity_field: changed
           plugin_id: field
-          label: Updated
+          label: Aktualizováno
           exclude: false
           alter:
             alter_text: false
@@ -1309,7 +1309,7 @@ display:
           admin_label: ''
           entity_type: comment
           plugin_id: entity_operations
-          label: Operations
+          label: Operace
           exclude: false
           alter:
             alter_text: false
@@ -1558,7 +1558,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Jazyk
             description: ''
             use_operator: false
             operator: langcode_op

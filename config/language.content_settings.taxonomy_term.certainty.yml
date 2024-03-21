@@ -1,0 +1,16 @@
+uuid: 72c17b98-f231-45cc-9c17-d2e77201ba23
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.certainty
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.certainty
+target_entity_type_id: taxonomy_term
+target_bundle: certainty
+default_langcode: site_default
+language_alterable: false

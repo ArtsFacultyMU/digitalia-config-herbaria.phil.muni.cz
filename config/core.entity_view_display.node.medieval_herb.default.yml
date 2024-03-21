@@ -1,0 +1,312 @@
+uuid: 1bb93b49-8a4d-440f-8cb7-0eccca4ac966
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.medieval_herb.field_czech_identification
+    - field.field.node.medieval_herb.field_czech_name_identification
+    - field.field.node.medieval_herb.field_german_name
+    - field.field.node.medieval_herb.field_latin_name
+    - field.field.node.medieval_herb.field_note
+    - field.field.node.medieval_herb.field_possible_botanical_identif
+    - field.field.node.medieval_herb.field_private_note
+    - node.type.medieval_herb
+    - views.view.herbaria_texts_plant_appears_in
+  module:
+    - datafield
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          9c21bbfe-7ceb-4a6b-b220-95b4d20648f7:
+            uuid: 9c21bbfe-7ceb-4a6b-b220-95b4d20648f7
+            region: content
+            configuration:
+              id: 'field_block:node:medieval_herb:field_possible_botanical_identif'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          c1994b55-ebcc-436f-a79d-7209d11eb9b8:
+            uuid: c1994b55-ebcc-436f-a79d-7209d11eb9b8
+            region: content
+            configuration:
+              id: 'field_block:node:medieval_herb:field_latin_name'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          3e6632fc-5c6e-41cd-b045-b37f74026eba:
+            uuid: 3e6632fc-5c6e-41cd-b045-b37f74026eba
+            region: content
+            configuration:
+              id: 'field_block:node:medieval_herb:field_czech_identification'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          dddba389-3d95-4eb0-aaa5-4ab6e76e9cbc:
+            uuid: dddba389-3d95-4eb0-aaa5-4ab6e76e9cbc
+            region: content
+            configuration:
+              id: 'field_block:node:medieval_herb:field_german_name'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          45634b6e-9cc5-4c0d-a163-f686ce988999:
+            uuid: 45634b6e-9cc5-4c0d-a163-f686ce988999
+            region: content
+            configuration:
+              id: 'field_block:node:medieval_herb:field_note'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          a19d1aba-282b-48d8-8405-344f790efec8:
+            uuid: a19d1aba-282b-48d8-8405-344f790efec8
+            region: content
+            configuration:
+              id: 'field_block:node:medieval_herb:field_private_note'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          a738cfd6-3cb5-4a04-8bf6-430934e69eb3:
+            uuid: a738cfd6-3cb5-4a04-8bf6-430934e69eb3
+            region: content
+            configuration:
+              id: 'extra_field_block:node:medieval_herb:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 6
+            additional: {  }
+          cf50f5c5-bfe3-4e14-9601-085ffc772eb6:
+            uuid: cf50f5c5-bfe3-4e14-9601-085ffc772eb6
+            region: content
+            configuration:
+              id: 'views_block:herbaria_texts_plant_appears_in-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 7
+            additional: {  }
+          b8e50f31-8c3c-4bbd-ac3c-3d62d03bfd57:
+            uuid: b8e50f31-8c3c-4bbd-ac3c-3d62d03bfd57
+            region: content
+            configuration:
+              id: 'field_block:node:medieval_herb:field_czech_name_identification'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: data_field_table_formatter
+                label: above
+                settings:
+                  formatter_settings: {  }
+                  ajax: false
+                  custom_class: ''
+                  line_operations: false
+                  form_format_table: false
+                  number_column: false
+                  number_column_label: №
+                  direction: horizontal
+                  mode: table
+                  caption: ''
+                  footer_text: ''
+                  datatables_options:
+                    bExpandable: true
+                    bInfo: true
+                    scrollX: true
+                    bStateSave: false
+                    paging: true
+                    ordering: true
+                    searching: true
+                    show-export: true
+                    bMultiFilter: false
+                  bootstrap_table_options:
+                    sticky-header: true
+                    search: true
+                    show-search-clear-button: true
+                    show-refresh: true
+                    show-toggle: true
+                    show-fullscreen: true
+                    show-columns: true
+                    data-detail-view: true
+                    show-columns-toggle-all: true
+                    mobile-responsive: true
+                    show-print: true
+                    show-copy-rows: true
+                    show-export: true
+                    sortable: true
+                    click-to-select: true
+                    show-pagination-switch: true
+                    pagination: true
+                    cookie: true
+                    show-footer: false
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+        third_party_settings: {  }
+id: node.medieval_herb.default
+targetEntityType: node
+bundle: medieval_herb
+mode: default
+content:
+  field_czech_identification:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_czech_name_identification:
+    type: data_field_table_formatter
+    label: above
+    settings:
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: true
+        bInfo: true
+        scrollX: true
+        bStateSave: false
+        paging: true
+        ordering: true
+        searching: true
+        show-export: true
+        bMultiFilter: false
+      bootstrap_table_options:
+        sticky-header: true
+        search: true
+        show-search-clear-button: true
+        show-refresh: true
+        show-toggle: true
+        show-fullscreen: true
+        show-columns: true
+        data-detail-view: true
+        show-columns-toggle-all: true
+        mobile-responsive: true
+        show-print: true
+        show-copy-rows: true
+        show-export: true
+        sortable: true
+        click-to-select: true
+        show-pagination-switch: true
+        pagination: true
+        cookie: true
+        show-footer: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_german_name:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_latin_name:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_note:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_possible_botanical_identif:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_private_note:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,60 @@
+uuid: d00686c0-7d82-4989-a71d-d18659364b06
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  matomo:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  public_profile_profiles:
+    type: profile_form
+    weight: 90
+    region: content
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+  timezone:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  langcode: true

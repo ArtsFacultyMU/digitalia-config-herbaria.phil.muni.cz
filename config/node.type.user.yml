@@ -1,0 +1,18 @@
+uuid: 39cb27b7-9c55-4b87-b197-b299cd036c70
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: User
+type: user
+description: 'Contributing user public profile'
+help: 'Full name including titles'
+new_revision: true
+preview_mode: 1
+display_submitted: false

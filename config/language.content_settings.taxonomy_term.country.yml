@@ -16,5 +16,5 @@ _core:
 id: taxonomy_term.country
 target_entity_type_id: taxonomy_term
 target_bundle: country
-default_langcode: site_default
+default_langcode: und
 language_alterable: true

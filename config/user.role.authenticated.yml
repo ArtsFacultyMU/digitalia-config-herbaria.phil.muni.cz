@@ -1,5 +1,5 @@
 uuid: f5555792-2d53-441a-b8ce-0d027735281b
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -8,6 +8,7 @@ dependencies:
   module:
     - comment
     - contact
+    - field_permissions
     - filter
     - matomo
     - media
@@ -25,9 +26,25 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'create field_created_after'
+  - 'create field_created_before'
+  - 'create field_private_note'
+  - 'create user_picture'
+  - 'edit field_created_after'
+  - 'edit field_created_before'
+  - 'edit own field_created_after'
+  - 'edit own field_created_before'
+  - 'edit own field_private_note'
+  - 'edit own user_picture'
   - 'opt-in or out of matomo tracking'
   - 'post comments'
   - 'restful get oai_pmh'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view field_created_after'
+  - 'view field_created_before'
   - 'view media'
+  - 'view own field_created_after'
+  - 'view own field_created_before'
+  - 'view own field_private_note'
+  - 'view own user_picture'

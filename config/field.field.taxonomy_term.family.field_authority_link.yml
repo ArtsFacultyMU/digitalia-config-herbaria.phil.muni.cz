@@ -1,5 +1,5 @@
 uuid: 37d40a15-b60e-4ea4-932b-e2e60d528f93
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: taxonomy_term.family.field_authority_link
 field_name: field_authority_link
 entity_type: taxonomy_term
 bundle: family
-label: 'Authority Sources'
+label: Authority
 description: ''
 required: false
 translatable: true

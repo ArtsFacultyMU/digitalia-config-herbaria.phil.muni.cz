@@ -1,5 +1,5 @@
 uuid: 2f4c445e-64a6-478b-b6ef-9723e69947aa
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -15,7 +15,7 @@ dependencies:
 _core:
   default_config_hash: vBKWYGGDoAX-tFd1JErB8tZLSxx3lJ0foouVsgpcbB4
 id: content
-label: Content
+label: Obsah
 module: node
 description: 'Find and manage content.'
 tag: default
@@ -24,11 +24,11 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Výchozí
     display_plugin: default
     position: 0
     display_options:
-      title: Content
+      title: Obsah
       fields:
         node_bulk_form:
           id: node_bulk_form
@@ -53,7 +53,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-          label: Title
+          label: Nadpis
           exclude: false
           alter:
             alter_text: false
@@ -486,7 +486,7 @@ display:
           entity_type: node
           entity_field: status
           plugin_id: field
-          label: Status
+          label: Stav
           exclude: false
           alter:
             alter_text: false
@@ -508,7 +508,7 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: field
-          label: Updated
+          label: Aktualizováno
           exclude: false
           alter:
             alter_text: false
@@ -540,7 +540,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: entity_operations
-          label: Operations
+          label: Operace
           exclude: false
           alter:
             alter_text: false
@@ -597,10 +597,10 @@ display:
           submit_button: Filter
           reset_button: true
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Řadit dle'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
           text_input_required: 'Select any filter and click on Apply to see results'
           text_input_required_format: basic_html
           bef:
@@ -701,7 +701,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Nadpis
             description: ''
             use_operator: false
             operator: title_op
@@ -835,7 +835,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Status
+            label: Stav
             description: ''
             use_operator: false
             operator: status_op
@@ -883,7 +883,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Jazyk
             description: ''
             use_operator: false
             operator: langcode_op
@@ -1271,14 +1271,14 @@ display:
       path: admin/content/node
       menu:
         type: 'default tab'
-        title: Content
+        title: Obsah
         description: ''
         weight: -10
         menu_name: admin
         context: ''
       tab_options:
         type: normal
-        title: Content
+        title: Obsah
         description: 'Find and manage content'
         weight: -10
         menu_name: admin

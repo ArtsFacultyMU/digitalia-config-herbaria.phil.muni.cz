@@ -1,5 +1,5 @@
 uuid: 28a8d830-8559-4e06-8cc3-5dfd1d81e956
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: taxonomy_term.temporal_subjects.field_authority_link
 field_name: field_authority_link
 entity_type: taxonomy_term
 bundle: temporal_subjects
-label: 'Authority Sources'
+label: Authority
 description: ''
 required: false
 translatable: true

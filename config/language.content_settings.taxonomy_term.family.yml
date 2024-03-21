@@ -1,5 +1,5 @@
 uuid: b9a8a1a2-d1dd-484b-8b6c-131b6843491f
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: d46aG1upnevhsHnX9C5ivYnn5AoZLcPlsc8m7tbBhdc
 id: taxonomy_term.family

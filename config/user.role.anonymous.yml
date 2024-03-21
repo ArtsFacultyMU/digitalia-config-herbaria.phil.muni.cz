@@ -1,5 +1,5 @@
 uuid: ce58ac50-c550-4c0d-b832-67a91c600104
-langcode: en
+langcode: cs
 status: true
 dependencies:
   config:
@@ -8,6 +8,7 @@ dependencies:
   module:
     - comment
     - contact
+    - field_permissions
     - filter
     - media
     - rest
@@ -25,3 +26,4 @@ permissions:
   - 'restful get oai_pmh'
   - 'use text format restricted_html'
   - 'view media'
+  - 'view user_picture'
