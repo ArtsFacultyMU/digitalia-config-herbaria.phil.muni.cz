@@ -1,0 +1,11 @@
+uuid: 0798c894-87a5-4e49-a48d-4bbbd973748e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: acknowledgment
+title: Acknowledgments
+content:
+  value: '<p><strong>Acknowledgments</strong></p><p>The dataset was created as part of the project <a href="https://www.phil.muni.cz/en/research/current-projects/47246"><span>MUNI/G/1059/2018</span></a> <em><span>Herbaria manuscripta Bohemiae et Moraviae usque ad annum 1500 – </span><span lang="en">a database of manuscript herbals created before the year 1500 as a platform for the study of humanities and natural science disciplines (Herbaria Manuscripta), which was</span></em><span lang="en"> funded from March </span><span>2019 to June 2023.</span></p>'
+  format: full_html

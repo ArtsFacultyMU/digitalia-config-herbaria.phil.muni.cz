@@ -1,0 +1,8 @@
+uuid: 8d8135f0-a496-49f6-ad81-f78ad37b6bbd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Herbal entry type'
+vid: herbal_entry_type
+description: Herbaria
+weight: 0

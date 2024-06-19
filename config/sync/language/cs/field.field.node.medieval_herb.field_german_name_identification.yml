@@ -1,0 +1,11 @@
+label: 'Německá identifikace'
+settings:
+  field_settings:
+    name:
+      label: 'Německý název'
+    certainty:
+      label: Jistota
+    user:
+      label: Uživatel
+    note:
+      label: Poznámka

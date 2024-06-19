@@ -1,0 +1,18 @@
+uuid: a5dbf618-9916-4b0f-8164-ba6f58bf4430
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.german_name
+id: taxonomy_term.german_name.name
+field_name: name
+entity_type: taxonomy_term
+bundle: german_name
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

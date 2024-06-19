@@ -1,0 +1,50 @@
+uuid: 4ef5046d-ba18-4b0f-9b5f-e859786bd698
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.czech_name.field_reference
+    - taxonomy.vocabulary.czech_name
+  module:
+    - text
+id: taxonomy_term.czech_name.default
+targetEntityType: taxonomy_term
+bundle: czech_name
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_reference:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  path: true

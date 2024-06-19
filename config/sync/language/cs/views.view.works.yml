@@ -1,0 +1,27 @@
+label: 'Unifikované názvy'
+display:
+  default:
+    display_options:
+      title: 'Unifikované názvy'
+      exposed_form:
+        options:
+          submit_button: Odeslat
+          reset_button_label: Resetovat
+          exposed_sorts_label: Seřadit
+          sort_asc_label: vzestupně
+          sort_desc_label: sestupně
+      filters:
+        name:
+          expose:
+            label: 'Název díla'
+      footer:
+        result:
+          content: 'Počet výsledků: @total'
+      fields:
+        name:
+          label: 'Unifikované názvy'
+        field_work:
+          label: 'Počet kopií'
+    display_title: Defaultní
+  herbaria_works:
+    display_title: Stránka

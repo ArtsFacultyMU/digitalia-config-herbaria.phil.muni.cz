@@ -1,0 +1,11 @@
+uuid: 781551d8-22ff-4777-9493-59124562ad0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: front_page_jumbotron
+title: 'Front page jumbotron'
+content:
+  value: '<p><span>Herbaria manuscripta</span><br><span>Medieval herbals found in manuscripts preserved by Czech heritage institutions</span></p>'
+  format: basic_html

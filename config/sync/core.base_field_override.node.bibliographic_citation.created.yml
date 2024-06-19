@@ -1,0 +1,18 @@
+uuid: 32e504ee-7137-4ea4-a33c-af15174793f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bibliographic_citation
+id: node.bibliographic_citation.created
+field_name: created
+entity_type: node
+bundle: bibliographic_citation
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,61 @@
+label: 'Kopie herbářů'
+display:
+  default:
+    display_options:
+      title: 'Kopie herbářů'
+      fields:
+        field_work:
+          label: 'Název herbáře'
+        field_manuscript:
+          label: 'Signatura rukopisu'
+        field_institution:
+          label: Instituce
+        field_herbal:
+          label: 'Počet zpracovaných položek herbáře'
+      exposed_form:
+        options:
+          submit_button: Odeslat
+          reset_button_label: Resetovat
+          exposed_sorts_label: Seřadit
+          sort_asc_label: vzestupně
+          sort_desc_label: sestupně
+      use_more_text: více
+      footer:
+        result:
+          content: 'Zobrazuje se @start až @end z @total herbářů vyhovujících podmínkám vyhledávání'
+      filters:
+        field_work_target_id:
+          expose:
+            label: 'Název herbáře'
+        title:
+          expose:
+            label: 'Signatura rukopisu'
+        title_1:
+          expose:
+            label: 'Položky herbáře'
+        field_herbal_target_id:
+          expose:
+            label: 'Má zpracované položky?'
+          group_info:
+            label: 'Zobrazit jen herbáře se zpracovanými položkami'
+            group_items:
+              1:
+                title: Ne
+              2:
+                title: Ano
+        field_city_target_id:
+          expose:
+            label: Město
+      pager:
+        options:
+          tags:
+            next: 'Další ›'
+            previous: '‹ Předchozí'
+            first: '« První'
+            last: 'Poslední »'
+    display_title: 'Kopie herbářů'
+  herbaria_herbals:
+    display_options:
+      menu:
+        title: Herbáře
+    display_title: Stránka

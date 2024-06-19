@@ -1,0 +1,123 @@
+uuid: 66c25895-9a08-41d3-842e-94b2b6351371
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.herbal_entry.field_botanical_identification
+    - field.field.node.herbal_entry.field_effects
+    - field.field.node.herbal_entry.field_foliation
+    - field.field.node.herbal_entry.field_herbal
+    - field.field.node.herbal_entry.field_medieval_identification
+    - field.field.node.herbal_entry.field_note
+    - field.field.node.herbal_entry.field_order_of_entry
+    - field.field.node.herbal_entry.field_private_note
+    - field.field.node.herbal_entry.field_transliteration_of_herbal
+    - node.type.herbal_entry
+  module:
+    - datafield
+    - manage_display
+id: node.herbal_entry.teaser
+targetEntityType: node
+bundle: herbal_entry
+mode: teaser
+content:
+  field_botanical_identification:
+    type: data_field_table_formatter
+    label: above
+    settings:
+      formatter_settings:
+        plant:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: Plant
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        certainty:
+          format_type: entity_reference_label
+          column_label: Certainty
+          weight: '0'
+          hidden: 0
+          show_label: 0
+          link: 0
+        user:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: User
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        note:
+          format_type: text_default
+          column_label: Note
+          weight: '0'
+          hidden: 0
+          show_label: 0
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: 0
+        bInfo: 0
+        scrollX: 0
+        bStateSave: 0
+        ordering: 0
+        paging: 0
+        searching: 0
+        show-export: 0
+        bMultiFilter: 0
+      bootstrap_table_options:
+        sticky-header: 0
+        show-export: 0
+        show-print: 0
+        show-copy-rows: 0
+        show-multi-sort: 0
+        show-fullscreen: 0
+        search: 0
+        show-refresh: 0
+        show-toggle: 0
+        show-columns: 0
+        mobile-responsive: 0
+        sortable: 0
+        click-to-select: 0
+        show-pagination-switch: 0
+        pagination: 0
+        show-footer: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  field_effects: true
+  field_foliation: true
+  field_herbal: true
+  field_medieval_identification: true
+  field_note: true
+  field_order_of_entry: true
+  field_private_note: true
+  field_transliteration_of_herbal: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

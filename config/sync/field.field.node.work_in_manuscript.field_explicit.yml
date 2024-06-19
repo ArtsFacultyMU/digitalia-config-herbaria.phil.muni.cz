@@ -1,0 +1,19 @@
+uuid: 596d2e2f-4325-4e8e-a748-a80e95bb0721
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_explicit
+    - node.type.work_in_manuscript
+id: node.work_in_manuscript.field_explicit
+field_name: field_explicit
+entity_type: node
+bundle: work_in_manuscript
+label: Explicit
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

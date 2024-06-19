@@ -1,0 +1,10 @@
+uuid: 870d7a8d-e749-41e3-90cc-44accf0d3429
+langcode: en
+status: true
+dependencies: {  }
+id: herbaria_content
+label: 'herbaria content'
+description: 'Custom initial Herbaria data migrations.'
+source_type: csv
+module: null
+shared_configuration: null

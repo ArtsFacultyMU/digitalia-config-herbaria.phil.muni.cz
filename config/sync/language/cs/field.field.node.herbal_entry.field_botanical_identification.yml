@@ -1,0 +1,11 @@
+label: 'Moderní identifikace léčiva'
+settings:
+  field_settings:
+    plant:
+      label: 'Moderní název léčiva'
+    certainty:
+      label: Jistota
+    user:
+      label: Uživatel
+    note:
+      label: Poznámka

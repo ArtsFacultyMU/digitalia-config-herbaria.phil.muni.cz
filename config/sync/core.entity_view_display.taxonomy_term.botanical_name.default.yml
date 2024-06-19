@@ -1,0 +1,76 @@
+uuid: e233240f-3f36-4f68-adfa-5f415891a830
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.botanical_name.field_authority_link
+    - field.field.taxonomy_term.botanical_name.field_effects
+    - field.field.taxonomy_term.botanical_name.field_herbal_entry_type
+    - field.field.taxonomy_term.botanical_name.field_reference
+    - taxonomy.vocabulary.botanical_name
+  module:
+    - controlled_access_terms
+    - text
+id: taxonomy_term.botanical_name.default
+targetEntityType: taxonomy_term
+bundle: botanical_name
+mode: default
+content:
+  description:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_authority_link:
+    type: authority_formatter_default
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_effects:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_herbal_entry_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_reference:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  herbaria_herbal_entries_as_modern_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  herbaria_link_modern_to_medical_db_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  langcode: true
+  name: true
+  search_api_excerpt: true

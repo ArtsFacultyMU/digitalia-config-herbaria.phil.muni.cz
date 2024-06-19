@@ -1,0 +1,22 @@
+uuid: 0917605b-0e7a-4487-9c0b-4c51a6ccb0d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.botanical_name
+id: taxonomy_term.botanical_name.status
+field_name: status
+entity_type: taxonomy_term
+bundle: botanical_name
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

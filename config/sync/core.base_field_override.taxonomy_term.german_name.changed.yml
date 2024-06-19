@@ -1,0 +1,18 @@
+uuid: 14c0b387-9eed-44c9-9785-210de717e03f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.german_name
+id: taxonomy_term.german_name.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: german_name
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

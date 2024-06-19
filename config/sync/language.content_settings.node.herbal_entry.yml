@@ -1,0 +1,18 @@
+uuid: bda4a061-1f6f-4325-8ff8-ec333704d0d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.herbal_entry
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.herbal_entry
+target_entity_type_id: node
+target_bundle: herbal_entry
+default_langcode: current_interface
+language_alterable: false

@@ -1,0 +1,18 @@
+uuid: 0d7e1c7a-fe32-4b95-bc17-91ef9f0f81ac
+langcode: en
+status: true
+dependencies: {  }
+id: node__work_in_manuscript
+label: 'Content: Text in Manuscript'
+tags:
+  dcterms_coverage: 'Central Europe, Middle Ages'
+  dcterms_date: ' [digitalia_muni:field_manuscript:manuscript:field_dating_interval]'
+  dcterms_description: 'This text is part of the manuscript [digitalia_muni:field_manuscript:manuscript:title], [node:field_foliation]. It starts with the incipit: "[node:field_incipit]" and ends with the explicit: "[node:field_explicit]". [node:field_note]'
+  dcterms_format: text
+  dcterms_identifier: '[node:url:absolute]'
+  dcterms_language: '[node:text_language]'
+  dcterms_publisher: '[digitalia_muni:field_manuscript:work_in_manuscript:field_institution:entity:title]'
+  dcterms_relation: '[digitalia_muni:field_manuscript:manuscript:field_link:uri]'
+  dcterms_subject: 'medieval medicine, herbs, [digitalia_muni:field_herbal:herbal_entry:title]'
+  dcterms_title: '[node:field_work] ([node:field_manuscript])'
+  dcterms_type: '[node:field_type]'

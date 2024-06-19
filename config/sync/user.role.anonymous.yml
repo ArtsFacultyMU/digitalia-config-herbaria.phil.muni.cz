@@ -1,0 +1,36 @@
+uuid: ce58ac50-c550-4c0d-b832-67a91c600104
+langcode: cs
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - rest.resource.oai_pmh
+  module:
+    - comment
+    - contact
+    - field_permissions
+    - filter
+    - media
+    - rest
+    - system
+    - taxonomy
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'access taxonomy overview'
+  - 'restful get oai_pmh'
+  - 'use text format restricted_html'
+  - 'view field_botanical_identification'
+  - 'view field_czech_name_identification'
+  - 'view field_german_name_identification'
+  - 'view field_latin_name_identification'
+  - 'view field_medieval_identification'
+  - 'view media'
+  - 'view user_picture'

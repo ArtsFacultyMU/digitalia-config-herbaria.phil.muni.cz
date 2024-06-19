@@ -1,0 +1,22 @@
+uuid: b9a88320-7524-4b13-8501-7696e6ce222d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.medieval_herb
+id: node.medieval_herb.sticky
+field_name: sticky
+entity_type: node
+bundle: medieval_herb
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,11 @@
+label: 'Česká identifikace'
+settings:
+  field_settings:
+    value:
+      label: 'Český název'
+    value1:
+      label: Jistota
+    value2:
+      label: Uživatel
+    value3:
+      label: Poznámka

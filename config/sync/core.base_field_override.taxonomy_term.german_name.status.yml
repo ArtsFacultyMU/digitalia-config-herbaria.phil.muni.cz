@@ -1,0 +1,22 @@
+uuid: 0164df87-328e-43a4-9b4c-f21ff89f8574
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.german_name
+id: taxonomy_term.german_name.status
+field_name: status
+entity_type: taxonomy_term
+bundle: german_name
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

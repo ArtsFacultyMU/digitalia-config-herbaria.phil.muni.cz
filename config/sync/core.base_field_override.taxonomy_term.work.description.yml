@@ -1,0 +1,21 @@
+uuid: be811585-9e02-4b4b-845b-9967cf65ea2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.work
+  module:
+    - text
+id: taxonomy_term.work.description
+field_name: description
+entity_type: taxonomy_term
+bundle: work
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

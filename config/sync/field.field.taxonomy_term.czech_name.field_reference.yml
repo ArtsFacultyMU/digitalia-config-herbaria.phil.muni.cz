@@ -1,0 +1,29 @@
+uuid: 444111e1-8fe3-4da9-be8a-11b69f39b9d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_reference
+    - node.type.bibliographic_citation
+    - taxonomy.vocabulary.czech_name
+id: taxonomy_term.czech_name.field_reference
+field_name: field_reference
+entity_type: taxonomy_term
+bundle: czech_name
+label: Bibliography
+description: 'Select the bibliographic citations related to this work. A new citation can be added under Content -> Bibliographic citation. Notes, such as page ranges referencing this work specifically, can be specified in the note field below.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bibliographic_citation: bibliographic_citation
+    sort:
+      field: field_citation.value
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

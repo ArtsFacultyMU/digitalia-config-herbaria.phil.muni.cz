@@ -1,0 +1,29 @@
+uuid: e3643c94-48d4-4679-89bf-c6e493c1e0bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_effects
+    - taxonomy.vocabulary.botanical_name
+    - taxonomy.vocabulary.effects
+id: taxonomy_term.botanical_name.field_effects
+field_name: field_effects
+entity_type: taxonomy_term
+bundle: botanical_name
+label: Effects
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      effects: effects
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

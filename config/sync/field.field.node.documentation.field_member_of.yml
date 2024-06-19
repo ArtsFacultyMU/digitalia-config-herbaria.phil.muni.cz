@@ -1,0 +1,29 @@
+uuid: d07daa8f-dffd-43f2-99f7-afe3a49da60a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_member_of
+    - node.type.documentation
+    - node.type.islandora_object
+id: node.documentation.field_member_of
+field_name: field_member_of
+entity_type: node
+bundle: documentation
+label: 'Member of'
+description: 'Select the mother institution'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      islandora_object: islandora_object
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 75682503-1600-46d0-93e6-bbece1f81eba
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.czech_name
+  module:
+    - text
+id: taxonomy_term.czech_name.description
+field_name: description
+entity_type: taxonomy_term
+bundle: czech_name
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

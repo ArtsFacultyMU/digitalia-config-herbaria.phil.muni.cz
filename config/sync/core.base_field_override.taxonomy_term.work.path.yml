@@ -1,0 +1,20 @@
+uuid: becd1745-df8e-49a1-bba5-f743e65e61aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.work
+  module:
+    - path
+id: taxonomy_term.work.path
+field_name: path
+entity_type: taxonomy_term
+bundle: work
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,11 @@
+label: 'Středověké názvy léčiva'
+settings:
+  field_settings:
+    name:
+      label: 'Středověký název léčiva'
+    certainty:
+      label: Jistota
+    user:
+      label: Uživatel
+    note:
+      label: Poznámka

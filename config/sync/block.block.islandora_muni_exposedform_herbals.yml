@@ -1,0 +1,35 @@
+uuid: 84db4d82-fc27-486a-8b2a-6f22e57c2933
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.herbals
+  module:
+    - context
+    - islandora
+    - views
+  theme:
+    - islandora_muni
+id: islandora_muni_exposedform_herbals
+theme: islandora_muni
+region: sidebar_first
+weight: -27
+provider: null
+plugin: 'views_exposed_filter_block:herbals-herbaria_herbals'
+settings:
+  id: 'views_exposed_filter_block:herbals-herbaria_herbals'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-herbals-herbaria_herbals: view-herbals-herbaria_herbals
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

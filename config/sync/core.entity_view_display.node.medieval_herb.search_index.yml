@@ -1,0 +1,133 @@
+uuid: a5723ba2-d949-4c0f-9723-2fcabb6bba7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.medieval_herb.field_czech_name_identification
+    - field.field.node.medieval_herb.field_german_name_identification
+    - field.field.node.medieval_herb.field_latin_name_identification
+    - field.field.node.medieval_herb.field_note
+    - field.field.node.medieval_herb.field_private_note
+    - node.type.medieval_herb
+  module:
+    - datafield
+    - manage_display
+    - text
+id: node.medieval_herb.search_index
+targetEntityType: node
+bundle: medieval_herb
+mode: search_index
+content:
+  field_czech_name_identification:
+    type: data_field_table_formatter
+    label: above
+    settings:
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: true
+        bInfo: true
+        scrollX: true
+        bStateSave: false
+        paging: true
+        ordering: true
+        searching: true
+        show-export: true
+        bMultiFilter: false
+      bootstrap_table_options:
+        sticky-header: true
+        search: true
+        show-search-clear-button: true
+        show-refresh: true
+        show-toggle: true
+        show-fullscreen: true
+        show-columns: true
+        data-detail-view: true
+        show-columns-toggle-all: true
+        mobile-responsive: true
+        show-print: true
+        show-copy-rows: true
+        show-export: true
+        sortable: true
+        click-to-select: true
+        show-pagination-switch: true
+        pagination: true
+        cookie: true
+        show-footer: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_latin_name_identification:
+    type: data_field_unformatted_list
+    label: above
+    settings:
+      inline: true
+      formatter_settings:
+        name:
+          format_type: entity_reference_label
+          link: true
+          hidden: false
+          weight: '0'
+          show_label: 0
+        certainty:
+          format_type: entity_reference_label
+          link: false
+          hidden: false
+          weight: '0'
+          show_label: 0
+        value:
+          format_type: entity_reference_label
+          link: true
+          hidden: false
+          weight: '0'
+          show_label: 0
+        note:
+          format_type: text_default
+          hidden: false
+          weight: '0'
+          show_label: 0
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_note:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  field_german_name_identification: true
+  field_private_note: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

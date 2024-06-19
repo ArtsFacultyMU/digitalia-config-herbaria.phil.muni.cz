@@ -1,0 +1,19 @@
+uuid: d8109737-2f8c-4929-b59c-f397f441fef2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_private_note
+    - node.type.medieval_herb
+id: node.medieval_herb.field_private_note
+field_name: field_private_note
+entity_type: node
+bundle: medieval_herb
+label: 'Private note'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

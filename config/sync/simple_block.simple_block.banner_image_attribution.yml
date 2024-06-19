@@ -1,0 +1,11 @@
+uuid: 2bfb8779-a1c7-4123-ad60-ccbd425aac9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: banner_image_attribution
+title: 'Banner image attribution'
+content:
+  value: '<p><strong>Banner image attribution</strong></p><p>The image used in the banner on the home page of the platform is from the manuscript&nbsp;<br><a href="//www.manuscriptorium.com/apps/index.php?direct=record&amp;pid=RTRBAR-NMP___I_H_29______42S6WYA-xx"><em>Lékařský sborník XV. stol. kdysi Hankův</em></a> (I H 29, <span>National Library of the Czech Republic) and is licensed under </span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 DEED</a>.</p>'
+  format: basic_html

@@ -1,0 +1,18 @@
+uuid: 935f989e-989f-4e3c-9b15-cc5b921ae97a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.work_in_manuscript
+id: node.work_in_manuscript.created
+field_name: created
+entity_type: node
+bundle: work_in_manuscript
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

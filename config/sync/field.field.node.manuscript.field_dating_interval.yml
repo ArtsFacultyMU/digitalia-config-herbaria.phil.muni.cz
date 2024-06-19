@@ -1,0 +1,33 @@
+uuid: c74ce20c-3031-4138-9e2e-0b4ad3cc1963
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dating_interval
+    - node.type.manuscript
+    - taxonomy.vocabulary.datation
+  content:
+    - 'taxonomy_term:datation:2a281236-0cf0-4634-a8d1-dd11d9a4d14d'
+id: node.manuscript.field_dating_interval
+field_name: field_dating_interval
+entity_type: node
+bundle: manuscript
+label: 'Dating Interval'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 2a281236-0cf0-4634-a8d1-dd11d9a4d14d
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      datation: datation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,11 @@
+label: 'Latinská identifikace'
+settings:
+  field_settings:
+    name:
+      label: 'Latinský název'
+    certainty:
+      label: Jistota
+    value:
+      label: Uživatel
+    note:
+      label: Poznámka

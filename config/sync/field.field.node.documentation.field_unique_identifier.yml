@@ -1,0 +1,22 @@
+uuid: 0b1d335a-6d67-4166-b7ab-057ce3ff0a66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unique_identifier
+    - node.type.documentation
+  module:
+    - text
+id: node.documentation.field_unique_identifier
+field_name: field_unique_identifier
+entity_type: node
+bundle: documentation
+label: Identifier
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

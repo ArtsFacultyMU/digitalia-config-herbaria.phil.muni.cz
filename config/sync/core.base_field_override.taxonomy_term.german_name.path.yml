@@ -1,0 +1,20 @@
+uuid: 3e1ea441-fb95-452e-9833-a15cf65083b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.german_name
+  module:
+    - path
+id: taxonomy_term.german_name.path
+field_name: path
+entity_type: taxonomy_term
+bundle: german_name
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

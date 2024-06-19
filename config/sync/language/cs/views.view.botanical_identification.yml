@@ -1,0 +1,26 @@
+display:
+  default:
+    display_options:
+      title: 'Moderní názvy léčiv'
+      pager:
+        options:
+          tags:
+            first: '« První'
+            last: 'Poslední »'
+      exposed_form:
+        options:
+          submit_button: Odeslat
+          reset_button_label: Resetovat
+          exposed_sorts_label: Seřadit
+          sort_asc_label: vzestupně
+          sort_desc_label: sestupně
+      filters:
+        name:
+          expose:
+            label: 'Moderní název'
+      footer:
+        result:
+          content: 'Zobrazují se výsledky @start - @end z @total'
+      fields:
+        name:
+          label: 'Moderní název léčiva'

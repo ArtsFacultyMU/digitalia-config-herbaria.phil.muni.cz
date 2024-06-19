@@ -1,0 +1,22 @@
+uuid: e194d6cd-e594-4cff-abb6-f8afb5195b21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_note_on_references
+    - taxonomy.vocabulary.work
+  module:
+    - text
+id: taxonomy_term.work.field_note_on_references
+field_name: field_note_on_references
+entity_type: taxonomy_term
+bundle: work
+label: 'Note on bibliography'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

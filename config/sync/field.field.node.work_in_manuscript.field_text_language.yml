@@ -1,0 +1,29 @@
+uuid: 3cc78520-b109-4cd1-841b-facb7b6d79fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_language
+    - node.type.work_in_manuscript
+    - taxonomy.vocabulary.language
+id: node.work_in_manuscript.field_text_language
+field_name: field_text_language
+entity_type: node
+bundle: work_in_manuscript
+label: Language
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      language: language
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

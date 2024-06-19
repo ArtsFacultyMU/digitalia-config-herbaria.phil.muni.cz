@@ -1,0 +1,87 @@
+uuid: ed6a7ff5-83d6-42d7-ab0e-113e9c7c96c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.documentation.body
+    - field.field.node.documentation.field_created_by
+    - field.field.node.documentation.field_edtf_date_issued
+    - field.field.node.documentation.field_language
+    - field.field.node.documentation.field_member_of
+    - field.field.node.documentation.field_model
+    - field.field.node.documentation.field_rights
+    - field.field.node.documentation.field_unique_identifier
+    - node.type.documentation
+  module:
+    - controlled_access_terms
+    - manage_display
+    - text
+id: node.documentation.search_index
+targetEntityType: node
+bundle: documentation
+mode: search_index
+content:
+  field_edtf_date_issued:
+    type: edtf_default
+    label: above
+    settings:
+      date_separator: dash
+      date_order: big_endian
+      month_format: mm
+      day_format: dd
+      year_format: 'y'
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_language:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_member_of:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_rights:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  islandora_fits_checksum:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  body: true
+  created: true
+  field_created_by: true
+  field_model: true
+  field_unique_identifier: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

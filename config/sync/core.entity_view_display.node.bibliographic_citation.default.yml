@@ -1,0 +1,35 @@
+uuid: 3e7c0f1c-8e1a-483e-af24-dcc52e28e6d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.bibliographic_citation.field_citation
+    - field.field.node.bibliographic_citation.field_hide_title
+    - node.type.bibliographic_citation
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.bibliographic_citation.default
+targetEntityType: node
+bundle: bibliographic_citation
+mode: default
+content:
+  field_citation:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_hide_title: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  title: true
+  uid: true

@@ -1,0 +1,29 @@
+uuid: d24bcc25-1424-4cc3-a988-fc56e2e580c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_herbal_entry_type
+    - taxonomy.vocabulary.botanical_name
+    - taxonomy.vocabulary.herbal_entry_type
+id: taxonomy_term.botanical_name.field_herbal_entry_type
+field_name: field_herbal_entry_type
+entity_type: taxonomy_term
+bundle: botanical_name
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      herbal_entry_type: herbal_entry_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

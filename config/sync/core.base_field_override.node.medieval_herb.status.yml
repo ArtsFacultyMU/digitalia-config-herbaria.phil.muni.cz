@@ -1,0 +1,22 @@
+uuid: 83a8ca7f-a803-404f-86a3-98a8b8e77a6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.medieval_herb
+id: node.medieval_herb.status
+field_name: status
+entity_type: node
+bundle: medieval_herb
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,34 @@
+uuid: b5e5a962-efd8-448f-a480-99105ddd31e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.german_name.field_reference
+    - taxonomy.vocabulary.german_name
+  module:
+    - text
+id: taxonomy_term.german_name.default
+targetEntityType: taxonomy_term
+bundle: german_name
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_reference:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  name: true
+  search_api_excerpt: true

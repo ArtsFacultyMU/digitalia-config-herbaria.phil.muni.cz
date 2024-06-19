@@ -1,0 +1,18 @@
+uuid: 3e68e328-7349-4d79-adbb-24e0baf3c633
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.botanical_name
+id: taxonomy_term.botanical_name.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: botanical_name
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

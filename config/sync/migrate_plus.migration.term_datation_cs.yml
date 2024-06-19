@@ -1,0 +1,36 @@
+uuid: 39f7df55-b4b4-4c5a-8b65-29f723492208
+langcode: en
+status: true
+dependencies: {  }
+id: term_datation_cs
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: herbaria_content
+label: 'Import Datation Taxonomy Translations'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/migrate/term_datation.csv
+  delimiter: $
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    uid: 1
+    lang: cs
+process:
+  uid: constants/uid
+  tid:
+    plugin: migration_lookup
+    source: id
+    migration: term_datation
+  langcode: constants/lang
+  name: czech
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: datation
+  translations: true
+migration_dependencies:
+  required:
+    - term_datation

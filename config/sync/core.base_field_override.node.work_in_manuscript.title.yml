@@ -1,0 +1,18 @@
+uuid: 6f85d497-f747-44c3-afda-009bd6017054
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.work_in_manuscript
+id: node.work_in_manuscript.title
+field_name: title
+entity_type: node
+bundle: work_in_manuscript
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

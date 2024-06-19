@@ -1,0 +1,18 @@
+uuid: 836446f3-350d-4070-8b3b-c18403b4e471
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.work
+id: taxonomy_term.work.name
+field_name: name
+entity_type: taxonomy_term
+bundle: work
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

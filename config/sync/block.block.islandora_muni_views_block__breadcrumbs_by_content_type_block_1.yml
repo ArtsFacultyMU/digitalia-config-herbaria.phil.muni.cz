@@ -1,0 +1,37 @@
+uuid: aa79f6d1-3359-4b2f-869b-ff4e96094077
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.breadcrumbs_by_content_type
+  module:
+    - context
+    - islandora
+    - views
+  theme:
+    - islandora_muni
+id: islandora_muni_views_block__breadcrumbs_by_content_type_block_1
+theme: islandora_muni
+region: content
+weight: -21
+provider: null
+plugin: 'views_block:breadcrumbs_by_content_type-block_1'
+settings:
+  id: 'views_block:breadcrumbs_by_content_type-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-content-page_1: view-content-page_1
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

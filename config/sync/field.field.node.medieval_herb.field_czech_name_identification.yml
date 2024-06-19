@@ -1,0 +1,40 @@
+uuid: 29e41891-12cf-49ee-baa8-0b04eb7c0f54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_czech_name_identification
+    - node.type.medieval_herb
+  module:
+    - datafield
+id: node.medieval_herb.field_czech_name_identification
+field_name: field_czech_name_identification
+entity_type: node
+bundle: medieval_herb
+label: 'Czech name identification'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    value:
+      label: 'Czech name'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: czech_name
+    value1:
+      label: Certainty
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: certainty
+    value2:
+      label: User
+      required: false
+      entity_reference_type: node
+      target_bundles: user
+    value3:
+      label: Note
+      required: false
+field_type: data_field

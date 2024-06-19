@@ -1,0 +1,40 @@
+uuid: acdc6fdf-8164-412a-aad4-86cd144ea016
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_medieval_identification
+    - node.type.herbal_entry
+  module:
+    - datafield
+id: node.herbal_entry.field_medieval_identification
+field_name: field_medieval_identification
+entity_type: node
+bundle: herbal_entry
+label: 'Unified medieval name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    name:
+      label: 'Medieval name of medicament'
+      required: false
+      entity_reference_type: node
+      target_bundles: medieval_herb
+    certainty:
+      label: Certainty
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: certainty
+    user:
+      label: User
+      required: false
+      entity_reference_type: node
+      target_bundles: user
+    note:
+      label: Note
+      required: false
+field_type: data_field

@@ -1,0 +1,20 @@
+uuid: 98860731-3c90-409e-9391-b52ce1e1e851
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.medieval_herb
+  module:
+    - path
+id: node.medieval_herb.path
+field_name: path
+entity_type: node
+bundle: medieval_herb
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

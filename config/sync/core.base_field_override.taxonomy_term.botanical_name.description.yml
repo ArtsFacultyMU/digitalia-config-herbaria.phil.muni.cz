@@ -1,0 +1,21 @@
+uuid: 0a7e1fa1-8f9d-4c1a-9afc-782544258a6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.botanical_name
+  module:
+    - text
+id: taxonomy_term.botanical_name.description
+field_name: description
+entity_type: taxonomy_term
+bundle: botanical_name
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

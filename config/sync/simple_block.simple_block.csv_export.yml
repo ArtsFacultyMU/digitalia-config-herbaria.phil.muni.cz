@@ -1,0 +1,11 @@
+uuid: 4ecb97f7-d00d-48ef-a6b7-df1a487ec8b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: csv_export
+title: 'CSV Export'
+content:
+  value: "<p><a href=\"node\" id=\"link\">Download CSV file</a>&nbsp;<script>\r\n                                                        var str = window.location.pathname\r\n                                                        str = str.split(\"/\").pop();\r\n                                                        document.getElementById(\"link\").href= \r\n                                                        \"https://herbaria-devel.phil.muni.cz/export/\"+str+\".csv\";\r\n                                                        document.getElementById(\"link\").innerHTML= \r\n                                                        str+\".csv\";\r\n                                        if (str == \"herbals\") {\r\n                                              var div = document.createElement(\"p\");\r\n                                              var el = document.createElement(\"a\");\r\n                                              el.innerHTML = \"herbal_entries.csv\";\r\n                                              el.href = \"https://herbaria-devel.phil.muni.cz/export/herbal_entries.csv\";\r\n                                              var link = document.getElementById(\"link\");\r\n                                              div.appendChild(el);\r\n                                              link.parentNode.insertBefore(div, link.nextSibling);\r\n                                            }\r\n                                                        </script></p>"
+  format: full_html

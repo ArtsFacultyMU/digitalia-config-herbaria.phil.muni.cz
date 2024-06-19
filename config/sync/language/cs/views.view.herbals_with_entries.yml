@@ -1,0 +1,6 @@
+display:
+  default:
+    display_options:
+      header:
+        result:
+          content: 'Zpracování položek herbářů (a jejich středověkých a současných identifikací) pořád probíhá. Zatím byly aspoň částečně zpracovány položky @total herbářů:'

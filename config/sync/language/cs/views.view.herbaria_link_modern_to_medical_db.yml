@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      fields:
+        name:
+          alter:
+            text: 'Vyhledat lékařskou literaturu k této rostlině v databázi PubMed'

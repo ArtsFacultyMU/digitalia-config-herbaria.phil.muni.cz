@@ -1,0 +1,18 @@
+uuid: 091bc917-d9d4-4a9e-b0a0-cacf4aba29eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.herbal_entry
+id: node.herbal_entry.created
+field_name: created
+entity_type: node
+bundle: herbal_entry
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created
