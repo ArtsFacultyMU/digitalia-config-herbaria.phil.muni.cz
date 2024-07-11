@@ -1,0 +1,42 @@
+uuid: e33676ff-d331-4983-94ca-df4c58db8436
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.instituce.field_city
+    - field.field.node.instituce.field_country
+    - field.field.node.instituce.field_link
+    - field.field.node.instituce.field_member_of
+    - field.field.node.instituce.field_model
+    - node.type.instituce
+  module:
+    - manage_display
+id: node.instituce.search_index
+targetEntityType: node
+bundle: instituce
+mode: search_index
+content:
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_city: true
+  field_country: true
+  field_link: true
+  field_member_of: true
+  field_model: true
+  herbaria_manuscripts_by_institution_entity_view_1: true
+  herbaria_subinstitutions_entity_view_1: true
+  islandora_fits_checksum: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  uid: true

@@ -1,4 +1,0 @@
-label: 'Delete Node from Triplestore'
-configuration:
-  queue: islandora-indexing-triplestore-delete
-  event: Delete

@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      title: Bibliografie
+      fields:
+        field_bibliography:
+          label: Bibliografie

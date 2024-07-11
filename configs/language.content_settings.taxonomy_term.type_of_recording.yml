@@ -1,0 +1,16 @@
+uuid: 00ac62b7-0762-4000-b9ff-02aa18f1bab3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.type_of_recording
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.type_of_recording
+target_entity_type_id: taxonomy_term
+target_bundle: type_of_recording
+default_langcode: site_default
+language_alterable: false

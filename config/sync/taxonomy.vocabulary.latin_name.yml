@@ -1,8 +1,0 @@
-uuid: f615f520-1bc4-4f1b-8064-197d92cd4d2a
-langcode: en
-status: true
-dependencies: {  }
-name: 'Latin Name'
-vid: latin_name
-description: Herbaria
-weight: 0

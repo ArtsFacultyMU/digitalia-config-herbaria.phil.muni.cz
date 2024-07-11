@@ -1,4 +1,0 @@
-label: 'Index Media in Triplestore'
-configuration:
-  queue: islandora-indexing-triplestore-index
-  event: Update

@@ -1,8 +1,0 @@
-uuid: 250b9971-e21c-419f-a5e0-bb2b130eb2b2
-langcode: en
-status: true
-dependencies: {  }
-name: Effects
-vid: effects
-description: 'Herbaria: Effects of herbs'
-weight: 0

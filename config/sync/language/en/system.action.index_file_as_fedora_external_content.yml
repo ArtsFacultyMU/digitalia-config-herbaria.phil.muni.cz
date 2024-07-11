@@ -1,4 +1,0 @@
-label: 'Index File as Fedora External Content'
-configuration:
-  queue: islandora-indexing-fcrepo-file-external
-  event: Update

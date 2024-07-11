@@ -1,0 +1,37 @@
+uuid: 4cefca52-302c-41b8-b571-d90bb8feb7f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gloses
+    - node.type.herbal_entry
+  module:
+    - datafield
+id: node.herbal_entry.field_gloses
+field_name: field_gloses
+entity_type: node
+bundle: herbal_entry
+label: Glosses
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    language:
+      label: Language
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: language
+    type:
+      label: Type
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: type_of_recording
+    gloss:
+      label: Gloss
+      list: false
+      allowed_values: ''
+      required: false
+field_type: data_field

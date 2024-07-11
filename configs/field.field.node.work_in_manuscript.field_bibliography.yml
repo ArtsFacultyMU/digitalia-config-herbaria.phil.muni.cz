@@ -1,0 +1,32 @@
+uuid: 3b90510b-1d5b-42c3-89a6-0739dc116750
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bibliography
+    - node.type.work_in_manuscript
+  module:
+    - datafield
+id: node.work_in_manuscript.field_bibliography
+field_name: field_bibliography
+entity_type: node
+bundle: work_in_manuscript
+label: bibliography
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    reference:
+      label: Reference
+      required: false
+      entity_reference_type: node
+      target_bundles: bibliographic_citation
+    note:
+      label: Note
+      list: false
+      allowed_values: ''
+      required: false
+field_type: data_field

@@ -1,0 +1,142 @@
+uuid: d5e78f18-a267-47b1-af5d-09de1379d7d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.search_index
+    - field.field.taxonomy_term.botanical_name.field_authority_link
+    - field.field.taxonomy_term.botanical_name.field_bibliography
+    - field.field.taxonomy_term.botanical_name.field_common_czech_name
+    - field.field.taxonomy_term.botanical_name.field_common_english_name
+    - field.field.taxonomy_term.botanical_name.field_effects
+    - field.field.taxonomy_term.botanical_name.field_herbal_entry_type
+    - field.field.taxonomy_term.botanical_name.field_reference
+    - taxonomy.vocabulary.botanical_name
+  module:
+    - controlled_access_terms
+    - datafield
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: taxonomy_term.botanical_name.search_index
+targetEntityType: taxonomy_term
+bundle: botanical_name
+mode: search_index
+content:
+  description:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_authority_link:
+    type: authority_formatter_default
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_bibliography:
+    type: data_field_table_formatter
+    label: above
+    settings:
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: true
+        bInfo: true
+        scrollX: true
+        bStateSave: false
+        paging: true
+        ordering: true
+        searching: true
+        show-export: true
+        bMultiFilter: false
+      bootstrap_table_options:
+        sticky-header: true
+        search: true
+        show-search-clear-button: true
+        show-refresh: true
+        show-toggle: true
+        show-fullscreen: true
+        show-columns: true
+        data-detail-view: true
+        show-columns-toggle-all: true
+        mobile-responsive: true
+        show-print: true
+        show-copy-rows: true
+        show-export: true
+        sortable: true
+        click-to-select: true
+        show-pagination-switch: true
+        pagination: true
+        cookie: true
+        show-footer: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_common_czech_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_common_english_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_effects:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_herbal_entry_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_reference: true
+  herbaria_herbal_entries_as_modern_entity_view_1: true
+  herbaria_link_modern_to_medical_db_entity_view_1: true
+  langcode: true
+  render_term_bibliography_entity_view_1: true
+  search_api_excerpt: true

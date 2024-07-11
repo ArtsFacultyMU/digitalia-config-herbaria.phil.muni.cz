@@ -1,4 +1,0 @@
-label: 'Index Media in Fedora'
-configuration:
-  queue: islandora-indexing-fcrepo-media
-  event: Update

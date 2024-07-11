@@ -1,0 +1,46 @@
+uuid: b25e2674-406e-44b8-9772-438a1e0d41d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.year_swc
+  module:
+    - context
+    - facets
+    - islandora
+  theme:
+    - islandora_muni
+id: islandora_muni_yearswc
+theme: islandora_muni
+region: header
+weight: -11
+provider: null
+plugin: 'facet_block:year_swc'
+settings:
+  id: 'facet_block:year_swc'
+  label: Year
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: yearswc
+visibility:
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  context_all:
+    id: context_all
+    negate: null
+    values: collection
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

@@ -1,9 +1,0 @@
-label: 'Herbaria Institutions'
-display:
-  default:
-    display_options:
-      title: Institutuce
-  page_1:
-    display_options:
-      menu:
-        title: Institutuce

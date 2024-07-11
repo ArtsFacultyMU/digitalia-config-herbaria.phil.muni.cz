@@ -1,0 +1,11 @@
+uuid: 08c181ce-96a5-46e9-b81a-97b8146941a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: front_page_intro_text
+title: 'Front page intro text'
+content:
+  value: '<p><span>The database provides researchers and those interested in the history of medicine and botany with information on medieval herbals, i.e. medical treatises on simple medicines (mainly plants, partly animal products and minerals). It records all known Latin and Old Czech herbals stored in Czech heritage institutions. Many texts are listed and identified here for the first time. Relevant literature is given for each manuscript, as well as links to digital copies where available. The database also covers the contents of selected herbaria that were very popular in Bohemia in the 15th century. Gradually, lists of all their medicines are created, including vernacular or Latin glosses and modern plant identifications.</span></p>'
+  format: basic_html

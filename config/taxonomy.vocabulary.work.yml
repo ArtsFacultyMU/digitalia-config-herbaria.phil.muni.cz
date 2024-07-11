@@ -1,8 +1,0 @@
-uuid: c17ede08-0b59-4065-9bc2-afd690ef2d08
-langcode: en
-status: true
-dependencies: {  }
-name: Work
-vid: work
-description: Herbaria
-weight: 0

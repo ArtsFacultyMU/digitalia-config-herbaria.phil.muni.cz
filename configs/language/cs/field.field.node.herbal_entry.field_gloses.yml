@@ -1,0 +1,9 @@
+label: Glosy
+settings:
+  field_settings:
+    language:
+      label: Jazyk
+    type:
+      label: Typ
+    gloss:
+      label: Glosa

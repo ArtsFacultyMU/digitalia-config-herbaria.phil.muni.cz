@@ -1,4 +1,0 @@
-label: 'Index Taxonomy Term in the Triplestore'
-configuration:
-  queue: islandora-indexing-triplestore-index
-  event: Update

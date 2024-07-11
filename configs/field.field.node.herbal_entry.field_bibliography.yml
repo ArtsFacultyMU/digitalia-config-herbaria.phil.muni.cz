@@ -1,0 +1,32 @@
+uuid: 0c80a2f3-7510-44a2-a4d6-5b9214117643
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bibliography
+    - node.type.herbal_entry
+  module:
+    - datafield
+id: node.herbal_entry.field_bibliography
+field_name: field_bibliography
+entity_type: node
+bundle: herbal_entry
+label: bibliography
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    reference:
+      label: Reference
+      required: false
+      entity_reference_type: node
+      target_bundles: bibliographic_citation
+    note:
+      label: Note
+      list: false
+      allowed_values: ''
+      required: false
+field_type: data_field

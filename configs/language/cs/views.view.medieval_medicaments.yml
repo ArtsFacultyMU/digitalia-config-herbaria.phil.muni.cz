@@ -1,0 +1,26 @@
+display:
+  default:
+    display_options:
+      title: 'Unifikované středověké názvy pro jednoduchá léčiva'
+      fields:
+        title:
+          label: 'Unifikovaný středověký název'
+        nid:
+          fallback_options:
+            format_plural_string: !!binary MQNAY291bnQD
+      exposed_form:
+        options:
+          submit_button: Odeslat
+          reset_button_label: Resetovat
+      filters:
+        search_api_fulltext:
+          expose:
+            label: Vyhledávání
+      footer:
+        result:
+          content: 'Zobrazují se výsledky @start - @end z @total'
+      pager:
+        options:
+          tags:
+            first: '« První'
+            last: 'Poslední »'

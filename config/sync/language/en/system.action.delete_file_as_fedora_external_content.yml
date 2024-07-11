@@ -1,4 +1,0 @@
-label: 'Delete File as Fedora External Content'
-configuration:
-  queue: islandora-indexing-fcrepo-delete
-  event: Delete

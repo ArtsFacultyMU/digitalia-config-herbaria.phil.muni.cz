@@ -1,4 +1,0 @@
-label: 'Delete Node from Fedora'
-configuration:
-  queue: islandora-indexing-fcrepo-delete
-  event: Delete

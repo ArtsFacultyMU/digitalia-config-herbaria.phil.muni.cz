@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      fields:
+        bibliographicref:
+          label: 'Literatura k rukopisu'
+        field_bibliography_1:
+          label: 'Literatura k titulu'

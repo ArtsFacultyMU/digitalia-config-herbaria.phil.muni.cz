@@ -1,0 +1,8 @@
+uuid: f311df0b-825d-41c0-8554-4b98eafd67d9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Type of recording'
+vid: type_of_recording
+description: 'Herbaria: Transcription or transliteration'
+weight: 0

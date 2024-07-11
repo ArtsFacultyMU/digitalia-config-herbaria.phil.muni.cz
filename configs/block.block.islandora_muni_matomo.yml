@@ -1,0 +1,39 @@
+uuid: 00d1a6b7-2c18-4eb8-84b8-a51d7bacaac9
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.matomo
+  module:
+    - context
+    - islandora
+    - simple_block
+    - system
+  theme:
+    - islandora_muni
+id: islandora_muni_matomo
+theme: islandora_muni
+region: header
+weight: -29
+provider: null
+plugin: 'simple_block:matomo'
+settings:
+  id: 'simple_block:matomo'
+  label: Matomo
+  label_display: '0'
+  provider: simple_block
+visibility:
+  http_status_code:
+    id: http_status_code
+    negate: false
+    status_codes:
+      200: 200
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/user/*/*"

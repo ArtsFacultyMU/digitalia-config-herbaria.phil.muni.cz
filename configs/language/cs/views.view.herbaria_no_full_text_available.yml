@@ -1,0 +1,20 @@
+display:
+  default:
+    display_options:
+      fields:
+        field_institution:
+          label: Instituce
+          alter:
+            text: '{% if field_member_of %} <strong> &nbsp;a kolekce: </strong> {{ field_member_of }}, {% else %}: {% endif %} {{ field_institution }} '
+        field_dating_interval:
+          label: 'Interval datace'
+        field_link:
+          label: 'Odkaz na digitalizovaný rukopis'
+          separator: '<br>'
+        field_link_to_full_text:
+          label: 'Odkaz na plný text'
+          alter:
+            text: 'Není k dispozici'
+          separator: '<br>'
+        field_city:
+          label: Město

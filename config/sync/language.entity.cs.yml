@@ -1,9 +1,0 @@
-uuid: 2e969a68-a1cd-4a58-ab3c-0d51b9c18d89
-langcode: cs
-status: true
-dependencies: {  }
-id: cs
-label: Čeština
-direction: ltr
-weight: 1
-locked: false
