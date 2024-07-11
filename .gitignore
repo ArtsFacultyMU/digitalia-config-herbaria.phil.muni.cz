@@ -1,0 +1,6 @@
+# ignore some default config files between devel and production
+islandora_iiif.settings.yml
+search_api.server.default_solr_server.yml
+openseadragon.settings.yml
+Matomo.settings.yml
+
