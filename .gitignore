@@ -3,4 +3,4 @@ islandora_iiif.settings.yml
 search_api.server.default_solr_server.yml
 openseadragon.settings.yml
 matomo.settings.yml
-
+islandora.settings.yml
