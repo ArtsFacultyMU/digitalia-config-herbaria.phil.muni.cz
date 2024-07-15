@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.bibliographic_citation.field_citation
-    - field.field.node.bibliographic_citation.field_hide_title
     - node.type.bibliographic_citation
   module:
     - path
@@ -57,7 +56,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_hide_title: true
   promote: true
   sticky: true
   uid: true

@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.bibliographic_citation.field_citation
-    - field.field.node.bibliographic_citation.field_hide_title
     - node.type.bibliographic_citation
   module:
     - manage_display
@@ -31,7 +30,6 @@ content:
 hidden:
   created: true
   field_citation: true
-  field_hide_title: true
   langcode: true
   search_api_excerpt: true
   uid: true

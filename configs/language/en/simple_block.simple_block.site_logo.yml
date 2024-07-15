@@ -1,3 +1,3 @@
 content:
-  value: '<p><a class="site-branding__logo" href="/en" rel="home"><img src="/themes/custom/islandora_muni/platform_specific/images/logo.svg" alt="Home" width="NaN" height="118"></a></p>'
+  value: '<p><a class="site-branding__logo" href="/en" rel="home"><img src="/themes/custom/islandora_muni/platform_specific/images/logo_cs.svg" alt="Home" width="NaN" height="NaN"></a></p>'
   format: full_html

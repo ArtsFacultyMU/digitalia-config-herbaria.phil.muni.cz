@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.bibliographic_citation.field_citation
-    - field.field.node.bibliographic_citation.field_hide_title
     - node.type.bibliographic_citation
   module:
     - layout_builder
@@ -27,7 +26,6 @@ content:
     region: content
 hidden:
   created: true
-  field_hide_title: true
   langcode: true
   links: true
   search_api_excerpt: true
