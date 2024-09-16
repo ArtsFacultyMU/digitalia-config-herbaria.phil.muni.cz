@@ -1,20 +1,20 @@
-uuid: 12393ce3-2245-4aad-abd2-d311a6073e98
+uuid: 7302d35f-8052-42fa-8e11-e8fe1887543a
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
     - taxonomy
-    - text
 third_party_settings:
   field_permissions:
     permission_type: public
-id: taxonomy_term.field_note_on_references
-field_name: field_note_on_references
+id: taxonomy_term.field_text_language
+field_name: field_text_language
 entity_type: taxonomy_term
-type: text_long
-settings: {  }
-module: text
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

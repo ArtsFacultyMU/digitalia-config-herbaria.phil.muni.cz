@@ -4,3 +4,6 @@ search_api.server.default_solr_server.yml
 openseadragon.settings.yml
 matomo.settings.yml
 islandora.settings.yml
+
+# these views filter by taxonomy term id, which is different on production and devel
+views.view.herbaria_link_modern_to_medical_db.yml

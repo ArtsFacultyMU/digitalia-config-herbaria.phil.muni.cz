@@ -1,4 +1,5 @@
 uuid: 5f477fec-f323-4569-b617-34dc9f173dab
+langcode: en
 status: true
 dependencies: {  }
 id: node_work_bibliography

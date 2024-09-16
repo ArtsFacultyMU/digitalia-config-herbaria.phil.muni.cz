@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.herbal_entry
     - node.type.manuscript
+    - node.type.medieval_herb
     - node.type.work_in_manuscript
   module:
     - digitalia_muni_view_field
@@ -74,8 +75,8 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: true
+          hide_empty: true
+          empty_zero: false
           hide_alter_empty: true
       pager:
         type: none
@@ -96,7 +97,7 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
+        type: none
         options: {  }
       empty: {  }
       sorts:
@@ -179,6 +180,7 @@ display:
             herbal_entry: herbal_entry
             manuscript: manuscript
             work_in_manuscript: work_in_manuscript
+            medieval_herb: medieval_herb
           group: 1
           exposed: false
           expose:
@@ -210,6 +212,10 @@ display:
             group_items: {  }
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
       row:
         type: fields
         options:
@@ -229,33 +235,6 @@ display:
       header: {  }
       footer: {  }
       display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_1:
-    id: block_1
-    display_title: Block
-    display_plugin: block
-    position: 1
-    display_options:
-      display_extenders:
-        matomo:
-          enabled: false
-          keyword_gets: ''
-          keyword_behavior: first
-          keyword_concat_separator: ' '
-          category_behavior: none
-          category_gets: ''
-          category_concat_separator: ' '
-          category_fallback: ''
-          category_facets: {  }
-          category_facets_concat_separator: ', '
-      block_description: 'Render bibliography'
     cache_metadata:
       max-age: -1
       contexts:
@@ -286,7 +265,9 @@ display:
       bundles:
         - herbal_entry
         - manuscript
+        - medieval_herb
         - work_in_manuscript
+      eva_hide_empty: 1
     cache_metadata:
       max-age: -1
       contexts:

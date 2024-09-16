@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.search_index
     - field.field.node.instituce.field_city
     - field.field.node.instituce.field_country
+    - field.field.node.instituce.field_english_name
     - field.field.node.instituce.field_link
     - field.field.node.instituce.field_member_of
     - field.field.node.instituce.field_model
@@ -30,6 +31,7 @@ hidden:
   created: true
   field_city: true
   field_country: true
+  field_english_name: true
   field_link: true
   field_member_of: true
   field_model: true

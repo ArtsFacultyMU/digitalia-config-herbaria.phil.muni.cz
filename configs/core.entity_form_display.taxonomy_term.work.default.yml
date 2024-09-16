@@ -4,8 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.work.field_bibliography
-    - field.field.taxonomy_term.work.field_note_on_references
-    - field.field.taxonomy_term.work.field_reference
+    - field.field.taxonomy_term.work.field_text_language
     - taxonomy.vocabulary.work
   module:
     - datafield
@@ -17,45 +16,44 @@ mode: default
 content:
   description:
     type: text_textarea
-    weight: 1
+    weight: 2
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_bibliography:
-    type: data_field_table_widget
-    weight: 6
-    region: content
-    settings:
-      inline: false
-      field_reference: ''
-      widget_settings: {  }
-    third_party_settings: {  }
-  field_note_on_references:
-    type: text_textarea
+    type: data_field_widget
     weight: 3
     region: content
     settings:
-      rows: 5
-      placeholder: ''
+      inline: false
+      widget_settings:
+        reference:
+          type: entity_reference_autocomplete
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+          autocreate: 0
+        note:
+          type: textfield
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          col: ''
     third_party_settings: {  }
-  field_reference:
+  field_text_language:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 1
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 5
-    region: content
-    settings:
-      include_locked: true
     third_party_settings: {  }
   name:
     type: string_textfield
@@ -65,12 +63,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    weight: 4
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
 hidden:
+  langcode: true
   path: true
+  status: true

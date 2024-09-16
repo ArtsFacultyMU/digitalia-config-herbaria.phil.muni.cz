@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_reference
+    - field.storage.taxonomy_term.field_text_language
     - taxonomy.vocabulary.work
   module:
     - csv_serialization
@@ -160,16 +160,16 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-        field_reference:
-          id: field_reference
-          table: taxonomy_term__field_reference
-          field: field_reference
+        field_text_language:
+          id: field_text_language
+          table: taxonomy_term__field_text_language
+          field: field_text_language
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: Bibliography
-          exclude: true
+          label: Language
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -221,7 +221,7 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: '|'
+          separator: ', '
           field_api_classes: false
       pager:
         type: mini
@@ -316,7 +316,7 @@ display:
         - url.query_args
         - user.permissions
       tags:
-        - 'config:field.storage.taxonomy_term.field_reference'
+        - 'config:field.storage.taxonomy_term.field_text_language'
   data_export_1:
     id: data_export_1
     display_title: 'Data export'
@@ -364,4 +364,4 @@ display:
         - request_format
         - user.permissions
       tags:
-        - 'config:field.storage.taxonomy_term.field_reference'
+        - 'config:field.storage.taxonomy_term.field_text_language'

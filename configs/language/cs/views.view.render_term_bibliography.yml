@@ -3,5 +3,5 @@ display:
     display_options:
       title: Bibliografie
       fields:
-        field_bibliography:
+        bibliographicref:
           label: Bibliografie

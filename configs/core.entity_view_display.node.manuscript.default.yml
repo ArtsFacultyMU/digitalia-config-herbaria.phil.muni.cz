@@ -36,24 +36,6 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_created_after:
-    type: number_integer
-    label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  field_created_before:
-    type: number_integer
-    label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 11
-    region: content
   field_dating:
     type: string
     label: inline
@@ -92,17 +74,17 @@ content:
     region: content
   field_note:
     type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 8
-    region: content
-  field_private_note:
-    type: basic_string
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 9
+    region: content
+  field_private_note:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
   field_provenance:
     type: string
@@ -123,12 +105,12 @@ content:
   herbaria_display_works_in_manuscript_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 12
+    weight: 8
     region: content
   render_bibliography_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 13
+    weight: 11
     region: content
   title:
     type: title
@@ -142,6 +124,8 @@ content:
 hidden:
   created: true
   field_bibliography: true
+  field_created_after: true
+  field_created_before: true
   field_institution: true
   field_reference: true
   langcode: true

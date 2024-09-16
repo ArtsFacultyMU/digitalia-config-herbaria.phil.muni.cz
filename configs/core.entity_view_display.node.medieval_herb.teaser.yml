@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.medieval_herb.field_bibliography
     - field.field.node.medieval_herb.field_note
     - field.field.node.medieval_herb.field_private_note
     - node.type.medieval_herb
@@ -35,6 +36,7 @@ content:
     region: content
 hidden:
   created: true
+  field_bibliography: true
   field_note: true
   field_private_note: true
   langcode: true

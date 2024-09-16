@@ -14,7 +14,7 @@ dependencies:
 id: islandora_muni_matomo
 theme: islandora_muni
 region: header
-weight: -29
+weight: -31
 provider: null
 plugin: 'simple_block:matomo'
 settings:

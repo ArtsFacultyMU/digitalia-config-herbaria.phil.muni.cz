@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_resource_type_swc
 theme: islandora_muni
 region: header
-weight: -27
+weight: -29
 provider: null
 plugin: 'facet_block:resource_type_swc'
 settings:

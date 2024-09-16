@@ -1,7 +1,7 @@
 display:
   default:
     display_options:
-      title: 'Moderní názvy léčiv'
+      title: 'Moderní názvy jednoduchých léčiv'
       pager:
         options:
           tags:
@@ -18,9 +18,19 @@ display:
         name:
           expose:
             label: 'Moderní název'
+        field_common_english_name_value:
+          expose:
+            label: 'Anglický název'
+        field_common_czech_name_value:
+          expose:
+            label: 'Český název'
       footer:
         result:
           content: 'Zobrazují se výsledky @start - @end z @total'
       fields:
         name:
           label: 'Moderní název léčiva'
+        field_common_english_name:
+          label: 'Anglický název'
+        field_common_czech_name:
+          label: 'Český název'

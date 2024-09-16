@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_creatorsandcontributors_swc
 theme: islandora_muni
 region: header
-weight: -24
+weight: -26
 provider: null
 plugin: 'facet_block:creators_and_contributors_swc'
 settings:

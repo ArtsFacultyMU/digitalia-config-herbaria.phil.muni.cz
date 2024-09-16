@@ -9,6 +9,7 @@ dependencies:
     - field.storage.node.field_work
     - node.type.work_in_manuscript
   module:
+    - digitalia_muni_view_field
     - eva
     - node
     - user
@@ -385,6 +386,19 @@ display:
         options: {  }
       empty: {  }
       sorts:
+        work_in_manuscript:
+          id: work_in_manuscript
+          table: node__field_foliation
+          field: work_in_manuscript
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: sortfoliation
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
         field_foliation_value:
           id: field_foliation_value
           table: node__field_foliation

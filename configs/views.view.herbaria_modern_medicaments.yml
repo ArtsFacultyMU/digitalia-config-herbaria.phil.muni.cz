@@ -530,8 +530,8 @@ display:
           category_fallback: ''
           category_facets: {  }
           category_facets_concat_separator: ', '
-      path: export/medicaments-modern.csv
-      filename: medicaments-modern.csv
+      path: export/modern-medicines.csv
+      filename: modern-medicines.csv
       automatic_download: false
       store_in_public_file_directory: null
       custom_redirect_path: false

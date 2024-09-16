@@ -30,7 +30,7 @@ settings:
       entity_reference_type: taxonomy_term
       target_bundles: certainty
     user:
-      label: User
+      label: 'Identified by'
       required: false
       entity_reference_type: node
       target_bundles: user

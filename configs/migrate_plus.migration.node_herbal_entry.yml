@@ -1,5 +1,4 @@
 uuid: 8d633c32-efd3-4e57-bbb7-817baee0212a
-langcode: en
 status: true
 dependencies: {  }
 id: node_herbal_entry
@@ -28,7 +27,7 @@ process:
   field_foliation: pozice
   field_herbal/target_id: nid
   field_order_of_entry: poradi
-  field_medieval_identification/name:
+  field_unified_medieval_name:
     plugin: migration_lookup
     migration: node_medieval_name
     source: id_medieval
@@ -42,3 +41,4 @@ migration_dependencies:
   required:
     - node_medieval_name
     - term_botanical_name
+    - node_work_in_manuscript

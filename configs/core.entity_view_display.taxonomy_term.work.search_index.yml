@@ -5,8 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.search_index
     - field.field.taxonomy_term.work.field_bibliography
-    - field.field.taxonomy_term.work.field_note_on_references
-    - field.field.taxonomy_term.work.field_reference
+    - field.field.taxonomy_term.work.field_text_language
     - taxonomy.vocabulary.work
   module:
     - datafield
@@ -85,8 +84,7 @@ content:
     weight: 0
     region: content
 hidden:
-  field_note_on_references: true
-  field_reference: true
+  field_text_language: true
   langcode: true
   render_term_bibliography_entity_view_1: true
   search_api_excerpt: true

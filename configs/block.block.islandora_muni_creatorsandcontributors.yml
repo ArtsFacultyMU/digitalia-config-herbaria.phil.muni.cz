@@ -15,7 +15,7 @@ _core:
 id: islandora_muni_creatorsandcontributors
 theme: islandora_muni
 region: header
-weight: -25
+weight: -27
 provider: null
 plugin: 'facet_block:creators_and_contributors'
 settings:

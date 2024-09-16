@@ -1,0 +1,26 @@
+uuid: 7fc03f04-7e84-46ec-a029-06e34a99230f
+langcode: en
+status: true
+dependencies: {  }
+id: term_country
+migration_tags: null
+migration_group: herbaria_content
+label: 'Import terms: Country'
+source:
+  plugin: embedded_data
+  data_rows:
+    -
+      unique_id: 61
+      value: 'Czech Republic'
+  ids:
+    unique_id:
+      type: integer
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: value
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: country
+migration_dependencies: null

@@ -3,16 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.medieval_herb.field_bibliography
     - field.field.node.medieval_herb.field_note
     - field.field.node.medieval_herb.field_private_note
     - node.type.medieval_herb
   module:
+    - datafield
     - text
 id: node.medieval_herb.default
 targetEntityType: node
 bundle: medieval_herb
 mode: default
 content:
+  field_bibliography:
+    type: data_field_table_widget
+    weight: 9
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings: {  }
+    third_party_settings: {  }
   field_note:
     type: text_textarea
     weight: 1

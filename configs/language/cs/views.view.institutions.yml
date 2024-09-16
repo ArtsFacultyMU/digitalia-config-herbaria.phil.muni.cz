@@ -10,29 +10,23 @@ display:
           exposed_sorts_label: Seřadit
           sort_asc_label: vzestupně
           sort_desc_label: sestupně
-      filters:
-        field_member_of_target_id:
-          group_info:
-            label: Typ
-            group_items:
-              1:
-                title: Kolekce
-              2:
-                title: 'Nadřazená instituce'
-      footer:
-        result:
-          content: 'Zobrazují se výsledky @start - @end z @total'
       fields:
         title:
           label: Instituce
-        field_city:
-          label: Město
-        title_1:
-          label: Kolekce
-        field_city_1:
-          label: 'Město (inst)'
+      footer:
+        result:
+          content: 'Počet výsledků @total'
   page_1:
+    display_title: Stránka
     display_options:
       menu:
         title: Instituce
-    display_title: Stránka
+      fields:
+        field_institution:
+          label: Instituce
+        title_2:
+          label: Kolekce
+        field_city:
+          label: Město
+        title:
+          label: 'Počet rukopisů'

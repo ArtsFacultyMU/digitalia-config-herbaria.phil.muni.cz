@@ -3,7 +3,7 @@ display:
     display_options:
       header:
         result:
-          content: '<br>Entries the term is referenced in (@total in total):'
+          content: '<br>Content referencing this item (displaying @start - @end out of @total):'
       pager:
         options:
           tags:

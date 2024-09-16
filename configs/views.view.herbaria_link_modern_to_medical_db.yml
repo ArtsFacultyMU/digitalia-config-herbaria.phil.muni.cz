@@ -6,7 +6,7 @@ dependencies:
     - taxonomy.vocabulary.botanical_name
     - taxonomy.vocabulary.herbal_entry_type
   content:
-    - 'taxonomy_term:herbal_entry_type:4da36195-123c-404e-bc77-a10494a5ec2c'
+    - 'taxonomy_term:herbal_entry_type:e59e88a1-a95b-42ba-a48b-be6319ee2d55'
   module:
     - eva
     - taxonomy
@@ -184,7 +184,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            - 158
+            - 71
           group: 1
           exposed: false
           expose:

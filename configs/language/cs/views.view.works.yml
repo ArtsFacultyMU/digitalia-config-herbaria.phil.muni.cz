@@ -1,6 +1,7 @@
 label: 'Unifikované názvy'
 display:
   default:
+    display_title: Defaultní
     display_options:
       title: 'Unifikované názvy'
       exposed_form:
@@ -14,6 +15,9 @@ display:
         name:
           expose:
             label: 'Název díla'
+        field_text_language_target_id:
+          expose:
+            label: Jazyk
       footer:
         result:
           content: 'Počet výsledků: @total'
@@ -22,6 +26,5 @@ display:
           label: 'Unifikované názvy'
         field_work:
           label: 'Počet kopií'
-    display_title: Defaultní
   herbaria_works:
     display_title: Stránka

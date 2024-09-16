@@ -6,6 +6,6 @@ settings:
     certainty:
       label: Jistota
     user:
-      label: Uživatel
+      label: 'Identifikováno uživatelem'
     note:
       label: Poznámka

@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_yearswc
 theme: islandora_muni
 region: header
-weight: -11
+weight: -13
 provider: null
 plugin: 'facet_block:year_swc'
 settings:

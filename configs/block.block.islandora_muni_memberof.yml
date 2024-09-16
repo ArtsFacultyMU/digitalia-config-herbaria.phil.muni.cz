@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_memberof
 theme: islandora_muni
 region: header
-weight: -26
+weight: -28
 provider: null
 plugin: 'facet_block:member_of'
 settings:

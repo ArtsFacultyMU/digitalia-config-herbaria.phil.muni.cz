@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.storage.node.field_city
     - field.storage.node.field_dating
     - field.storage.node.field_institution
     - field.storage.node.field_link
@@ -357,6 +358,69 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_city:
+          id: field_city
+          table: node__field_city
+          field: field_city
+          relationship: field_institution
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: City
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         field_dating:
           id: field_dating
           table: node__field_dating
@@ -488,7 +552,7 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
           items_per_page: 50
@@ -497,6 +561,8 @@ display:
           tags:
             next: ››
             previous: ‹‹
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -505,11 +571,12 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 9
       exposed_form:
         type: bef
         options:
           submit_button: Apply
-          reset_button: true
+          reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -891,7 +958,7 @@ display:
           admin_label: 'field_institution: Content'
           plugin_id: standard
           required: false
-      use_ajax: true
+      use_ajax: false
       header: {  }
       footer:
         result:
@@ -915,6 +982,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_city'
         - 'config:field.storage.node.field_dating'
         - 'config:field.storage.node.field_institution'
         - 'config:field.storage.node.field_link'
@@ -945,7 +1013,7 @@ display:
         title: Manuscripts
         weight: -48
         menu_name: main
-        parent: 'menu_link_content:fa2b42b4-79e7-4418-a823-6c589e59e95a'
+        parent: 'menu_link_content:dc7fc879-7733-46b6-82d0-f8a12cce609e'
     cache_metadata:
       max-age: -1
       contexts:
@@ -955,6 +1023,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_city'
         - 'config:field.storage.node.field_dating'
         - 'config:field.storage.node.field_institution'
         - 'config:field.storage.node.field_link'

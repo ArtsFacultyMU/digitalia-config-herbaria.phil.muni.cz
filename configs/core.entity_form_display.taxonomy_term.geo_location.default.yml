@@ -10,7 +10,6 @@ dependencies:
     - taxonomy.vocabulary.geo_location
   module:
     - controlled_access_terms
-    - path
     - text
 _core:
   default_config_hash: i7uRsqg6AGmJND-V2OR0NAM8KUwrvk4Nbt2DYNEhnlI
@@ -37,7 +36,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 4
+    weight: 3
     region: content
     settings:
       include_locked: true
@@ -50,29 +49,20 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 5
+    weight: 4
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  translation:
-    weight: 6
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
   field_geo_alt_name: true
   field_geo_broader: true
   field_geo_geolocation: true
+  path: true
   promote: true
   sticky: true
+  translation: true
   uid: true

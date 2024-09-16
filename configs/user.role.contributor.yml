@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.basic_html
     - node.type.herbal_entry
     - node.type.medieval_herb
     - taxonomy.vocabulary.botanical_name
-    - taxonomy.vocabulary.czech_name
-    - taxonomy.vocabulary.german_name
-    - taxonomy.vocabulary.latin_name
   module:
+    - content_translation
     - field_permissions
+    - filter
     - node
     - taxonomy
     - taxonomy_manager
@@ -21,40 +21,31 @@ is_admin: null
 permissions:
   - 'access taxonomy manager list'
   - 'create field_botanical_identification'
-  - 'create field_czech_name_identification'
-  - 'create field_german_name_identification'
-  - 'create field_latin_name_identification'
-  - 'create field_medieval_identification'
+  - 'create field_created_after'
+  - 'create field_created_before'
+  - 'create field_private_note'
   - 'create herbal_entry content'
   - 'create medieval_herb content'
   - 'create terms in botanical_name'
-  - 'create terms in czech_name'
-  - 'create terms in german_name'
-  - 'create terms in latin_name'
   - 'delete own herbal_entry content'
   - 'delete own medieval_herb content'
   - 'delete terms in botanical_name'
-  - 'delete terms in czech_name'
-  - 'delete terms in german_name'
-  - 'delete terms in latin_name'
+  - 'edit field_created_after'
+  - 'edit field_created_before'
   - 'edit own field_botanical_identification'
-  - 'edit own field_czech_name_identification'
-  - 'edit own field_german_name_identification'
-  - 'edit own field_latin_name_identification'
-  - 'edit own field_medieval_identification'
+  - 'edit own field_created_after'
+  - 'edit own field_created_before'
+  - 'edit own field_private_note'
   - 'edit own herbal_entry content'
   - 'edit own medieval_herb content'
+  - 'edit own user_picture'
   - 'edit terms in botanical_name'
-  - 'edit terms in czech_name'
-  - 'edit terms in german_name'
-  - 'edit terms in latin_name'
+  - 'translate botanical_name taxonomy_term'
+  - 'use text format basic_html'
   - 'view field_botanical_identification'
-  - 'view field_czech_name_identification'
-  - 'view field_german_name_identification'
-  - 'view field_latin_name_identification'
-  - 'view field_medieval_identification'
+  - 'view field_created_after'
+  - 'view field_created_before'
   - 'view own field_botanical_identification'
-  - 'view own field_czech_name_identification'
-  - 'view own field_german_name_identification'
-  - 'view own field_latin_name_identification'
-  - 'view own field_medieval_identification'
+  - 'view own field_created_after'
+  - 'view own field_created_before'
+  - 'view own field_private_note'

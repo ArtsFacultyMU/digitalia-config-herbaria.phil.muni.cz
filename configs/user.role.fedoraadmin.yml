@@ -1,11 +1,31 @@
 uuid: 562ed874-38cf-4a77-962a-2f21f755d96e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - field_permissions
+    - filter
 _core:
   default_config_hash: e6W733rBSNmewsIQsvWQ-8mIE5H-CIeArLBwIbN5vVQ
 id: fedoraadmin
 label: fedoraAdmin
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create field_created_after'
+  - 'create field_created_before'
+  - 'create field_private_note'
+  - 'edit field_created_after'
+  - 'edit field_created_before'
+  - 'edit own field_created_after'
+  - 'edit own field_created_before'
+  - 'edit own field_private_note'
+  - 'edit own user_picture'
+  - 'use text format basic_html'
+  - 'view field_created_after'
+  - 'view field_created_before'
+  - 'view own field_created_after'
+  - 'view own field_created_before'
+  - 'view own field_private_note'

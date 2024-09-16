@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
+    - filter.format.full_html
 id: front_page_jumbotron
 title: 'Front page jumbotron'
 content:
-  value: '<p><span>Herbaria manuscripta</span><br><span>Medieval herbals found in manuscripts preserved by Czech heritage institutions</span></p>'
-  format: basic_html
+  value: '<p><span>Herbaria manuscripta</span><br><span>Medieval herbals from manuscripts preserved in Czech heritage institutions</span></p>'
+  format: full_html

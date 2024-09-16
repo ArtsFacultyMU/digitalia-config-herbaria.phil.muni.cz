@@ -1,15 +1,15 @@
-uuid: 3cc78520-b109-4cd1-841b-facb7b6d79fe
+uuid: 03446e0e-1d8f-4302-87c5-3dc0fab5eaba
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_text_language
-    - node.type.work_in_manuscript
+    - field.storage.taxonomy_term.field_text_language
     - taxonomy.vocabulary.language
-id: node.work_in_manuscript.field_text_language
+    - taxonomy.vocabulary.work
+id: taxonomy_term.work.field_text_language
 field_name: field_text_language
-entity_type: node
-bundle: work_in_manuscript
+entity_type: taxonomy_term
+bundle: work
 label: Language
 description: ''
 required: false

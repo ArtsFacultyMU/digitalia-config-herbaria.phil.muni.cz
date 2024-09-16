@@ -3,11 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_bibliography
     - taxonomy.vocabulary.botanical_name
     - taxonomy.vocabulary.work
   module:
-    - datafield
+    - digitalia_muni_view_field
     - eva
     - taxonomy
     - user
@@ -27,14 +26,15 @@ display:
     display_options:
       title: ''
       fields:
-        field_bibliography:
-          id: field_bibliography
-          table: taxonomy_term__field_bibliography
-          field: field_bibliography
+        bibliographicref:
+          id: bibliographicref
+          table: taxonomy_term_data
+          field: bibliographicref
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
+          entity_type: taxonomy_term
+          plugin_id: bibliographicref
           label: Bibliography
           exclude: false
           alter:
@@ -71,43 +71,11 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: true
-          empty_zero: false
+          empty_zero: true
           hide_alter_empty: true
-          click_sort_column: reference
-          type: data_field_unformatted_list
-          settings:
-            inline: true
-            formatter_settings:
-              reference:
-                format_type: entity_reference_entity_view
-                hidden: false
-                view_mode: default
-                weight: '0'
-                show_label: 0
-              note:
-                format_type: text_twig
-                hidden: false
-                trim_length: 2000
-                twig_template: '{% if value %} └─ {{value}} {% endif %}'
-                weight: '0'
-                show_label: 0
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ''
-          field_api_classes: false
       pager:
         type: none
         options:
@@ -246,12 +214,10 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions
-      tags:
-        - 'config:field.storage.taxonomy_term.field_bibliography'
+      tags: {  }
   block_1:
     id: block_1
     display_title: Block
@@ -273,12 +239,10 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions
-      tags:
-        - 'config:field.storage.taxonomy_term.field_bibliography'
+      tags: {  }
   entity_view_1:
     id: entity_view_1
     display_title: EVA
@@ -304,9 +268,7 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions
-      tags:
-        - 'config:field.storage.taxonomy_term.field_bibliography'
+      tags: {  }

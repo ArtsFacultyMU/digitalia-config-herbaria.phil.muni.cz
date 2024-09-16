@@ -22,27 +22,6 @@ process:
   uid: constants/uid
   title: medieval
   field_private_note: private_note
-  field_latin_name_identification/name:
-    plugin: entity_lookup
-    source: latin_tids
-    entity_type: taxonomy_term
-    value_key: tid
-    bundle_key: vid
-    bundle: latin_name
-  field_german_name_identification/name:
-    plugin: entity_lookup
-    source: german_tids
-    entity_type: taxonomy_term
-    value_key: tid
-    bundle_key: vid
-    bundle: german_name
-  field_czech_name_identification/value:
-    plugin: entity_lookup
-    source: czech_tids
-    entity_type: taxonomy_term
-    value_key: tid
-    bundle_key: vid
-    bundle: czech_name
 destination:
   plugin: 'entity:node'
   default_bundle: medieval_herb

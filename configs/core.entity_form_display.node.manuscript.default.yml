@@ -28,26 +28,12 @@ mode: default
 content:
   field_bibliography:
     type: data_field_table_widget
-    weight: 27
+    weight: 11
     region: content
     settings:
       inline: false
       field_reference: ''
       widget_settings: {  }
-    third_party_settings: {  }
-  field_created_after:
-    type: number
-    weight: 6
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_created_before:
-    type: number
-    weight: 7
-    region: content
-    settings:
-      placeholder: ''
     third_party_settings: {  }
   field_dating:
     type: string_textfield
@@ -91,7 +77,7 @@ content:
     third_party_settings: {  }
   field_note:
     type: text_textarea
-    weight: 11
+    weight: 8
     region: content
     settings:
       rows: 5
@@ -99,7 +85,7 @@ content:
     third_party_settings: {  }
   field_private_note:
     type: string_textarea
-    weight: 12
+    weight: 9
     region: content
     settings:
       rows: 5
@@ -107,25 +93,15 @@ content:
     third_party_settings: {  }
   field_provenance:
     type: string_textfield
-    weight: 9
+    weight: 7
     region: content
     settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_reference:
-    type: entity_reference_autocomplete
-    weight: 14
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_scribe:
     type: string_textfield
-    weight: 8
+    weight: 6
     region: content
     settings:
       size: 60
@@ -133,7 +109,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 13
+    weight: 10
     region: content
     settings:
       display_label: true
@@ -153,6 +129,9 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_created_after: true
+  field_created_before: true
+  field_reference: true
   langcode: true
   path: true
   promote: true

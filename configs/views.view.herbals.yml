@@ -12,9 +12,8 @@ dependencies:
     - node.type.work_in_manuscript
     - taxonomy.vocabulary.genre
     - taxonomy.vocabulary.geo_location
+    - taxonomy.vocabulary.language
     - taxonomy.vocabulary.work
-  content:
-    - 'taxonomy_term:genre:81c89388-fa7c-4baa-9b04-0ed0d8b2885f'
   module:
     - better_exposed_filters
     - node
@@ -34,7 +33,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Copies of Herbals'
+      title: 'Copies of Texts'
       fields:
         nid_1:
           id: nid_1
@@ -110,7 +109,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: Herbal
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -576,7 +575,7 @@ display:
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
           text_input_required: 'Select any filter and click on Apply to see results'
@@ -592,6 +591,16 @@ display:
               secondary_label: 'Advanced options'
               secondary_open: false
               reset_button_always_show: false
+            sort:
+              plugin_id: default
+              advanced:
+                combine: false
+                combine_rewrite: ''
+                reset: false
+                reset_label: ''
+                collapsible: false
+                collapsible_label: 'Sort options'
+                is_secondary: false
             filter:
               field_work_target_id:
                 plugin_id: default
@@ -627,10 +636,10 @@ display:
                   placeholder_text: ''
                   collapsible: false
                   is_secondary: false
-              field_herbal_target_id:
+              field_text_language_target_id:
                 plugin_id: default
                 advanced:
-                  placeholder_text: ''
+                  sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
@@ -641,6 +650,22 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: '- Any -|No'
+                  collapsible: false
+                  is_secondary: false
+              field_type_target_id_1:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_herbal_target_id:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
       access:
@@ -664,9 +689,9 @@ display:
           plugin_id: standard
           order: ASC
           expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
+            label: Title
+            field_identifier: title
+          exposed: true
         title:
           id: title
           table: node_field_data
@@ -679,9 +704,22 @@ display:
           plugin_id: standard
           order: ASC
           expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
+            label: Manuscript
+            field_identifier: manuscript
+          exposed: true
+        field_incipit_value:
+          id: field_incipit_value
+          table: node__field_incipit
+          field: field_incipit_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: Incipit
+            field_identifier: incipit
+          exposed: true
       arguments: {  }
       filters:
         status:
@@ -705,52 +743,6 @@ display:
           value:
             work_in_manuscript: work_in_manuscript
           group: 1
-        field_type_target_id:
-          id: field_type_target_id
-          table: node__field_type
-          field: field_type_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value:
-            - 56
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: genre
-          type: textfield
-          hierarchy: false
-          limit: true
-          error_message: true
         field_work_target_id:
           id: field_work_target_id
           table: node__field_work
@@ -765,7 +757,7 @@ display:
           exposed: true
           expose:
             operator_id: field_work_target_id_op
-            label: 'Title of herbal'
+            label: Title
             description: ''
             use_operator: false
             operator: field_work_target_id_op
@@ -986,6 +978,149 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_text_language_target_id:
+          id: field_text_language_target_id
+          table: taxonomy_term__field_text_language
+          field: field_text_language_target_id
+          relationship: field_work
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_text_language_target_id_op
+            label: Language
+            description: ''
+            use_operator: false
+            operator: field_text_language_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_text_language
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              contributor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: language
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_link_uri:
+          id: field_link_uri
+          table: node__field_link
+          field: field_link_uri
+          relationship: field_manuscript
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_link_uri_op
+            label: 'Link (field_link:uri)'
+            description: null
+            use_operator: false
+            operator: field_link_uri_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_link_uri
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Display only results with links to the digitized manuscript'
+            description: ''
+            identifier: field_link_uri
+            optional: true
+            widget: radios
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Yes'
+                operator: 'not empty'
+                value: ''
+        field_type_target_id_1:
+          id: field_type_target_id_1
+          table: node__field_type
+          field: field_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_type_target_id_1_op
+            label: Type
+            description: ''
+            use_operator: false
+            operator: field_type_target_id_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              contributor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: genre
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
         field_herbal_target_id:
           id: field_herbal_target_id
           table: node__field_herbal
@@ -1049,49 +1184,6 @@ display:
                   min: ''
                   max: ''
                   value: '0'
-        field_link_uri:
-          id: field_link_uri
-          table: node__field_link
-          field: field_link_uri
-          relationship: field_manuscript
-          group_type: group
-          admin_label: ''
-          plugin_id: string
-          operator: '='
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_link_uri_op
-            label: 'Link (field_link:uri)'
-            description: null
-            use_operator: false
-            operator: field_link_uri_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_link_uri
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: null
-          is_grouped: true
-          group_info:
-            label: 'Display only results with links to the digitized manuscript'
-            description: ''
-            identifier: field_link_uri
-            optional: true
-            widget: radios
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: 'Yes'
-                operator: 'not empty'
-                value: ''
       filter_groups:
         operator: AND
         groups:
@@ -1103,14 +1195,23 @@ display:
           row_class: ''
           default_row_class: true
           columns:
+            nid_1: nid_1
             field_work: field_work
             field_manuscript: field_manuscript
+            field_member_of: field_member_of
             field_institution: field_institution
+            field_city: field_city
             field_incipit: field_incipit
-            view_node: view_node
             field_herbal: field_herbal
           default: '-1'
           info:
+            nid_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             field_work:
               sortable: false
               default_sort_order: asc
@@ -1125,6 +1226,13 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
+            field_member_of:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             field_institution:
               sortable: false
               default_sort_order: asc
@@ -1132,17 +1240,17 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
+            field_city:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             field_incipit:
               sortable: false
               default_sort_order: asc
               align: views-align-left
-              separator: ''
-              empty_column: false
-              responsive: ''
-            view_node:
-              sortable: false
-              default_sort_order: asc
-              align: ''
               separator: ''
               empty_column: false
               responsive: ''
@@ -1246,7 +1354,7 @@ display:
           admin_label: ''
           plugin_id: result
           empty: true
-          content: 'Displaying @start to @end of @total herbals matching the query'
+          content: 'Displaying @start to @end of @total results matching the query'
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -1255,6 +1363,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1300,6 +1409,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
         - 'user.node_grants:view'
         - user.permissions
       tags:

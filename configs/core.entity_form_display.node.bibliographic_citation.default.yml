@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.bibliographic_citation.field_citation
     - node.type.bibliographic_citation
   module:
-    - path
     - text
 id: node.bibliographic_citation.default
 targetEntityType: node
@@ -15,7 +14,7 @@ mode: default
 content:
   field_citation:
     type: text_textarea
-    weight: 5
+    weight: 1
     region: content
     settings:
       rows: 5
@@ -23,23 +22,10 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  path:
-    type: path
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    weight: 3
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -56,6 +42,8 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  path: true
   promote: true
+  status: true
   sticky: true
   uid: true

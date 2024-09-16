@@ -11,7 +11,7 @@ id: node.herbal_entry.field_bibliography
 field_name: field_bibliography
 entity_type: node
 bundle: herbal_entry
-label: bibliography
+label: Bibliography
 description: ''
 required: false
 translatable: false

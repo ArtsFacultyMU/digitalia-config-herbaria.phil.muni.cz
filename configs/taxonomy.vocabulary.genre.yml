@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: GtwZmHfoUe9zdJe_uX6oD5CU40m-0jfjiDk5USbdHMc
-name: Genre
+name: 'Type of text'
 vid: genre
 description: Herbaria
 weight: 0

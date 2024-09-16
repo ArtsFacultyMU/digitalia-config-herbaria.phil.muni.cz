@@ -11,7 +11,7 @@ dependencies:
 id: islandora_muni_solrsearchcontentadvancedsearchforblock
 theme: islandora_muni
 region: header
-weight: -8
+weight: -10
 provider: null
 plugin: 'advanced_search_block:solr_search_content__block_1'
 settings:

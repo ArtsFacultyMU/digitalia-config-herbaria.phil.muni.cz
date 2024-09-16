@@ -296,7 +296,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: Gloses
+          label: Glosses
           exclude: false
           alter:
             alter_text: false
@@ -442,12 +442,12 @@ display:
               user:
                 format_type: entity_reference_label
                 link: false
-                hidden: false
+                hidden: true
                 weight: '0'
                 show_label: 0
               note:
                 format_type: text_default
-                hidden: false
+                hidden: true
                 weight: '0'
                 show_label: 0
             ajax: false
@@ -462,7 +462,7 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ', '
+          separator: ''
           field_api_classes: false
       pager:
         type: full

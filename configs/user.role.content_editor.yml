@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.basic_html
+    - filter.format.full_html
     - node.type.bibliographic_citation
     - node.type.documentation
     - node.type.herbal_entry
@@ -13,13 +15,14 @@ dependencies:
     - node.type.user
     - node.type.work_in_manuscript
     - taxonomy.vocabulary.botanical_name
-    - taxonomy.vocabulary.czech_name
+    - taxonomy.vocabulary.country
+    - taxonomy.vocabulary.datation
     - taxonomy.vocabulary.effects
     - taxonomy.vocabulary.genre
     - taxonomy.vocabulary.geo_location
-    - taxonomy.vocabulary.german_name
     - taxonomy.vocabulary.herbal_entry_type
-    - taxonomy.vocabulary.latin_name
+    - taxonomy.vocabulary.language
+    - taxonomy.vocabulary.type_of_recording
     - taxonomy.vocabulary.work
   module:
     - comment
@@ -27,6 +30,7 @@ dependencies:
     - contextual
     - field_permissions
     - file
+    - filter
     - help
     - node
     - path
@@ -57,23 +61,20 @@ permissions:
   - 'create field_botanical_identification'
   - 'create field_created_after'
   - 'create field_created_before'
-  - 'create field_czech_name_identification'
-  - 'create field_german_name_identification'
-  - 'create field_latin_name_identification'
-  - 'create field_medieval_identification'
   - 'create field_private_note'
   - 'create herbal_entry content'
   - 'create instituce content'
   - 'create manuscript content'
   - 'create medieval_herb content'
   - 'create terms in botanical_name'
-  - 'create terms in czech_name'
+  - 'create terms in country'
+  - 'create terms in datation'
   - 'create terms in effects'
   - 'create terms in genre'
   - 'create terms in geo_location'
-  - 'create terms in german_name'
   - 'create terms in herbal_entry_type'
-  - 'create terms in latin_name'
+  - 'create terms in language'
+  - 'create terms in type_of_recording'
   - 'create terms in work'
   - 'create url aliases'
   - 'create user content'
@@ -96,13 +97,14 @@ permissions:
   - 'delete own user content'
   - 'delete own work_in_manuscript content'
   - 'delete terms in botanical_name'
-  - 'delete terms in czech_name'
+  - 'delete terms in country'
+  - 'delete terms in datation'
   - 'delete terms in effects'
   - 'delete terms in genre'
   - 'delete terms in geo_location'
-  - 'delete terms in german_name'
   - 'delete terms in herbal_entry_type'
-  - 'delete terms in latin_name'
+  - 'delete terms in language'
+  - 'delete terms in type_of_recording'
   - 'delete terms in work'
   - 'delete work_in_manuscript revisions'
   - 'edit any bibliographic_citation content'
@@ -115,20 +117,14 @@ permissions:
   - 'edit any work_in_manuscript content'
   - 'edit field_botanical_identification'
   - 'edit field_created_after'
-  - 'edit field_czech_name_identification'
-  - 'edit field_german_name_identification'
-  - 'edit field_latin_name_identification'
-  - 'edit field_medieval_identification'
+  - 'edit field_created_before'
   - 'edit field_private_note'
   - 'edit own bibliographic_citation content'
   - 'edit own comments'
   - 'edit own documentation content'
   - 'edit own field_botanical_identification'
   - 'edit own field_created_after'
-  - 'edit own field_czech_name_identification'
-  - 'edit own field_german_name_identification'
-  - 'edit own field_latin_name_identification'
-  - 'edit own field_medieval_identification'
+  - 'edit own field_created_before'
   - 'edit own field_private_note'
   - 'edit own herbal_entry content'
   - 'edit own instituce content'
@@ -136,31 +132,36 @@ permissions:
   - 'edit own medieval_herb content'
   - 'edit own page content'
   - 'edit own user content'
+  - 'edit own user_picture'
   - 'edit own work_in_manuscript content'
   - 'edit terms in botanical_name'
-  - 'edit terms in czech_name'
+  - 'edit terms in country'
+  - 'edit terms in datation'
   - 'edit terms in effects'
   - 'edit terms in genre'
   - 'edit terms in geo_location'
-  - 'edit terms in german_name'
   - 'edit terms in herbal_entry_type'
-  - 'edit terms in latin_name'
+  - 'edit terms in language'
+  - 'edit terms in type_of_recording'
   - 'edit terms in work'
   - 'revert all revisions'
+  - 'revert bibliographic_citation revisions'
   - 'translate botanical_name taxonomy_term'
+  - 'translate datation taxonomy_term'
   - 'translate effects taxonomy_term'
   - 'translate genre taxonomy_term'
   - 'translate geo_location taxonomy_term'
   - 'translate herbal_entry_type taxonomy_term'
+  - 'translate language taxonomy_term'
+  - 'translate type_of_recording taxonomy_term'
+  - 'use text format basic_html'
+  - 'use text format full_html'
   - 'view all revisions'
   - 'view bibliographic_citation revisions'
   - 'view documentation revisions'
   - 'view field_botanical_identification'
   - 'view field_created_after'
-  - 'view field_czech_name_identification'
-  - 'view field_german_name_identification'
-  - 'view field_latin_name_identification'
-  - 'view field_medieval_identification'
+  - 'view field_created_before'
   - 'view field_private_note'
   - 'view herbal_entry revisions'
   - 'view instituce revisions'
@@ -168,10 +169,7 @@ permissions:
   - 'view medieval_herb revisions'
   - 'view own field_botanical_identification'
   - 'view own field_created_after'
-  - 'view own field_czech_name_identification'
-  - 'view own field_german_name_identification'
-  - 'view own field_latin_name_identification'
-  - 'view own field_medieval_identification'
+  - 'view own field_created_before'
   - 'view own field_private_note'
   - 'view own unpublished content'
   - 'view page revisions'

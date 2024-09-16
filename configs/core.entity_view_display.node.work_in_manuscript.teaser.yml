@@ -12,8 +12,6 @@ dependencies:
     - field.field.node.work_in_manuscript.field_manuscript
     - field.field.node.work_in_manuscript.field_note
     - field.field.node.work_in_manuscript.field_private_note
-    - field.field.node.work_in_manuscript.field_reference
-    - field.field.node.work_in_manuscript.field_text_language
     - field.field.node.work_in_manuscript.field_type
     - field.field.node.work_in_manuscript.field_work
     - node.type.work_in_manuscript
@@ -24,7 +22,17 @@ targetEntityType: node
 bundle: work_in_manuscript
 mode: teaser
 content:
+  bibliografies_related_to_texts_in_manuscript_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   herbaria_no_full_text_available_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  render_bibliography_entity_view_1:
     settings: {  }
     third_party_settings: {  }
     weight: 10
@@ -48,8 +56,6 @@ hidden:
   field_manuscript: true
   field_note: true
   field_private_note: true
-  field_reference: true
-  field_text_language: true
   field_type: true
   field_work: true
   included_herbs_entity_view_1: true

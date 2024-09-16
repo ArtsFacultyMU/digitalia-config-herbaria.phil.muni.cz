@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_subjectnamesswc
 theme: islandora_muni
 region: header
-weight: -17
+weight: -19
 provider: null
 plugin: 'facet_block:subject_names_swc'
 settings:

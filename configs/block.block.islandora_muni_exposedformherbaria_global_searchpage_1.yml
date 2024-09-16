@@ -12,7 +12,7 @@ dependencies:
 id: islandora_muni_exposedformherbaria_global_searchpage_1
 theme: islandora_muni
 region: header
-weight: -14
+weight: -16
 provider: null
 plugin: 'views_exposed_filter_block:herbaria_global_search-page_1'
 settings:

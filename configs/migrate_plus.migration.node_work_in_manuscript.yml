@@ -1,5 +1,4 @@
 uuid: f284dc92-d6df-439d-a7f2-0fd7153ebe99
-langcode: en
 status: true
 dependencies: {  }
 id: node_work_in_manuscript
@@ -19,7 +18,7 @@ source:
     - id_rukopis
   constants:
     uid: 1
-    type: 56
+    type: 120
 process:
   uid: constants/uid
   field_explicit: explicit
@@ -29,7 +28,10 @@ process:
     plugin: migration_lookup
     migration: node_manuscript
     source: id_rukopis
-  field_work/target_id: tid
+  field_work:
+    plugin: migration_lookup
+    migration: term_work
+    source: id_opus
   field_type/target_id: constants/type
   field_note: poznamka
 destination:

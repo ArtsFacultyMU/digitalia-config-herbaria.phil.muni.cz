@@ -4,8 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.work.field_bibliography
-    - field.field.taxonomy_term.work.field_note_on_references
-    - field.field.taxonomy_term.work.field_reference
+    - field.field.taxonomy_term.work.field_text_language
     - taxonomy.vocabulary.work
   module:
     - text
@@ -14,28 +13,30 @@ targetEntityType: taxonomy_term
 bundle: work
 mode: default
 content:
-  description:
-    type: text_default
-    label: hidden
+  copies_of_this_title_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 2
     region: content
-  field_note_on_references:
+  description:
     type: text_default
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
-  field_reference:
-    type: entity_reference_entity_view
-    label: above
+  field_text_language:
+    type: entity_reference_label
+    label: inline
     settings:
-      view_mode: full
-      link: false
+      link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 0
+    region: content
+  render_term_bibliography_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   field_bibliography: true

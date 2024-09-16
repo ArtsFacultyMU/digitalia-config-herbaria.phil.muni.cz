@@ -5,11 +5,4 @@ display:
       title: Rukopisy
       header:
         result:
-          content: '<h1>Rukopisy</h1>'
-      pager:
-        options:
-          tags:
-            next: 'Další ›'
-            previous: '‹ Předchozí'
-            first: '« První'
-            last: 'Poslední »'
+          content: "<h1>Rukopisy</h1>\r\n(Celkem @total)"

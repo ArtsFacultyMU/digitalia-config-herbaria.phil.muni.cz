@@ -10,7 +10,6 @@ dependencies:
     - field.field.taxonomy_term.botanical_name.field_common_english_name
     - field.field.taxonomy_term.botanical_name.field_effects
     - field.field.taxonomy_term.botanical_name.field_herbal_entry_type
-    - field.field.taxonomy_term.botanical_name.field_reference
     - taxonomy.vocabulary.botanical_name
   module:
     - controlled_access_terms
@@ -22,10 +21,10 @@ mode: full
 content:
   description:
     type: text_default
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
   field_authority_link:
     type: authority_formatter_default
@@ -37,15 +36,31 @@ content:
       rel: '0'
       target: _blank
     third_party_settings: {  }
-    weight: 3
+    weight: 5
+    region: content
+  field_common_czech_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_common_english_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
     region: content
   field_effects:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
   field_herbal_entry_type:
     type: entity_reference_label
@@ -55,28 +70,23 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_reference:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 6
-    region: content
   herbaria_herbal_entries_as_modern_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 7
     region: content
   herbaria_link_modern_to_medical_db_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 6
+    region: content
+  render_term_bibliography_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
     region: content
 hidden:
   field_bibliography: true
-  field_common_czech_name: true
-  field_common_english_name: true
   langcode: true
   name: true
   search_api_excerpt: true

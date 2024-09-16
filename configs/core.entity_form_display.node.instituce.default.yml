@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.instituce.field_city
     - field.field.node.instituce.field_country
+    - field.field.node.instituce.field_english_name
     - field.field.node.instituce.field_link
     - field.field.node.instituce.field_member_of
     - field.field.node.instituce.field_model
@@ -34,6 +35,14 @@ content:
     settings:
       match_operator: CONTAINS
       match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_english_name:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }

@@ -11,7 +11,7 @@ id: node.manuscript.field_bibliography
 field_name: field_bibliography
 entity_type: node
 bundle: manuscript
-label: bibliography
+label: Bibliography
 description: ''
 required: false
 translatable: false
