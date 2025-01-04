@@ -6,15 +6,19 @@ dependencies:
     - field.storage.taxonomy_term.field_herbal_entry_type
     - taxonomy.vocabulary.botanical_name
     - taxonomy.vocabulary.herbal_entry_type
+  content:
+    - 'taxonomy_term:herbal_entry_type:e59e88a1-a95b-42ba-a48b-be6319ee2d55'
 id: taxonomy_term.botanical_name.field_herbal_entry_type
 field_name: field_herbal_entry_type
 entity_type: taxonomy_term
 bundle: botanical_name
 label: Type
 description: ''
-required: false
+required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: e59e88a1-a95b-42ba-a48b-be6319ee2d55
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

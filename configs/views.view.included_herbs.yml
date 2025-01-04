@@ -638,6 +638,9 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      title: 'Included simple medicines'
+      defaults:
+        title: false
       display_extenders:
         matomo:
           enabled: false

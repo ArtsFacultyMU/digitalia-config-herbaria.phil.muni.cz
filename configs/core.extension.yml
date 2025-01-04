@@ -34,6 +34,7 @@ module:
   datetime: 0
   dblog: 0
   devel: 0
+  digitalia_muni_general_includes: 0
   digitalia_muni_token: 0
   digitalia_muni_view_field: 0
   dynamic_page_cache: 0

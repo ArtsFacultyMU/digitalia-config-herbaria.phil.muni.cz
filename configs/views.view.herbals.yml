@@ -14,6 +14,9 @@ dependencies:
     - taxonomy.vocabulary.geo_location
     - taxonomy.vocabulary.language
     - taxonomy.vocabulary.work
+  content:
+    - 'taxonomy_term:language:9e17fb07-5e07-43dc-aa89-7965afb9df1a'
+    - 'taxonomy_term:language:ad9ef261-221b-48cd-a5d6-a4c07419a793'
   module:
     - better_exposed_filters
     - node
@@ -987,7 +990,9 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: {  }
+          value:
+            116: 116
+            115: 115
           group: 1
           exposed: true
           expose:

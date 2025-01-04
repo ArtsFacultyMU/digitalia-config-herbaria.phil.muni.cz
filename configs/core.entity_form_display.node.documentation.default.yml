@@ -65,24 +65,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_member_of:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 12
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_model:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 13
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_rights:
     type: text_textarea

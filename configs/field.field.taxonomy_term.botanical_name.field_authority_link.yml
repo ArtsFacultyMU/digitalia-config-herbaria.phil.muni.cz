@@ -19,7 +19,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   authority_sources:
-    pladias: 'Pladias (Databáze české flóry a vegetace/Database of the Czech Flora and Vegetation)'
+    pladias: 'Pladias (Databáze české flóry a vegetace/Database of Czech Flora & Vegetation)'
     powo: 'Plants of the World Online'
     ipni: 'International Plant Names Index'
     floraveg: FloraVeg.EU

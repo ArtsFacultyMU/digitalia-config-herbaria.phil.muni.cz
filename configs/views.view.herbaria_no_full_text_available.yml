@@ -622,8 +622,10 @@ display:
         type: fields
         options:
           default_field_elements: true
-          inline: {  }
-          separator: ''
+          inline:
+            field_link: field_link
+            field_link_to_full_text: field_link_to_full_text
+          separator: '<br><br>'
           hide_empty: true
       query:
         type: views_query
