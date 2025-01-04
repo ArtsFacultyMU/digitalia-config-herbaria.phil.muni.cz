@@ -3,12 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - search_api.server.default_solr_server
     - core.entity_view_mode.node.full
+    - search_api.server.default_solr_server
   module:
-    - search_api_solr
     - node
-    - search_api
+    - search_api_solr
 third_party_settings:
   search_api_solr:
     finalize: false

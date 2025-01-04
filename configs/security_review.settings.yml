@@ -1,6 +1,5 @@
-langcode: cs
 _core:
   default_config_hash: ylcsF3ZfWc6Ua1nUaTXyVy2TNwupiRAtBA6w_whTMGg
-configured: false
 untrusted_roles: {  }
 log: true
+configured: false

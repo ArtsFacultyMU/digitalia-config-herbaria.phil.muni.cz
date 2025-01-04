@@ -571,6 +571,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 3
+          pagination_heading_level: h4
       exposed_form:
         type: bef
         options:
@@ -611,66 +612,81 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
               title:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
               field_city_target_id:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
               field_incipit_value:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
               title_1:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
               field_text_language_target_id:
                 plugin_id: default
                 advanced:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
               field_link_uri:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: '- Any -|No'
+                    filter_rewrite_values_key: false
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
               field_type_target_id_1:
                 plugin_id: default
                 advanced:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
               field_herbal_target_id:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
       access:
         type: perm
         options:

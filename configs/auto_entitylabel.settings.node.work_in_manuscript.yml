@@ -7,3 +7,4 @@ chunk: 50
 dependencies:
   config:
     - node.type.work_in_manuscript
+new_content_behavior: 1

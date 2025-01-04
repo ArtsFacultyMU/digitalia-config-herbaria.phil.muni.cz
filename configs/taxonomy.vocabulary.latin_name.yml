@@ -6,3 +6,4 @@ name: 'Latin Name'
 vid: latin_name
 description: Herbaria
 weight: 0
+new_revision: false

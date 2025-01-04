@@ -12,7 +12,7 @@ third_party_settings:
 name: 'Herbal entry'
 type: herbal_entry
 description: 'Herbaria: An herb or other object listed in a medieval herbal'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

@@ -6,3 +6,4 @@ name: 'Certainty Scale'
 vid: certainty
 description: "Hunston's scale of certainty"
 weight: 0
+new_revision: false

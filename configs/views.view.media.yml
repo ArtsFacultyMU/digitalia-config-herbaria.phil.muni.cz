@@ -31,7 +31,7 @@ base_field: mid
 display:
   default:
     id: default
-    display_title: Výchozí
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -87,7 +87,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Akce
+          action_title: Action
           include_exclude: exclude
           selected_actions: {  }
         thumbnail__target_id:
@@ -215,7 +215,7 @@ display:
           entity_type: media
           entity_field: bundle
           plugin_id: field
-          label: Typ
+          label: Type
           exclude: false
           alter:
             alter_text: false
@@ -408,7 +408,7 @@ display:
           entity_type: media
           entity_field: status
           plugin_id: field
-          label: Stav
+          label: Status
           exclude: false
           alter:
             alter_text: false
@@ -475,7 +475,7 @@ display:
           entity_type: media
           entity_field: changed
           plugin_id: field
-          label: Aktualizováno
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -550,7 +550,7 @@ display:
           admin_label: ''
           entity_type: media
           plugin_id: entity_operations
-          label: Operace
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -785,6 +785,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0
@@ -808,10 +809,10 @@ display:
           submit_button: Filter
           reset_button: true
           reset_button_label: Reset
-          exposed_sorts_label: 'Řadit dle'
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Vzestupně
-          sort_desc_label: Sestupně
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       access:
         type: perm
         options:
@@ -908,7 +909,7 @@ display:
           exposed: true
           expose:
             operator_id: bundle_op
-            label: Typ
+            label: Type
             description: ''
             use_operator: false
             operator: bundle_op
@@ -951,7 +952,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Pravda (True)'
+            label: 'True'
             description: null
             use_operator: false
             operator: status_op
@@ -1038,7 +1039,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Jazyk
+            label: Language
             description: ''
             use_operator: false
             operator: langcode_op

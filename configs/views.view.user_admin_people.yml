@@ -16,7 +16,7 @@ base_field: uid
 display:
   default:
     id: default
-    display_title: Výchozí
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -134,7 +134,7 @@ display:
           entity_type: user
           entity_field: status
           plugin_id: field
-          label: Stav
+          label: Status
           exclude: false
           alter:
             alter_text: false
@@ -179,7 +179,7 @@ display:
           settings:
             format: custom
             format_custom_false: Blocked
-            format_custom_true: Aktivní
+            format_custom_true: Active
         roles_target_id:
           id: roles_target_id
           table: user__roles
@@ -352,7 +352,7 @@ display:
           admin_label: ''
           entity_type: user
           plugin_id: entity_operations
-          label: Operace
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -462,6 +462,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: 0
           id: 0
@@ -485,10 +486,10 @@ display:
           submit_button: Filter
           reset_button: true
           reset_button_label: Reset
-          exposed_sorts_label: 'Řadit dle'
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Vzestupně
-          sort_desc_label: Sestupně
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       access:
         type: perm
         options:
@@ -600,7 +601,7 @@ display:
               administrator: '0'
           is_grouped: true
           group_info:
-            label: Stav
+            label: Status
             description: ''
             identifier: status
             optional: true
@@ -611,7 +612,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Aktivní
+                title: Active
                 operator: '='
                 value: '1'
               2:

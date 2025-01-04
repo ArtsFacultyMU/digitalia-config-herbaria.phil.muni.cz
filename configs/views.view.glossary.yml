@@ -19,7 +19,7 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Výchozí
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -34,7 +34,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-          label: Nadpis
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -196,6 +196,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 36
           total_pages: 0
           id: 0
@@ -213,13 +214,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Použít
+          submit_button: Apply
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Řadit dle'
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Vzestupně
-          sort_desc_label: Sestupně
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       access:
         type: perm
         options:
@@ -386,7 +387,7 @@ display:
       tags: {  }
   attachment_1:
     id: attachment_1
-    display_title: Příloha
+    display_title: Attachment
     display_plugin: attachment
     position: 2
     display_options:

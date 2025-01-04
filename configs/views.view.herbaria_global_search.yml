@@ -500,6 +500,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 3
+          pagination_heading_level: h4
       exposed_form:
         type: bef
         options:
@@ -530,13 +531,15 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
       access:
         type: none
         options: {  }
       cache:
-        type: none
+        type: search_api_none
         options: {  }
       empty:
         area:

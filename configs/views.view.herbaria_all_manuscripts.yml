@@ -555,6 +555,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0
@@ -576,7 +577,7 @@ display:
         type: bef
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -601,6 +602,7 @@ display:
                 advanced:
                   placeholder_text: ''
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               field_link_uri:
                 plugin_id: bef
@@ -608,7 +610,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: "- Any - | No\r\nYes | Yes"
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
                 select_all_none: false
                 select_all_none_nested: false
@@ -619,7 +623,9 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
                 select_all_none: true
                 select_all_none_nested: false
@@ -630,7 +636,9 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
                 select_all_none: true
                 select_all_none_nested: false

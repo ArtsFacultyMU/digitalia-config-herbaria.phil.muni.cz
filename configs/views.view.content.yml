@@ -15,7 +15,7 @@ dependencies:
 _core:
   default_config_hash: vBKWYGGDoAX-tFd1JErB8tZLSxx3lJ0foouVsgpcbB4
 id: content
-label: Obsah
+label: Content
 module: node
 description: 'Find and manage content.'
 tag: default
@@ -24,11 +24,11 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Výchozí
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
-      title: Obsah
+      title: Content
       fields:
         node_bulk_form:
           id: node_bulk_form
@@ -53,7 +53,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-          label: Nadpis
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -486,7 +486,7 @@ display:
           entity_type: node
           entity_field: status
           plugin_id: field
-          label: Stav
+          label: Status
           exclude: false
           alter:
             alter_text: false
@@ -508,7 +508,7 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: field
-          label: Aktualizováno
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -540,7 +540,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: entity_operations
-          label: Operace
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -585,6 +585,7 @@ display:
       pager:
         type: full
         options:
+          pagination_heading_level: h4
           items_per_page: 50
           tags:
             next: 'Next ›'
@@ -597,10 +598,10 @@ display:
           submit_button: Filter
           reset_button: true
           reset_button_label: Reset
-          exposed_sorts_label: 'Řadit dle'
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Vzestupně
-          sort_desc_label: Sestupně
+          sort_asc_label: Asc
+          sort_desc_label: Desc
           text_input_required: 'Select any filter and click on Apply to see results'
           text_input_required_format: basic_html
           bef:
@@ -620,6 +621,7 @@ display:
                 advanced:
                   placeholder_text: ''
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               type:
                 plugin_id: default
@@ -627,7 +629,9 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               field_model_target_id:
                 plugin_id: default
@@ -635,7 +639,9 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               status:
                 plugin_id: default
@@ -643,7 +649,9 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               langcode:
                 plugin_id: default
@@ -651,22 +659,27 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               field_member_of_target_id:
                 plugin_id: default
                 advanced:
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: true
               nid:
                 plugin_id: default
                 advanced:
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: true
               mid:
                 plugin_id: default
                 advanced:
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: true
       access:
         type: perm
@@ -701,7 +714,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Nadpis
+            label: Title
             description: ''
             use_operator: false
             operator: title_op
@@ -835,7 +848,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Stav
+            label: Status
             description: ''
             use_operator: false
             operator: status_op
@@ -883,7 +896,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Jazyk
+            label: Language
             description: ''
             use_operator: false
             operator: langcode_op
@@ -1271,14 +1284,14 @@ display:
       path: admin/content/node
       menu:
         type: 'default tab'
-        title: Obsah
+        title: Content
         description: ''
         weight: -10
         menu_name: admin
         context: ''
       tab_options:
         type: normal
-        title: Obsah
+        title: Content
         description: 'Find and manage content'
         weight: -10
         menu_name: admin

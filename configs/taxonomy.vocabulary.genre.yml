@@ -4,7 +4,8 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: GtwZmHfoUe9zdJe_uX6oD5CU40m-0jfjiDk5USbdHMc
-name: 'Type of text'
+name: Genre
 vid: genre
-description: Herbaria
+description: 'A term or terms that designate a category characterizing a particular style, form, or content, such as artistic, musical, literary composition, etc.'
 weight: 0
+new_revision: false

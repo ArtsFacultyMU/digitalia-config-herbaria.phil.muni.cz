@@ -17,7 +17,7 @@ base_field: wid
 display:
   default:
     id: default
-    display_title: Výchozí
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -179,7 +179,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: Typ
+          label: Type
           exclude: false
           alter:
             alter_text: false
@@ -228,7 +228,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: date
-          label: Datum
+          label: Date
           exclude: false
           alter:
             alter_text: false
@@ -280,7 +280,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: dblog_message
-          label: Zpráva
+          label: Message
           exclude: false
           alter:
             alter_text: false
@@ -395,7 +395,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: dblog_operations
-          label: Operace
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -440,6 +440,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0
@@ -460,10 +461,10 @@ display:
           submit_button: Filter
           reset_button: true
           reset_button_label: Reset
-          exposed_sorts_label: 'Řadit dle'
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: false
-          sort_asc_label: Vzestupně
-          sort_desc_label: Sestupně
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       access:
         type: perm
         options:
@@ -513,7 +514,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Typ
+            label: Type
             description: ''
             use_operator: false
             operator: type_op

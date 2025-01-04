@@ -6,3 +6,4 @@ name: 'Modern Name of Simple Medicine'
 vid: botanical_name
 description: Herbaria
 weight: 0
+new_revision: false

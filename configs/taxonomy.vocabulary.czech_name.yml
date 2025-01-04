@@ -6,3 +6,4 @@ name: 'Czech name'
 vid: czech_name
 description: 'Herbaria: Herb name in (old) Czech'
 weight: 0
+new_revision: false

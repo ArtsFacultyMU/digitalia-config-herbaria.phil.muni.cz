@@ -6,3 +6,4 @@ name: Effects
 vid: effects
 description: 'Herbaria: Effects of herbs'
 weight: 0
+new_revision: false

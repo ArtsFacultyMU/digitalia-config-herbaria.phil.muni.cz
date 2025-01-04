@@ -1,6 +1,5 @@
 _core:
   default_config_hash: p424-t2jPYKOLgjMqdWrVjbfAlvdkSGiSydbVfle7P8
-langcode: cs
 maxDepth: -1
 includeSelf: false
 referenceFields:
