@@ -1,0 +1,32 @@
+label: 'Herbaria Institutions'
+display:
+  default:
+    display_options:
+      title: 'Instituce a jejich kolekce'
+      exposed_form:
+        options:
+          submit_button: Odeslat
+          reset_button_label: Resetovat
+          exposed_sorts_label: Seřadit
+          sort_asc_label: vzestupně
+          sort_desc_label: sestupně
+      fields:
+        title:
+          label: Instituce
+      footer:
+        result:
+          content: 'Počet výsledků @total'
+  page_1:
+    display_title: Stránka
+    display_options:
+      menu:
+        title: Instituce
+      fields:
+        field_institution:
+          label: Instituce
+        title_2:
+          label: Kolekce
+        field_city:
+          label: Město
+        title:
+          label: 'Počet rukopisů'

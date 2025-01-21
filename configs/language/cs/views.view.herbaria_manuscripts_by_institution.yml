@@ -1,0 +1,8 @@
+label: Rukopisy
+display:
+  default:
+    display_options:
+      title: Rukopisy
+      header:
+        result:
+          content: "<h1>Rukopisy</h1>\r\n(Celkem @total)"

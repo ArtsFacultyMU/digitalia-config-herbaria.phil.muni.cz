@@ -1,0 +1,20 @@
+label: Byliny
+display:
+  default:
+    display_title: Byliny
+    display_options:
+      title: 'Léčiva v tomto herbáři'
+      fields:
+        field_order_of_entry_value:
+          label: Pořadí
+        title:
+          label: 'Položka herbáře'
+        field_foliation:
+          label: Foliace
+        field_botanical_identification:
+          label: 'Moderní název'
+        field_gloses:
+          label: Glosy
+      header:
+        result:
+          content: "<h1>Léčiva v tomto herbáři</h1>\r\nZobrazuje se @start až @end z @total položek v herbáři"

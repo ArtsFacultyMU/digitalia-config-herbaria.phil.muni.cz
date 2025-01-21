@@ -1,0 +1,35 @@
+uuid: 60e0d389-7ec2-4e9f-a9ea-fe44fa32a4a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.works
+  module:
+    - context
+    - islandora
+    - views
+  theme:
+    - islandora_muni
+id: islandora_muni_exposedformworksherbaria_works
+theme: islandora_muni
+region: sidebar_first
+weight: -24
+provider: null
+plugin: 'views_exposed_filter_block:works-herbaria_works'
+settings:
+  id: 'views_exposed_filter_block:works-herbaria_works'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-works-herbaria_works: view-works-herbaria_works
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

@@ -1,0 +1,18 @@
+uuid: 784af275-7748-429a-9f58-38cdf7aaef86
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bibliographic_citation
+id: node.bibliographic_citation.title
+field_name: title
+entity_type: node
+bundle: bibliographic_citation
+label: 'Shortened citation'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

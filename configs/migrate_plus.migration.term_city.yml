@@ -1,0 +1,24 @@
+uuid: 7771cc76-4f34-47cc-b599-34b728529140
+status: true
+dependencies: {  }
+id: term_city
+class: null
+migration_tags: null
+migration_group: herbaria_content
+label: 'Import terms: City'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/migrate/term_city.csv
+  delimiter: $
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: city
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: geo_location
+migration_dependencies: null

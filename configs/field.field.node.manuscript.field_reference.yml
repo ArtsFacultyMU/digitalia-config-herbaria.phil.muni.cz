@@ -1,0 +1,29 @@
+uuid: 66b6b5fd-a919-4ea5-859e-acdf4722236e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reference
+    - node.type.bibliographic_citation
+    - node.type.manuscript
+id: node.manuscript.field_reference
+field_name: field_reference
+entity_type: node
+bundle: manuscript
+label: Bibliography
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bibliographic_citation: bibliographic_citation
+    sort:
+      field: field_citation.value
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

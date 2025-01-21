@@ -1,0 +1,32 @@
+display:
+  default:
+    display_options:
+      title: 'Texty v tomto rukopise'
+      fields:
+        field_foliation:
+          label: Foliace
+        field_work:
+          label: 'Název textu'
+        field_type:
+          label: Typ
+      pager:
+        options:
+          tags:
+            next: 'Příští ›'
+            previous: '‹ Předchozí'
+            first: '« První'
+            last: 'Poslední »'
+      exposed_form:
+        options:
+          submit_button: Odeslat
+          reset_button_label: Resetovat
+          exposed_sorts_label: 'Seřadit podle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      arguments:
+        field_manuscript_target_id:
+          exception:
+            title: Všechny
+      header:
+        result:
+          content: '<h1>Texty v tomto rukopise</h1>'

@@ -1,0 +1,35 @@
+uuid: 5eca0aaf-69a9-4017-a64f-900c0f92d84a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.botanical_identification
+  module:
+    - context
+    - islandora
+    - views
+  theme:
+    - islandora_muni
+id: islandora_muni_exposed_form_modern_medicaments
+theme: islandora_muni
+region: sidebar_first
+weight: -28
+provider: null
+plugin: 'views_exposed_filter_block:botanical_identification-herbaria_modern_medicaments'
+settings:
+  id: 'views_exposed_filter_block:botanical_identification-herbaria_modern_medicaments'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-botanical_identification-herbaria_modern_medicaments: view-botanical_identification-herbaria_modern_medicaments
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

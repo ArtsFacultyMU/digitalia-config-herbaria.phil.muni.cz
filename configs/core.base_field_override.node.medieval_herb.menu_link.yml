@@ -1,0 +1,20 @@
+uuid: 2cac5e66-cb8e-44dd-89bf-b1ff423d2db4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.medieval_herb
+id: node.medieval_herb.menu_link
+field_name: menu_link
+entity_type: node
+bundle: medieval_herb
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,18 @@
+uuid: b1b1aa30-e82b-470a-b387-bceeefe0d043
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.botanical_name
+id: taxonomy_term.botanical_name.name
+field_name: name
+entity_type: taxonomy_term
+bundle: botanical_name
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

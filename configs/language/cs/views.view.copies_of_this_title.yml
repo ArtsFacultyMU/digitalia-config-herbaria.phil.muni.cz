@@ -1,0 +1,6 @@
+display:
+  default:
+    display_options:
+      header:
+        result:
+          content: '<b>Rukopisy obsahující kopie tohoto titulu</b>'

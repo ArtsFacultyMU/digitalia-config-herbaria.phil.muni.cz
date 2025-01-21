@@ -1,0 +1,195 @@
+uuid: 7f78c125-1241-4505-be16-adc997a0a259
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - core.entity_view_mode.node.search_index
+    - core.entity_view_mode.taxonomy_term.full
+    - core.entity_view_mode.taxonomy_term.search_index
+    - search_api.server.default_solr_server
+  module:
+    - node
+    - search_api_solr
+    - taxonomy
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: Europe/Prague
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        cs: '0'
+      use_universal_collation: false
+id: global_search
+name: 'Global search'
+description: ''
+read_only: false
+field_settings:
+  aggregated_field:
+    label: 'Aggregated field'
+    property_path: aggregated_field
+    type: string
+    configuration:
+      type: union
+      separator: |+
+
+
+      fields:
+        - 'entity:node/body'
+        - 'entity:node/field_bibliography'
+        - 'entity:node/field_botanical_identification'
+        - 'entity:node/field_city'
+        - 'entity:node/field_country'
+        - 'entity:node/field_dating_interval'
+        - 'entity:node/field_effects'
+        - 'entity:node/field_explicit'
+        - 'entity:node/field_foliation'
+        - 'entity:node/field_gloses'
+        - 'entity:node/field_herbal'
+        - 'entity:node/field_incipit'
+        - 'entity:node/field_institution'
+        - 'entity:node/field_known_as'
+        - 'entity:node/field_language'
+        - 'entity:node/field_link'
+        - 'entity:node/field_manuscript'
+        - 'entity:node/field_note'
+        - 'entity:node/field_private_note'
+        - 'entity:node/field_provenance'
+        - 'entity:node/field_reference'
+        - 'entity:node/field_scribe'
+        - 'entity:node/field_text_language'
+        - 'entity:node/field_transliteration_of_herbal'
+        - 'entity:node/field_type'
+        - 'entity:node/field_unified_medieval_name'
+        - 'entity:node/field_unique_identifier'
+        - 'entity:node/field_work'
+        - 'entity:node/langcode'
+        - 'entity:node/nid'
+        - 'entity:node/title'
+        - 'entity:node/type'
+        - 'entity:taxonomy_term/field_common_czech_name'
+        - 'entity:taxonomy_term/field_common_english_name'
+        - 'entity:taxonomy_term/name'
+        - rendered_item
+        - search_api_entity_type
+  name:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - taxonomy
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: 'solr_text_custom:edge'
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          documentation: full
+          herbal_entry: search_index
+          instituce: search_index
+          manuscript: search_index
+          medieval_herb: search_index
+          page: full
+          work_in_manuscript: search_index
+        'entity:taxonomy_term':
+          botanical_name: search_index
+          effects: full
+          genre: full
+          geo_location: search_index
+          herbal_entry_type: full
+          work: search_index
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected:
+        - article
+        - bibliographic_citation
+        - islandora_object
+        - user
+    languages:
+      default: true
+      selected: {  }
+  'entity:taxonomy_term':
+    bundles:
+      default: false
+      selected:
+        - botanical_name
+        - effects
+        - genre
+        - geo_location
+        - herbal_entry_type
+        - work
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: false
+  track_changes_in_references: true
+server: default_solr_server

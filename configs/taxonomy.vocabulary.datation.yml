@@ -1,0 +1,9 @@
+uuid: 084477d5-7d6c-4b91-983e-b6efe7679d90
+langcode: en
+status: true
+dependencies: {  }
+name: Datation
+vid: datation
+description: 'Half century time ranges in which manuscripts were likely created'
+weight: 0
+new_revision: false

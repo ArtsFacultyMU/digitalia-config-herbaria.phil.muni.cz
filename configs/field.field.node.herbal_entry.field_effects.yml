@@ -1,0 +1,29 @@
+uuid: a6adec08-9de4-4345-b15d-d8e91c1482b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_effects
+    - node.type.herbal_entry
+    - taxonomy.vocabulary.effects
+id: node.herbal_entry.field_effects
+field_name: field_effects
+entity_type: node
+bundle: herbal_entry
+label: Effects
+description: 'Effects related to herbal entry as described in text'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      effects: effects
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

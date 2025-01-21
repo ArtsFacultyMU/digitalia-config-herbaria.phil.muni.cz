@@ -1,0 +1,22 @@
+uuid: d3b5b07e-bb3e-4210-b87d-d1b68a0ea6da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_note
+    - node.type.herbal_entry
+  module:
+    - text
+id: node.herbal_entry.field_note
+field_name: field_note
+entity_type: node
+bundle: herbal_entry
+label: Note
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

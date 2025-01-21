@@ -1,0 +1,39 @@
+uuid: 4a0c815f-59ec-4958-b5c0-95191dedcf84
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.translate_link_to_digitalia_in_menu
+  module:
+    - context
+    - islandora
+    - simple_block
+    - system
+  theme:
+    - islandora_muni
+id: islandora_muni_translatelinktodigitaliainmenu
+theme: islandora_muni
+region: primary_menu
+weight: -29
+provider: null
+plugin: 'simple_block:translate_link_to_digitalia_in_menu'
+settings:
+  id: 'simple_block:translate_link_to_digitalia_in_menu'
+  label: 'Translate link to Digitalia in menu'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/*'
+  http_status_code:
+    id: http_status_code
+    negate: false
+    status_codes:
+      200: 200

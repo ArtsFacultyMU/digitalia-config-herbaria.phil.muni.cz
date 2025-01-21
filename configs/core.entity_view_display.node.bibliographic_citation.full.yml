@@ -1,0 +1,34 @@
+uuid: c05301c3-184f-4fca-a428-317abeafb893
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.bibliographic_citation.field_citation
+    - node.type.bibliographic_citation
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.bibliographic_citation.full
+targetEntityType: node
+bundle: bibliographic_citation
+mode: full
+content:
+  field_citation:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  title: true
+  uid: true

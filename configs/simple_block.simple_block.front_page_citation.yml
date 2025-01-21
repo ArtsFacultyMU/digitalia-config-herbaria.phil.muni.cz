@@ -1,0 +1,11 @@
+uuid: 3b9d4bdf-3a62-4211-b4b2-eb7a3056b15f
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: front_page_citation
+title: 'Front page citation'
+content:
+  value: "<p><strong>How to cite the database</strong></p><p>The recommended form of citation, according to the Harvard format, if you are citing the database as a whole (e.g., in acknowledgements):</p><ul><li>Stehlíková, D, Herbaria manuscripta, online database, Digitalia MUNI ARTS, Faculty of Arts, Masaryk University, viewed <script>\r\n                        var options = { year: 'numeric', month: 'long', day: 'numeric' }; document.write( new Date().toLocaleDateString('en-GB', options));</script>, <a href=\"https://herbaria.phil.muni.cz/\" target=\"_blank\" title=\"https://herbaria.phil.muni.cz/\">https://herbaria.phil.muni.cz/.</a></li></ul>"
+  format: full_html

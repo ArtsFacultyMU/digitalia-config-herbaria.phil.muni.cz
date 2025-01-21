@@ -1,0 +1,18 @@
+uuid: 4a92fc1f-d8a0-4371-9e97-5aab8453e0c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.medieval_herb
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.medieval_herb
+target_entity_type_id: node
+target_bundle: medieval_herb
+default_langcode: und
+language_alterable: false

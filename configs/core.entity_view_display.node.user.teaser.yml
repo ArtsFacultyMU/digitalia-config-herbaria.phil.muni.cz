@@ -1,0 +1,42 @@
+uuid: 9f2c400d-8c0f-4f70-9df9-14099bb04d3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.user.field_expertise
+    - field.field.node.user.field_link
+    - field.field.node.user.field_user
+    - node.type.user
+  module:
+    - manage_display
+id: node.user.teaser
+targetEntityType: node
+bundle: user
+mode: teaser
+content:
+  field_expertise:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_link: true
+  field_user: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  uid: true

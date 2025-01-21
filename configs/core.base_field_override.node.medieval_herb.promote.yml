@@ -1,0 +1,22 @@
+uuid: b15d372e-c2f9-446f-8153-1160e83fc5bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.medieval_herb
+id: node.medieval_herb.promote
+field_name: promote
+entity_type: node
+bundle: medieval_herb
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

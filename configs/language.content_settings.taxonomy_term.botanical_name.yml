@@ -1,0 +1,18 @@
+uuid: 19d97acb-545e-49cd-a273-f91a05d28fea
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.botanical_name
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+id: taxonomy_term.botanical_name
+target_entity_type_id: taxonomy_term
+target_bundle: botanical_name
+default_langcode: und
+language_alterable: true

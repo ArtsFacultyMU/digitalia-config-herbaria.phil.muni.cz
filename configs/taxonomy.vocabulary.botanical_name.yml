@@ -1,0 +1,9 @@
+uuid: b1220924-4fb6-46b5-9f8c-712464418e9c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Modern Name of Simple Medicine'
+vid: botanical_name
+description: Herbaria
+weight: 0
+new_revision: false

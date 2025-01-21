@@ -1,0 +1,46 @@
+uuid: 544e40b8-2df2-45b5-9eb8-49d3be94defd
+status: true
+dependencies: {  }
+id: node_manuscript
+migration_tags: null
+migration_group: herbaria_content
+label: 'Import Manuscript Nodes'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/migrate/node_manuscript.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    uid: 1
+process:
+  type:
+    plugin: default_value
+    default_value: manuscript
+  uid: constants/uid
+  title: signatura
+  field_created_after: datace_od
+  field_created_before: datace_do
+  field_dating: datace
+  field_dating_interval:
+    -
+      plugin: explode
+      delimiter: ', '
+      source: dating
+    -
+      plugin: migration_lookup
+      migration: term_datation
+  field_institution:
+    plugin: migration_lookup
+    migration: node_institution
+    source: nid_instituce
+  field_link/uri: link
+  field_link/title: link_text
+  field_note: poznamka
+  field_private_note: skryta_poznamka
+  field_provenance: Provenance
+  field_scribe: scribe
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null

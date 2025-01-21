@@ -1,0 +1,22 @@
+display:
+  default:
+    display_options:
+      title: Vyhledávání
+      pager:
+        options:
+          tags:
+            first: '« První'
+            last: 'Poslední »'
+      exposed_form:
+        options:
+          reset_button_label: Resetovat
+      empty:
+        area:
+          content:
+            value: '<p><span>Žádné položky nenalezeny</span></p>'
+            format: basic_html
+      header:
+        result:
+          content: "Zobrazují se záznamy @start - @end z celkového počtu @total\r\n<br><br>"
+  page_1:
+    display_title: Stránka

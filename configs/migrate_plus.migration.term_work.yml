@@ -1,0 +1,28 @@
+uuid: a9fb1dfd-bef7-438b-86d2-05f1dcf507f2
+langcode: en
+status: true
+dependencies: {  }
+id: term_work
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: herbaria_content
+label: 'Import Unified Names of Texts Taxonomy'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/migrate/term_work.csv
+  delimiter: $
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: title
+  description: description
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: work
+migration_dependencies: null

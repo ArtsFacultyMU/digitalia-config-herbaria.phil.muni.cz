@@ -1,0 +1,20 @@
+uuid: b1f039c1-6362-4add-a5b1-b2454351a37b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.herbal_entry
+  module:
+    - path
+id: node.herbal_entry.path
+field_name: path
+entity_type: node
+bundle: herbal_entry
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

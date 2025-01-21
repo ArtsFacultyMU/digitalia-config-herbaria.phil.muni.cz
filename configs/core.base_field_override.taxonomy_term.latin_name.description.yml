@@ -1,0 +1,21 @@
+uuid: f2f142da-77ae-4ff8-a740-d616f2b14970
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.latin_name
+  module:
+    - text
+id: taxonomy_term.latin_name.description
+field_name: description
+entity_type: taxonomy_term
+bundle: latin_name
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,18 @@
+uuid: d2aba6bf-6676-4245-bc6b-1c7610848476
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.latin_name
+id: taxonomy_term.latin_name.name
+field_name: name
+entity_type: taxonomy_term
+bundle: latin_name
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

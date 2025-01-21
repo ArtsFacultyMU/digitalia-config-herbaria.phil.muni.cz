@@ -1,0 +1,35 @@
+uuid: 01200e89-844b-46a3-a8ca-36796e35f15d
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bibliographic_citation.field_citation
+    - node.type.bibliographic_citation
+  module:
+    - manage_display
+id: node.bibliographic_citation.teaser
+targetEntityType: node
+bundle: bibliographic_citation
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  field_citation: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

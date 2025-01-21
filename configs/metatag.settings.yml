@@ -1,0 +1,26 @@
+_core:
+  default_config_hash: tKLBW2GXZVLFXqS9QgLyfTuxCLc1u_quKPQLtCia-Bw
+entity_type_groups:
+  node:
+    herbal_entry:
+      dublin_core: dublin_core
+    manuscript:
+      dublin_core: dublin_core
+    medieval_herb:
+      dublin_core: dublin_core
+    work_in_manuscript:
+      dublin_core: dublin_core
+  taxonomy_term:
+    botanical_name:
+      dublin_core: dublin_core
+separator: ','
+tag_trim_method: beforeValue
+use_maxlength: true
+tag_trim_maxlength:
+  metatag_maxlength_title: null
+  metatag_maxlength_description: null
+  metatag_maxlength_abstract: null
+  metatag_maxlength_dcterms_title: null
+  metatag_maxlength_dcterms_description: null
+tag_scroll_max_height: ''
+tag_trim_end: '|.,-:;/+&([{"'''

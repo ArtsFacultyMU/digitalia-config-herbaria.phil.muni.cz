@@ -1,0 +1,18 @@
+uuid: 729cbe7d-e339-4f8a-9809-5c9a4f4e04cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.czech_name
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.czech_name
+target_entity_type_id: taxonomy_term
+target_bundle: czech_name
+default_langcode: site_default
+language_alterable: false

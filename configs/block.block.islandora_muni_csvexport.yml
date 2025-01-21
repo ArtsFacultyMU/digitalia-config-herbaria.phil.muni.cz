@@ -1,0 +1,39 @@
+uuid: 10d699a5-57f5-4e55-9eef-77480c2592b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.csv_export
+  module:
+    - context
+    - islandora
+    - simple_block
+  theme:
+    - islandora_muni
+id: islandora_muni_csvexport
+theme: islandora_muni
+region: sidebar_first
+weight: -23
+provider: null
+plugin: 'simple_block:csv_export'
+settings:
+  id: 'simple_block:csv_export'
+  label: 'CSV Export'
+  label_display: visible
+  provider: simple_block
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-botanical_identification-herbaria_modern_medicaments: view-botanical_identification-herbaria_modern_medicaments
+      view-herbals-herbaria_herbals: view-herbals-herbaria_herbals
+      view-herbaria_all_manuscripts-herbaria_all_manuscripts: view-herbaria_all_manuscripts-herbaria_all_manuscripts
+      view-institutions-page_1: view-institutions-page_1
+      view-medieval_medicaments-page_1: view-medieval_medicaments-page_1
+      view-works-herbaria_works: view-works-herbaria_works
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

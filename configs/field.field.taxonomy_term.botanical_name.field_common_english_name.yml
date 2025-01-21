@@ -1,0 +1,19 @@
+uuid: 0ffb09d1-d1c9-428a-a445-b8f3b07e4c0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_common_english_name
+    - taxonomy.vocabulary.botanical_name
+id: taxonomy_term.botanical_name.field_common_english_name
+field_name: field_common_english_name
+entity_type: taxonomy_term
+bundle: botanical_name
+label: 'Common English Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

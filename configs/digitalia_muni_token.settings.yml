@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: 6PQBSsRyX81lTFgc44CgmHotr19DK4tVapnDUDm2pO0
+langcode: en
+media_fields: 'image:field_media_image;file:field_media_file'
+reference_fields: 'field_manuscript:work_in_manuscript;field_institution:manuscript;title:institution;field_manuscript:manuscript;manuscript:field_institution;field_institution:instituce;field_member_of:instituce;instituce:title;manuscript:title;manuscript:field_dating;manuscript:field_dating_interval;field_institution:title;field_herbal:herbal_entry;herbal_entry:title'
+media_delimiter: ;
+reference_delimiter: ', '
+double_fields: ''
+triple_fields: ''

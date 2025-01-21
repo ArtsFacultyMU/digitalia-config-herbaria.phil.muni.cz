@@ -1,0 +1,20 @@
+uuid: 6484bc15-b146-431d-934b-3fae34d4af71
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.medieval_herb
+id: node.medieval_herb.uid
+field_name: uid
+entity_type: node
+bundle: medieval_herb
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

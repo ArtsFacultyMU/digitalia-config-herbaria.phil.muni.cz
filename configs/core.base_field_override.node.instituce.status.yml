@@ -1,0 +1,22 @@
+uuid: f2748f28-fb7d-429d-8203-1725b5b5ff3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.instituce
+id: node.instituce.status
+field_name: status
+entity_type: node
+bundle: instituce
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

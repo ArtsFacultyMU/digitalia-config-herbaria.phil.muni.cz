@@ -1,0 +1,51 @@
+uuid: d3dbc475-c6b7-41be-931c-2f6e5d9e47c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - node.type.herbal_entry
+    - node.type.medieval_herb
+    - taxonomy.vocabulary.botanical_name
+  module:
+    - content_translation
+    - field_permissions
+    - filter
+    - node
+    - taxonomy
+    - taxonomy_manager
+id: contributor
+label: Contributor
+weight: 4
+is_admin: null
+permissions:
+  - 'access taxonomy manager list'
+  - 'create field_botanical_identification'
+  - 'create field_created_after'
+  - 'create field_created_before'
+  - 'create field_private_note'
+  - 'create herbal_entry content'
+  - 'create medieval_herb content'
+  - 'create terms in botanical_name'
+  - 'delete own herbal_entry content'
+  - 'delete own medieval_herb content'
+  - 'delete terms in botanical_name'
+  - 'edit field_created_after'
+  - 'edit field_created_before'
+  - 'edit own field_botanical_identification'
+  - 'edit own field_created_after'
+  - 'edit own field_created_before'
+  - 'edit own field_private_note'
+  - 'edit own herbal_entry content'
+  - 'edit own medieval_herb content'
+  - 'edit own user_picture'
+  - 'edit terms in botanical_name'
+  - 'translate botanical_name taxonomy_term'
+  - 'use text format basic_html'
+  - 'view field_botanical_identification'
+  - 'view field_created_after'
+  - 'view field_created_before'
+  - 'view own field_botanical_identification'
+  - 'view own field_created_after'
+  - 'view own field_created_before'
+  - 'view own field_private_note'

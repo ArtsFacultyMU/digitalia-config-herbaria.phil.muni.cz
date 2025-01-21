@@ -1,0 +1,22 @@
+uuid: 9b62dfb6-ca52-4c6d-a264-ea86fcc87b87
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.herbal_entry
+id: node.herbal_entry.status
+field_name: status
+entity_type: node
+bundle: herbal_entry
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

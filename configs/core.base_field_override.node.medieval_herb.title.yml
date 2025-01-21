@@ -1,0 +1,18 @@
+uuid: 946ecb7b-b7e7-4778-82a8-fcf01dd57074
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.medieval_herb
+id: node.medieval_herb.title
+field_name: title
+entity_type: node
+bundle: medieval_herb
+label: 'Unified name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

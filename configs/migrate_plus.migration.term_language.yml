@@ -1,0 +1,35 @@
+uuid: 2e811b11-91f3-4559-a320-9694aee970bd
+langcode: en
+status: true
+dependencies: {  }
+id: term_language
+migration_tags: null
+migration_group: herbaria_content
+label: 'Import Language Taxonomy'
+source:
+  plugin: embedded_data
+  data_rows:
+    -
+      unique_id: 1
+      value: 'old czech'
+    -
+      unique_id: 2
+      value: latin
+    -
+      unique_id: 3
+      value: polish
+    -
+      unique_id: 4
+      value: german
+  ids:
+    unique_id:
+      type: integer
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: value
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: language
+migration_dependencies: null

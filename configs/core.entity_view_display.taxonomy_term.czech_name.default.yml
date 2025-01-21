@@ -1,0 +1,34 @@
+uuid: 7288e647-2b95-4099-9a98-e0f956cd450e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.czech_name.field_reference
+    - taxonomy.vocabulary.czech_name
+  module:
+    - text
+id: taxonomy_term.czech_name.default
+targetEntityType: taxonomy_term
+bundle: czech_name
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_reference:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  langcode: true
+  name: true
+  search_api_excerpt: true

@@ -1,0 +1,9 @@
+uuid: 11ce9952-f52e-4a2b-88db-67a88ca32df5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Certainty Scale'
+vid: certainty
+description: "Hunston's scale of certainty"
+weight: 0
+new_revision: false

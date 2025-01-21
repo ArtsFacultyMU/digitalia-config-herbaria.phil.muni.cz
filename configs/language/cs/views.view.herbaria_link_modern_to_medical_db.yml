@@ -1,0 +1,17 @@
+display:
+  default:
+    display_options:
+      fields:
+        name:
+          alter:
+            text: '⚕️ Vyhledat lékařskou literaturu k této rostlině v databázi PubMed'
+        name_2:
+          alter:
+            text: '⚘ Vyhledat rostlinu v databázi Plants of the World Online (pouze anglicky)'
+        name_1:
+          alter:
+            text: '⚕️ Zkusit vyhledat rostlinu v Atlasu léčivých rostlin'
+        name_3:
+          alter:
+            text: '⚘ Zkusit vyhledat rostlinu v Databáze české flóry a vegetace (PLADIAS)'
+            path: 'https://pladias.cz/taxon/overview/{{ name_3 }}'

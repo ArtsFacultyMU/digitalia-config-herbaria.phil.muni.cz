@@ -1,0 +1,36 @@
+display:
+  default:
+    display_options:
+      title: 'Moderní názvy jednoduchých léčiv'
+      pager:
+        options:
+          tags:
+            first: '« První'
+            last: 'Poslední »'
+      exposed_form:
+        options:
+          submit_button: Odeslat
+          reset_button_label: Resetovat
+          exposed_sorts_label: Seřadit
+          sort_asc_label: vzestupně
+          sort_desc_label: sestupně
+      filters:
+        name:
+          expose:
+            label: 'Moderní název'
+        field_common_english_name_value:
+          expose:
+            label: 'Anglický název'
+        field_common_czech_name_value:
+          expose:
+            label: 'Český název'
+      footer:
+        result:
+          content: 'Zobrazují se výsledky @start - @end z @total'
+      fields:
+        name:
+          label: 'Moderní název léčiva'
+        field_common_english_name:
+          label: 'Anglický název'
+        field_common_czech_name:
+          label: 'Český název'

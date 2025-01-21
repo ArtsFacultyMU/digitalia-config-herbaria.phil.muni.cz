@@ -1,0 +1,49 @@
+uuid: ec021b20-99a8-4640-9ab6-127fbfd76457
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.bibliographic_citation.field_citation
+    - node.type.bibliographic_citation
+  module:
+    - text
+id: node.bibliographic_citation.default
+targetEntityType: node
+bundle: bibliographic_citation
+mode: default
+content:
+  field_citation:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 250
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

@@ -1,0 +1,19 @@
+uuid: 43b76b48-08cc-4ef7-a388-240e1b18c5c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_english_name
+    - node.type.instituce
+id: node.instituce.field_english_name
+field_name: field_english_name
+entity_type: node
+bundle: instituce
+label: 'English name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

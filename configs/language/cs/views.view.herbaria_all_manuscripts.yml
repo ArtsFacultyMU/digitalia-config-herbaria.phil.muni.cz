@@ -1,0 +1,56 @@
+display:
+  default:
+    display_title: Rukopisy
+    display_options:
+      title: Rukopisy
+      fields:
+        title:
+          label: Signatura
+        field_institution:
+          label: 'Instituce a kolekce'
+        field_dating:
+          label: Datace
+        field_link:
+          label: Odkaz
+        field_city:
+          label: Město
+      exposed_form:
+        options:
+          submit_button: Odeslat
+          reset_button_label: Resetovat
+          exposed_sorts_label: Seřadit
+          sort_asc_label: vzestupně
+          sort_desc_label: sestupně
+          bef:
+            filter:
+              field_link_uri:
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: "- jakýkoliv -| Ne\r\nYes | Ano"
+      filters:
+        title:
+          expose:
+            label: Signatura
+        eref_node_titles:
+          expose:
+            label: Kolekce
+        field_link_uri:
+          expose:
+            label: Odkaz
+          group_info:
+            label: 'Zobrazovat jen rukopisy obsahující odkaz na digitalizovaný rukopis?'
+        field_dating_interval_target_id:
+          expose:
+            label: 'Interval datace'
+      footer:
+        result:
+          content: 'Zobrazuje se výsledek @start - @end z @total'
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Všechny -'
+  herbaria_all_manuscripts:
+    display_title: Stránka
+    display_options:
+      menu:
+        title: Rukopisy

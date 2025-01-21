@@ -1,0 +1,19 @@
+uuid: 7b6c7d66-c9c1-4501-b18a-9910f5f378c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_private_note
+    - node.type.work_in_manuscript
+id: node.work_in_manuscript.field_private_note
+field_name: field_private_note
+entity_type: node
+bundle: work_in_manuscript
+label: 'Private note'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

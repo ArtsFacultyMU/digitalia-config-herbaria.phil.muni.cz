@@ -1,0 +1,32 @@
+uuid: 60588aa7-79f4-4824-ac8c-28c44320dcc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_bibliography
+    - taxonomy.vocabulary.botanical_name
+  module:
+    - datafield
+id: taxonomy_term.botanical_name.field_bibliography
+field_name: field_bibliography
+entity_type: taxonomy_term
+bundle: botanical_name
+label: Bibliography
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    reference:
+      label: Reference
+      required: false
+      entity_reference_type: node
+      target_bundles: bibliographic_citation
+    note:
+      label: Note
+      list: false
+      allowed_values: ''
+      required: false
+field_type: data_field

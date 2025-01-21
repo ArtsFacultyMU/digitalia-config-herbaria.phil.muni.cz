@@ -1,0 +1,20 @@
+uuid: c1fe4cf9-a5ee-4a3f-8c59-dae58ddea31f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.herbal_entry
+id: node.herbal_entry.menu_link
+field_name: menu_link
+entity_type: node
+bundle: herbal_entry
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

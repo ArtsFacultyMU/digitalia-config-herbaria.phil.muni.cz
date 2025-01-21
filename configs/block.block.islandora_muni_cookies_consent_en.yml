@@ -1,0 +1,41 @@
+uuid: 57b2e475-afae-459f-bc67-556bbab0d1b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.cookies_consent_en
+  module:
+    - islandora
+    - language
+    - simple_block
+    - system
+  theme:
+    - islandora_muni
+id: islandora_muni_cookies_consent_en
+theme: islandora_muni
+region: footer_first
+weight: 0
+provider: null
+plugin: 'simple_block:cookies_consent_en'
+settings:
+  id: 'simple_block:cookies_consent_en'
+  label: cookies_consent_en
+  label_display: '0'
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/user/*/*"

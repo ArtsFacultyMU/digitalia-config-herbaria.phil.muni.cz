@@ -1,0 +1,23 @@
+display:
+  default:
+    display_options:
+      title: 'Herbáře s položkami identifikované jako toto léčivo'
+      fields:
+        field_herbal:
+          label: Herbář
+        title:
+          label: 'Variantní název v herbáři'
+        field_botanical_identification:
+          label: 'Moderní název'
+        field_gloses:
+          label: Glosy
+      pager:
+        options:
+          tags:
+            next: 'Další ›'
+            previous: '‹ Předchozí'
+            first: '« První'
+            last: 'Poslední »'
+      header:
+        result:
+          content: 'Počet výskytů tohoto jednoduchého léčiva napříč středověkými herbáři: @total'

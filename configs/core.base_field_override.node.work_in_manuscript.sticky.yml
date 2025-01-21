@@ -1,0 +1,22 @@
+uuid: 511141bb-2484-4614-ba21-fb4db7840dc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.work_in_manuscript
+id: node.work_in_manuscript.sticky
+field_name: sticky
+entity_type: node
+bundle: work_in_manuscript
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

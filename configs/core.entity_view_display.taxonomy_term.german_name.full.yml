@@ -1,0 +1,34 @@
+uuid: 17c0ac16-1233-4d41-9cc8-8074cdb4679d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.german_name.field_reference
+    - taxonomy.vocabulary.german_name
+  module:
+    - text
+id: taxonomy_term.german_name.full
+targetEntityType: taxonomy_term
+bundle: german_name
+mode: full
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_reference:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  name: true
+  search_api_excerpt: true

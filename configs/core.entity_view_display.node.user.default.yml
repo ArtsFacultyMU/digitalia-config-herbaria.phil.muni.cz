@@ -1,0 +1,60 @@
+uuid: 5d12f313-9123-4876-8e5c-284c37d9b472
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.user.field_expertise
+    - field.field.node.user.field_link
+    - field.field.node.user.field_user
+    - node.type.user
+  module:
+    - link
+    - manage_display
+id: node.user.default
+targetEntityType: node
+bundle: user
+mode: default
+content:
+  field_expertise:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_user:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  uid: true

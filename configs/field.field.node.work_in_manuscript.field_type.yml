@@ -1,0 +1,33 @@
+uuid: 1c88fb7c-0ca4-4728-8118-eb45526d4ac9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.work_in_manuscript
+    - taxonomy.vocabulary.genre
+  content:
+    - 'taxonomy_term:genre:81c89388-fa7c-4baa-9b04-0ed0d8b2885f'
+id: node.work_in_manuscript.field_type
+field_name: field_type
+entity_type: node
+bundle: work_in_manuscript
+label: Type
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 81c89388-fa7c-4baa-9b04-0ed0d8b2885f
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      genre: genre
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

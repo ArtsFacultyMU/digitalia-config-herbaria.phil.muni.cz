@@ -1,0 +1,19 @@
+uuid: 29f2eab3-fd61-4a08-9a49-573337c661df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_private_note
+    - node.type.herbal_entry
+id: node.herbal_entry.field_private_note
+field_name: field_private_note
+entity_type: node
+bundle: herbal_entry
+label: 'Private note'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

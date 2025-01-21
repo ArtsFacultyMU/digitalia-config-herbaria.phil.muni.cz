@@ -1,0 +1,19 @@
+uuid: 5bb75bfa-444f-48f4-a740-0b89bafcc63d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.czech_name.field_reference
+    - taxonomy.vocabulary.czech_name
+id: taxonomy_term.czech_name.full
+targetEntityType: taxonomy_term
+bundle: czech_name
+mode: full
+content: {  }
+hidden:
+  description: true
+  field_reference: true
+  langcode: true
+  name: true
+  search_api_excerpt: true

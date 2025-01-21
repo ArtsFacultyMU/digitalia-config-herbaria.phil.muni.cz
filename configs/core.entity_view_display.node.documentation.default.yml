@@ -1,0 +1,97 @@
+uuid: 5f02bd04-b148-44fd-b9a2-49ff7cdb7c36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.documentation.body
+    - field.field.node.documentation.field_created_by
+    - field.field.node.documentation.field_edtf_date_issued
+    - field.field.node.documentation.field_language
+    - field.field.node.documentation.field_member_of
+    - field.field.node.documentation.field_model
+    - field.field.node.documentation.field_rights
+    - field.field.node.documentation.field_unique_identifier
+    - node.type.documentation
+  module:
+    - controlled_access_terms
+    - manage_display
+    - text
+id: node.documentation.default
+targetEntityType: node
+bundle: documentation
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_created_by:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_edtf_date_issued:
+    type: edtf_default
+    label: inline
+    settings:
+      date_separator: dash
+      date_order: big_endian
+      month_format: mm
+      day_format: dd
+      year_format: 'y'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_language:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_rights:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_unique_identifier:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  islandora_fits_checksum:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_member_of: true
+  field_model: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

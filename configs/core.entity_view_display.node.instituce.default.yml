@@ -1,0 +1,96 @@
+uuid: 705a5696-b5f5-4905-8f89-c89eba909252
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.instituce.field_city
+    - field.field.node.instituce.field_country
+    - field.field.node.instituce.field_english_name
+    - field.field.node.instituce.field_link
+    - field.field.node.instituce.field_member_of
+    - field.field.node.instituce.field_model
+    - node.type.instituce
+  module:
+    - layout_builder
+    - link
+    - manage_display
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.instituce.default
+targetEntityType: node
+bundle: instituce
+mode: default
+content:
+  field_city:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_country:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_english_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_member_of:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  herbaria_manuscripts_by_institution_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  herbaria_subinstitutions_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_model: true
+  islandora_fits_checksum: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  uid: true

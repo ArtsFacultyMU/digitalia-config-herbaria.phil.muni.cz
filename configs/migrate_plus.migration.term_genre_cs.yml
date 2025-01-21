@@ -1,0 +1,37 @@
+uuid: a3ae80a0-30fb-4ebb-9fa9-563084dd9568
+langcode: cs
+status: true
+dependencies: {  }
+id: term_genre_cs
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: herbaria_content
+label: 'Import Genre Taxonomy Translations'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/migrate/term_genre.csv
+  delimiter: $
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    uid: 1
+    lang: cs
+process:
+  uid: constants/uid
+  tid:
+    plugin: migration_lookup
+    source: id
+    migration: term_genre
+  langcode: constants/lang
+  name: genre_cs
+  description: description_cs
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: genre
+  translations: true
+migration_dependencies:
+  required:
+    - term_genre

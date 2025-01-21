@@ -1,0 +1,16 @@
+uuid: 46b8a1bb-0270-48a1-a91c-834179f876d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.datation
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.datation
+target_entity_type_id: taxonomy_term
+target_bundle: datation
+default_langcode: site_default
+language_alterable: false

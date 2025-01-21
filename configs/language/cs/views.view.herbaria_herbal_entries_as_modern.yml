@@ -1,0 +1,18 @@
+display:
+  default:
+    display_options:
+      fields:
+        field_herbal:
+          label: Herbář
+        title:
+          label: 'Položka v herbáři'
+      pager:
+        options:
+          tags:
+            next: 'Další ›'
+            previous: '‹ Předchozí'
+            first: '« První'
+            last: 'Poslední »'
+      header:
+        result:
+          content: 'Počet výskytů tohoto léčiva v databázi: @total'

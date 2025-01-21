@@ -1,0 +1,45 @@
+uuid: 4be1a010-776e-438e-8868-646769bf0bb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.work.field_bibliography
+    - field.field.taxonomy_term.work.field_text_language
+    - taxonomy.vocabulary.work
+  module:
+    - text
+id: taxonomy_term.work.default
+targetEntityType: taxonomy_term
+bundle: work
+mode: default
+content:
+  copies_of_this_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  description:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text_language:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  render_term_bibliography_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_bibliography: true
+  langcode: true
+  name: true
+  search_api_excerpt: true

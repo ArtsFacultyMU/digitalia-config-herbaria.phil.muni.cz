@@ -1,0 +1,29 @@
+uuid: d4938bbd-e1dd-4ffa-8bed-623e56d13ad9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_authority_link
+    - taxonomy.vocabulary.botanical_name
+  module:
+    - controlled_access_terms
+id: taxonomy_term.botanical_name.field_authority_link
+field_name: field_authority_link
+entity_type: taxonomy_term
+bundle: botanical_name
+label: 'Links to databases with more information about this simple medicine'
+description: 'Add a link to PLADIAS https://pladias.cz/taxon/ or POWO https://powo.science.kew.org/ and to the Czech Atlas of Medicinal Plants https://is.muni.cz/auth/do/med/el/lecive_rostliny/atlas.html'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  authority_sources:
+    pladias: 'Pladias (Databáze české flóry a vegetace/Database of Czech Flora & Vegetation)'
+    powo: 'Plants of the World Online'
+    ipni: 'International Plant Names Index'
+    floraveg: FloraVeg.EU
+    alr: 'Atlas léčivých rostlin/Atlas of Medicinal Plants'
+  title: 1
+  link_type: 16
+field_type: authority_link
