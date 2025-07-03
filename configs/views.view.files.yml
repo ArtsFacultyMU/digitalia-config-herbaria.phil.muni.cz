@@ -529,7 +529,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: Filename
+            label: 'Název souboru'
             description: ''
             use_operator: false
             operator: filename_op
@@ -904,7 +904,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: 'Entity type'
+          label: 'Typ entity'
           exclude: false
           alter:
             alter_text: false

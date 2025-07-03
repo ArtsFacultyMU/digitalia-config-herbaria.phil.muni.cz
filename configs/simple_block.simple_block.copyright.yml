@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
+    - filter.format.full_html
 id: copyright
 title: copyright
 content:
-  value: '<p><br><strong>Copyright</strong></p><p>The Herbaria manuscripta dataset authored and created by Masaryk University, can be used in accordance with the Creative Commons license terms: <a href="https://creativecommons.org/licenses/by/4.0/"><span>Creative Commons BY 4.0</span></a><span>.</span></p>'
-  format: basic_html
+  value: '<p><strong>Copyright</strong></p><p>The Herbaria manuscripta dataset authored and created by Masaryk University, can be used in accordance with the Creative Commons license terms: <a href="https://creativecommons.org/licenses/by/4.0/"><span>CC BY 4.0.</span></a></p><p><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="/themes/custom/islandora_muni/images/by.svg" alt="CC BY" width="120" height="42"></a></p>'
+  format: full_html
