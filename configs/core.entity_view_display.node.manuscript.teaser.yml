@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.manuscript.field_annotated_bibliography
     - field.field.node.manuscript.field_bibliography
     - field.field.node.manuscript.field_created_after
     - field.field.node.manuscript.field_created_before
@@ -23,6 +24,11 @@ targetEntityType: node
 bundle: manuscript
 mode: teaser
 content:
+  render_bibliography_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   title:
     type: string
     label: visually_hidden
@@ -33,6 +39,7 @@ content:
     region: content
 hidden:
   created: true
+  field_annotated_bibliography: true
   field_bibliography: true
   field_created_after: true
   field_created_before: true

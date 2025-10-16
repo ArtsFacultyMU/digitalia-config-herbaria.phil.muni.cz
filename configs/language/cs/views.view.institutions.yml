@@ -25,7 +25,7 @@ display:
         field_institution:
           label: Instituce
         title_2:
-          label: Kolekce
+          label: 'Instituce » Kolekce'
         field_city:
           label: Město
         title:

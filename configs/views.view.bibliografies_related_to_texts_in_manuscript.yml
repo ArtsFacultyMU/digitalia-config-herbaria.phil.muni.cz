@@ -5,11 +5,11 @@ dependencies:
   config:
     - node.type.work_in_manuscript
   module:
-    - digitalia_muni_view_field
     - eva
     - node
     - taxonomy
     - user
+    - views_field_view
 id: bibliografies_related_to_texts_in_manuscript
 label: 'Bibliografies related to texts in manuscript'
 module: views
@@ -26,17 +26,18 @@ display:
     display_options:
       title: ''
       fields:
-        bibliographicref:
-          id: bibliographicref
-          table: node
-          field: bibliographicref
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
           relationship: field_manuscript
           group_type: group
           admin_label: ''
           entity_type: node
-          plugin_id: bibliographicref
-          label: 'Bibliography on this manuscript'
-          exclude: false
+          entity_field: nid
+          plugin_id: field
+          label: ''
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -66,7 +67,7 @@ display:
             html: false
           element_type: ''
           element_class: ''
-          element_label_type: strong
+          element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
@@ -76,16 +77,96 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-        bibliographicref_1:
-          id: bibliographicref_1
-          table: taxonomy_term_data
-          field: bibliographicref
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
           relationship: field_work
           group_type: group
           admin_label: ''
           entity_type: taxonomy_term
-          plugin_id: bibliographicref
-          label: 'Bibliography on this title'
+          entity_field: tid
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: 'manuscript bibliography'
+          plugin_id: view
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -116,7 +197,7 @@ display:
             html: false
           element_type: ''
           element_class: ''
-          element_label_type: strong
+          element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
@@ -126,6 +207,61 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          view: render_bibliography
+          display: entity_view_1
+          arguments: '{{ raw_fields.nid }} '
+        view_1:
+          id: view_1
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: 'title bibliography'
+          plugin_id: view
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: render_term_bibliography
+          display: default
+          arguments: '{{ raw_fields.tid }}'
       pager:
         type: none
         options:
@@ -228,8 +364,10 @@ display:
         type: fields
         options:
           default_field_elements: true
-          inline: {  }
-          separator: ''
+          inline:
+            view: view
+            view_1: view_1
+          separator: '<br>'
           hide_empty: true
       query:
         type: views_query
@@ -264,33 +402,7 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_interface'
-        - url
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_1:
-    id: block_1
-    display_title: Block
-    display_plugin: block
-    position: 1
-    display_options:
-      display_extenders:
-        matomo:
-          enabled: false
-          keyword_gets: ''
-          keyword_behavior: first
-          keyword_concat_separator: ' '
-          category_behavior: none
-          category_gets: ''
-          category_concat_separator: ' '
-          category_fallback: ''
-          category_facets: {  }
-          category_facets_concat_separator: ', '
-      block_description: 'Bibliografies related to texts in manuscript'
-    cache_metadata:
-      max-age: -1
-      contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
@@ -320,6 +432,7 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'

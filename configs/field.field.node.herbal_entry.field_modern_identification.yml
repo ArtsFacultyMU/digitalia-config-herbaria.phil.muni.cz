@@ -1,0 +1,29 @@
+uuid: d735558b-9df7-4fdc-be3b-618b2e68f374
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modern_identification
+    - node.type.herbal_entry
+    - node.type.simple_medicine_modern_identific
+id: node.herbal_entry.field_modern_identification
+field_name: field_modern_identification
+entity_type: node
+bundle: herbal_entry
+label: 'Modern name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      simple_medicine_modern_identific: simple_medicine_modern_identific
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

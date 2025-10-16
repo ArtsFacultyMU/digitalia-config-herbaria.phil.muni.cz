@@ -3,11 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.work.field_annotated_bibliography
     - field.field.taxonomy_term.work.field_bibliography
     - field.field.taxonomy_term.work.field_text_language
     - taxonomy.vocabulary.work
   module:
-    - datafield
+    - inline_entity_form
     - text
 id: taxonomy_term.work.default
 targetEntityType: taxonomy_term
@@ -22,28 +23,23 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_bibliography:
-    type: data_field_widget
-    weight: 3
+  field_annotated_bibliography:
+    type: inline_entity_form_complex
+    weight: 4
     region: content
     settings:
-      inline: false
-      widget_settings:
-        reference:
-          type: entity_reference_autocomplete
-          label_display: ''
-          field_display: '1'
-          weight: 0
-          col: ''
-          autocreate: 0
-        note:
-          type: textfield
-          label_display: ''
-          size: 30
-          placeholder: 'Please type'
-          field_display: '1'
-          weight: 0
-          col: ''
+      form_mode: default
+      override_labels: true
+      label_singular: reference
+      label_plural: references
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: true
+      removed_reference: keep
     third_party_settings: {  }
   field_text_language:
     type: entity_reference_autocomplete
@@ -63,7 +59,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  simple_sitemap:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_bibliography: true
   langcode: true
   path: true
   status: true

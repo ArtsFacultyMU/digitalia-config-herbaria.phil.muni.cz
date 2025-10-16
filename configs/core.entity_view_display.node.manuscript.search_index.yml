@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_index
+    - field.field.node.manuscript.field_annotated_bibliography
     - field.field.node.manuscript.field_bibliography
     - field.field.node.manuscript.field_created_after
     - field.field.node.manuscript.field_created_before
@@ -77,6 +78,7 @@ content:
 hidden:
   created: true
   display_both_institution_and_collection_of_manuscript_entity_view_1: true
+  field_annotated_bibliography: true
   field_bibliography: true
   field_created_after: true
   field_created_before: true

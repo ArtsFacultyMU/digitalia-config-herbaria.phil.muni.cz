@@ -1,0 +1,21 @@
+links:
+  -
+    path: /
+    priority: '1.0'
+    changefreq: daily
+  -
+    path: /about
+    priority: '1.0'
+    changefreq: monthly
+  -
+    path: /help
+    priority: '1.0'
+    changefreq: monthly
+  -
+    path: /documentation
+    priority: '1.0'
+    changefreq: monthly
+  -
+    path: /literature
+    priority: '1.0'
+    changefreq: monthly

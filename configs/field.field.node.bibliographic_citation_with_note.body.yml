@@ -1,0 +1,24 @@
+uuid: 1dd4c469-1ba4-438a-9d4e-1a80ba549e60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.bibliographic_citation_with_note
+  module:
+    - text
+id: node.bibliographic_citation_with_note.body
+field_name: body
+entity_type: node
+bundle: bibliographic_citation_with_note
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

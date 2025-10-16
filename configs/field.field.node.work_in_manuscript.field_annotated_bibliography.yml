@@ -1,0 +1,29 @@
+uuid: 09bdf1b4-b9b3-4ff7-bd46-57c4f4dce51f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annotated_bibliography
+    - node.type.bibliographic_citation_with_note
+    - node.type.work_in_manuscript
+id: node.work_in_manuscript.field_annotated_bibliography
+field_name: field_annotated_bibliography
+entity_type: node
+bundle: work_in_manuscript
+label: Bibliography
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bibliographic_citation_with_note: bibliographic_citation_with_note
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

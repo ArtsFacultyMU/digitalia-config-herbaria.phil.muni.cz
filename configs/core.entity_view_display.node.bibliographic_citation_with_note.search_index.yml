@@ -1,0 +1,46 @@
+uuid: 5e12e628-83a1-4ee4-9f20-00c83af89245
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.bibliographic_citation_with_note.body
+    - field.field.node.bibliographic_citation_with_note.field_bibliographic_citation
+    - field.field.node.bibliographic_citation_with_note.field_note
+    - node.type.bibliographic_citation_with_note
+  module:
+    - manage_display
+    - text
+id: node.bibliographic_citation_with_note.search_index
+targetEntityType: node
+bundle: bibliographic_citation_with_note
+mode: search_index
+content:
+  field_note:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  body: true
+  created: true
+  field_bibliographic_citation: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

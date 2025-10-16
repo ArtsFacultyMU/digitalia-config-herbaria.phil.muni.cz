@@ -1,0 +1,7 @@
+uuid: 8df7e1cc-9875-43ac-8331-a1cc4434824e
+langcode: en
+status: false
+dependencies: {  }
+formId: node_bibliographic_citation_form
+captchaType: default
+label: node_bibliographic_citation_form

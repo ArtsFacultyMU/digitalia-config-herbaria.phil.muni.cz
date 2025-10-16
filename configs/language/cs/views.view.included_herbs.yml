@@ -11,10 +11,10 @@ display:
           label: 'Položka herbáře'
         field_foliation:
           label: Foliace
-        field_botanical_identification:
-          label: 'Moderní název'
-        field_gloses:
+        field_glosses:
           label: Glosy
+        field_modern_identification:
+          label: 'Moderní název'
       header:
         result:
           content: "<h1>Léčiva v tomto herbáři</h1>\r\nZobrazuje se @start až @end z @total položek v herbáři"

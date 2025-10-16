@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.search_index
+    - field.field.taxonomy_term.botanical_name.field_annotated_bibliography
     - field.field.taxonomy_term.botanical_name.field_authority_link
     - field.field.taxonomy_term.botanical_name.field_bibliography
     - field.field.taxonomy_term.botanical_name.field_common_czech_name
@@ -48,11 +49,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -89,6 +85,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 5
     region: content
@@ -133,6 +134,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_annotated_bibliography: true
   herbaria_herbal_entries_as_modern_entity_view_1: true
   herbaria_link_modern_to_medical_db_entity_view_1: true
   langcode: true

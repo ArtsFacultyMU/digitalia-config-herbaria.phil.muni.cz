@@ -1,0 +1,24 @@
+uuid: 5f4f7439-aff9-4f05-85cc-10361a5af696
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_note
+    - filter.format.plain_text
+    - node.type.simple_medicine_modern_identific
+  module:
+    - text
+id: node.simple_medicine_modern_identific.field_note
+field_name: field_note
+entity_type: node
+bundle: simple_medicine_modern_identific
+label: Note
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text_long

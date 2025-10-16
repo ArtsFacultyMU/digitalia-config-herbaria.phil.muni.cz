@@ -1,0 +1,36 @@
+uuid: fdd83ad0-9ea3-46e3-b957-4d0874f5a7ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.simple_medicine_modern_identific.body
+    - field.field.node.simple_medicine_modern_identific.field_certainty
+    - field.field.node.simple_medicine_modern_identific.field_identified_by
+    - field.field.node.simple_medicine_modern_identific.field_note
+    - field.field.node.simple_medicine_modern_identific.field_simple_medicine
+    - node.type.simple_medicine_modern_identific
+id: node.simple_medicine_modern_identific.teaser
+targetEntityType: node
+bundle: simple_medicine_modern_identific
+mode: teaser
+content:
+  field_simple_medicine:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  created: true
+  field_certainty: true
+  field_identified_by: true
+  field_note: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  title: true
+  uid: true

@@ -1,0 +1,11 @@
+uuid: 91c495b5-9dfc-4b86-a957-74d0ee19da93
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bibliographic_citation_with_note
+id: node.bibliographic_citation_with_note
+target_entity_type_id: node
+target_bundle: bibliographic_citation_with_note
+default_langcode: site_default
+language_alterable: false

@@ -7,10 +7,10 @@ display:
           label: Herbář
         title:
           label: 'Variantní název v herbáři'
-        field_botanical_identification:
-          label: 'Moderní název'
-        field_gloses:
+        field_glosses:
           label: Glosy
+        field_modern_identification:
+          label: 'Moderní název'
       pager:
         options:
           tags:

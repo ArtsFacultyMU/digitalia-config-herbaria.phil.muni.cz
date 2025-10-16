@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.medieval_herb.field_annotated_bibliography
     - field.field.node.medieval_herb.field_bibliography
     - field.field.node.medieval_herb.field_note
     - field.field.node.medieval_herb.field_private_note
@@ -25,6 +26,11 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
+  render_bibliography_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   title:
     type: title
     label: above
@@ -36,6 +42,7 @@ content:
     region: content
 hidden:
   created: true
+  field_annotated_bibliography: true
   field_bibliography: true
   field_note: true
   field_private_note: true

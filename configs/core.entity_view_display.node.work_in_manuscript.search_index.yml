@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_index
+    - field.field.node.work_in_manuscript.field_annotated_bibliography
     - field.field.node.work_in_manuscript.field_bibliography
     - field.field.node.work_in_manuscript.field_explicit
     - field.field.node.work_in_manuscript.field_foliation
@@ -17,6 +18,7 @@ dependencies:
     - node.type.work_in_manuscript
   module:
     - advanced_search
+    - link
     - manage_display
     - text
 id: node.work_in_manuscript.search_index
@@ -31,12 +33,32 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_foliation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
   field_incipit:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 5
+    region: content
+  field_link_to_full_text:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_manuscript:
     type: entity_reference_url_title
@@ -53,6 +75,14 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
   field_work:
     type: entity_reference_label
     label: above
@@ -66,6 +96,11 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
+  render_bibliography_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
   title:
     type: title
     label: hidden
@@ -76,17 +111,16 @@ content:
     weight: 0
     region: content
 hidden:
+  add_new_herbal_entry_button_entity_view_1: true
   bibliografies_related_to_texts_in_manuscript_entity_view_1: true
   created: true
+  field_annotated_bibliography: true
   field_bibliography: true
-  field_foliation: true
-  field_link_to_full_text: true
   field_private_note: true
-  field_type: true
   herbaria_no_full_text_available_entity_view_1: true
   included_herbs_entity_view_1: true
+  included_herbs_entity_view_2: true
   langcode: true
   links: true
-  render_bibliography_entity_view_1: true
   search_api_excerpt: true
   uid: true

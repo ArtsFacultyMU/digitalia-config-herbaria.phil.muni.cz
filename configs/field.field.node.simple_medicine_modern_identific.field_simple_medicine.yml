@@ -1,0 +1,29 @@
+uuid: 7107f641-19fe-4d20-bbd6-17fa7dd82848
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_simple_medicine
+    - node.type.simple_medicine_modern_identific
+    - taxonomy.vocabulary.botanical_name
+id: node.simple_medicine_modern_identific.field_simple_medicine
+field_name: field_simple_medicine
+entity_type: node
+bundle: simple_medicine_modern_identific
+label: 'Modern name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      botanical_name: botanical_name
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

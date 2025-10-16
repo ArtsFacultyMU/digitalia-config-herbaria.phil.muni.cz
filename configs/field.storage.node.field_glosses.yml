@@ -1,0 +1,19 @@
+uuid: 12ffe47e-c2cf-4ac0-b92d-13facb224783
+langcode: en
+status: true
+dependencies:
+  module:
+    - digitalia_muni_view_field
+    - node
+id: node.field_glosses
+field_name: field_glosses
+entity_type: node
+type: digitalia_muni_field_glosses
+settings: {  }
+module: digitalia_muni_view_field
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

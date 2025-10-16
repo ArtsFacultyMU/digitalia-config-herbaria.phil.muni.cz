@@ -11,7 +11,7 @@ id: node.medieval_herb.field_bibliography
 field_name: field_bibliography
 entity_type: node
 bundle: medieval_herb
-label: Bibliography
+label: 'DEPRACTED Bibliography'
 description: ''
 required: false
 translatable: false

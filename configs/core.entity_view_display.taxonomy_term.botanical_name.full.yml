@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.botanical_name.field_annotated_bibliography
     - field.field.taxonomy_term.botanical_name.field_authority_link
     - field.field.taxonomy_term.botanical_name.field_bibliography
     - field.field.taxonomy_term.botanical_name.field_common_czech_name
@@ -86,6 +87,7 @@ content:
     weight: 8
     region: content
 hidden:
+  field_annotated_bibliography: true
   field_bibliography: true
   langcode: true
   name: true

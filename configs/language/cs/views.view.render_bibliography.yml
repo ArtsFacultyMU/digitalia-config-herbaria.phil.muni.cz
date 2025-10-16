@@ -1,6 +1,13 @@
 display:
   default:
     display_options:
-      fields:
-        bibliographicref:
-          label: Bibliografie
+      empty:
+        area:
+          content:
+            value: '<p>There is no bibliography for this item.</p>'
+            format: basic_html
+      header:
+        area:
+          content:
+            value: '<p>{% if field_citation %}<strong>Bibliografie</strong> (<strong>{{ type }})</strong>{% endif %}</p>'
+            format: basic_html

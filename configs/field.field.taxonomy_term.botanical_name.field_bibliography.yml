@@ -11,7 +11,7 @@ id: taxonomy_term.botanical_name.field_bibliography
 field_name: field_bibliography
 entity_type: taxonomy_term
 bundle: botanical_name
-label: Bibliography
+label: 'DEPRACTED Bibliography'
 description: ''
 required: false
 translatable: false

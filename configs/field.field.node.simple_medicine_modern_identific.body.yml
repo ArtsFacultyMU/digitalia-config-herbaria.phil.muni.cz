@@ -1,0 +1,24 @@
+uuid: c86c189d-f0ab-4b27-9322-5b4a4a38b319
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.simple_medicine_modern_identific
+  module:
+    - text
+id: node.simple_medicine_modern_identific.body
+field_name: body
+entity_type: node
+bundle: simple_medicine_modern_identific
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

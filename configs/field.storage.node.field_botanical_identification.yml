@@ -20,37 +20,24 @@ settings:
       type: entity_reference
       max_length: 255
       size: normal
-      precision: 10
       unsigned: false
-      scale: 2
-      datetime_type: date
     certainty:
       name: certainty
       type: entity_reference
       max_length: 255
       size: normal
-      precision: 10
       unsigned: false
-      scale: 2
-      datetime_type: date
     user:
       name: user
       type: entity_reference
       max_length: 255
       size: normal
-      precision: 10
       unsigned: false
-      scale: 2
-      datetime_type: date
     note:
       name: note
       type: text
       max_length: 255
       size: normal
-      precision: 10
-      unsigned: false
-      scale: 2
-      datetime_type: date
 module: datafield
 locked: false
 cardinality: -1

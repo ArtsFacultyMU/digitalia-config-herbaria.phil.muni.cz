@@ -3,13 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_botanical_identification
     - field.storage.node.field_foliation
-    - field.storage.node.field_gloses
+    - field.storage.node.field_glosses
+    - field.storage.node.field_modern_identification
     - field.storage.node.field_order_of_entry
     - node.type.herbal_entry
+    - user.role.administrator
+    - user.role.anonymous
+    - user.role.authenticated
+    - user.role.content_editor
+    - user.role.contributor
+    - user.role.fedoraadmin
   module:
-    - datafield
+    - digitalia_muni_view_field
     - eva
     - node
     - user
@@ -223,10 +229,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_gloses:
-          id: field_gloses
-          table: node__field_gloses
-          field: field_gloses
+        field_glosses:
+          id: field_glosses
+          table: node__field_glosses
+          field: field_glosses
           relationship: none
           group_type: group
           admin_label: ''
@@ -234,8 +240,8 @@ display:
           label: Glosses
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_glosses__gloss }}'
             make_link: false
             path: ''
             absolute: false
@@ -273,31 +279,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: language
-          type: data_field_unformatted_list
+          type: digitalia_muni_field_glosses_default
           settings:
-            inline: false
-            formatter_settings:
-              language:
-                format_type: entity_reference_label
-                link: true
-                hidden: true
-                weight: '0'
-                show_label: 0
-              type:
-                format_type: entity_reference_label
-                link: true
-                hidden: true
-                weight: '0'
-                show_label: 0
-              gloss:
-                format_type: string
-                hidden: false
-                weight: '0'
-                show_label: 0
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
+            foo: bar
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -306,12 +290,12 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ''
+          separator: '<br>'
           field_api_classes: false
-        field_botanical_identification:
-          id: field_botanical_identification
-          table: node__field_botanical_identification
-          field: field_botanical_identification
+        field_modern_identification:
+          id: field_modern_identification
+          table: node__field_modern_identification
+          field: field_modern_identification
           relationship: none
           group_type: group
           admin_label: ''
@@ -319,7 +303,7 @@ display:
           label: 'Modern name'
           exclude: false
           alter:
-            alter_text: false
+            alter_text: true
             text: ''
             make_link: false
             path: ''
@@ -357,39 +341,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: plant
-          type: data_field_unformatted_list
+          click_sort_column: target_id
+          type: entity_reference_entity_view
           settings:
-            inline: false
-            formatter_settings:
-              plant:
-                format_type: entity_reference_label
-                link: true
-                hidden: false
-                weight: '0'
-                show_label: 0
-              certainty:
-                format_type: entity_reference_label
-                link: true
-                hidden: true
-                weight: '0'
-                show_label: 0
-              user:
-                format_type: entity_reference_label
-                link: true
-                hidden: true
-                weight: '0'
-                show_label: 0
-              note:
-                format_type: text_default
-                hidden: true
-                weight: '0'
-                show_label: 0
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
-          group_column: entity_id
+            view_mode: teaser
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -397,7 +353,7 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ''
+          separator: '<br>'
           field_api_classes: false
         field_foliation:
           id: field_foliation
@@ -466,6 +422,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 20
           total_pages: null
           id: 0
@@ -483,7 +440,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -495,9 +451,14 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            authenticated: authenticated
+            content_editor: content_editor
+            administrator: administrator
+            fedoraadmin: fedoraadmin
+            contributor: contributor
       cache:
         type: tag
         options: {  }
@@ -628,55 +589,26 @@ display:
         - url
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
-        - 'config:field.storage.node.field_botanical_identification'
         - 'config:field.storage.node.field_foliation'
-        - 'config:field.storage.node.field_gloses'
-        - 'config:field.storage.node.field_order_of_entry'
-  block_1:
-    id: block_1
-    display_title: Block
-    display_plugin: block
-    position: 1
-    display_options:
-      title: 'Included simple medicines'
-      defaults:
-        title: false
-      display_extenders:
-        matomo:
-          enabled: false
-          keyword_gets: ''
-          keyword_behavior: first
-          keyword_concat_separator: ' '
-          category_behavior: none
-          category_gets: ''
-          category_concat_separator: ' '
-          category_fallback: ''
-          category_facets: {  }
-          category_facets_concat_separator: ', '
-      block_description: 'Herbaria Included Herbs'
-      block_hide_empty: true
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_botanical_identification'
-        - 'config:field.storage.node.field_foliation'
-        - 'config:field.storage.node.field_gloses'
+        - 'config:field.storage.node.field_glosses'
+        - 'config:field.storage.node.field_modern_identification'
         - 'config:field.storage.node.field_order_of_entry'
   entity_view_1:
     id: entity_view_1
-    display_title: EVA
+    display_title: 'EVA anonym user'
     display_plugin: entity_view
     position: 2
     display_options:
+      access:
+        type: role
+        options:
+          role:
+            anonymous: anonymous
+      defaults:
+        access: false
+      display_description: ''
       display_extenders:
         matomo:
           enabled: false
@@ -692,7 +624,7 @@ display:
       entity_type: node
       bundles:
         - work_in_manuscript
-      eva_hide_empty: 1
+      eva_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -701,9 +633,485 @@ display:
         - url
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
-        - 'config:field.storage.node.field_botanical_identification'
         - 'config:field.storage.node.field_foliation'
-        - 'config:field.storage.node.field_gloses'
+        - 'config:field.storage.node.field_glosses'
+        - 'config:field.storage.node.field_modern_identification'
+        - 'config:field.storage.node.field_order_of_entry'
+  entity_view_2:
+    id: entity_view_2
+    display_title: 'EVA logged in user'
+    display_plugin: entity_view
+    position: 2
+    display_options:
+      fields:
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
+          label: ID
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: entity_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_order_of_entry_value:
+          id: field_order_of_entry_value
+          table: node__field_order_of_entry
+          field: field_order_of_entry_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Order
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Herb Entry'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: true
+            path: '/node/{{ nid }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns:
+            entity_id: entity_id
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_glosses:
+          id: field_glosses
+          table: node__field_glosses
+          field: field_glosses
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Glosses
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_glosses__gloss }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: language
+          type: digitalia_muni_field_glosses_default
+          settings:
+            foo: bar
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: '<br>'
+          field_api_classes: false
+        field_modern_identification:
+          id: field_modern_identification
+          table: node__field_modern_identification
+          field: field_modern_identification
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Modern name'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_view
+          settings:
+            view_mode: teaser
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: '<br>'
+          field_api_classes: false
+        field_foliation:
+          id: field_foliation
+          table: node__field_foliation
+          field: field_foliation
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Foliation
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: 'term-help, foliation-help'
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: edit
+          output_url_as_text: false
+          absolute: false
+      defaults:
+        fields: false
+      display_description: ''
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      entity_type: node
+      bundles:
+        - work_in_manuscript
+      eva_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_foliation'
+        - 'config:field.storage.node.field_glosses'
+        - 'config:field.storage.node.field_modern_identification'
         - 'config:field.storage.node.field_order_of_entry'

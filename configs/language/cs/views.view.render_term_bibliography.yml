@@ -2,6 +2,8 @@ display:
   default:
     display_options:
       title: Bibliografie
-      fields:
-        bibliographicref:
-          label: Bibliografie
+      header:
+        area:
+          content:
+            value: '<p>{% if field_citation %}<strong>Bibliografie ({{ vid }})</strong>{% endif %}</p>'
+            format: basic_html

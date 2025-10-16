@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.search_index
+    - field.field.taxonomy_term.work.field_annotated_bibliography
     - field.field.taxonomy_term.work.field_bibliography
     - field.field.taxonomy_term.work.field_text_language
     - taxonomy.vocabulary.work
@@ -20,6 +21,11 @@ targetEntityType: taxonomy_term
 bundle: work
 mode: search_index
 content:
+  copies_of_this_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   description:
     type: text_default
     label: hidden
@@ -31,11 +37,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -72,6 +73,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 2
     region: content
@@ -84,6 +90,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_annotated_bibliography: true
   field_text_language: true
   langcode: true
   render_term_bibliography_entity_view_1: true

@@ -1,0 +1,163 @@
+<?php
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * @file
+ * Primary module hooks for digitalia_muni_herbaria_copy_fields module. Used to copy data from data fields to new container structures.
+ */
+
+// execute using drush php:e
+// e.g. drush php:e "digitalia_muni_herbaria_copy_fields_modern_identification();"
+
+function digitalia_muni_herbaria_copy_fields_bibliography(array $entities) {
+  $old_field = 'field_bibliography';
+  $new_field = 'field_annotated_bibliography';
+  foreach ($entities as $entity) {
+    $old_values = $entity->get($old_field)->getValue();
+    $new_values = [];
+    if (empty($old_values)) {
+      continue;
+    }
+    foreach ($old_values as $value) {
+      if (!empty($value['reference']) && empty(Node::Load($value['reference']))) {
+        echo("SKIP ORPHAN\n");
+        continue;
+      }
+      $new_node = \Drupal\node\Entity\Node::create([
+        'type' => 'bibliographic_citation_with_note',
+        'title' => 'something',
+        'uid' => 1,
+        'field_bibliographic_citation' => $value['reference'] ? ['target_id' => $value['reference']] : NULL,
+        'field_note' => $value['note'] ? [['value' => $value['note'], 'format' => 'plain_text']] : NULL,
+        'status' => 1,
+        'created' => \Drupal::time()->getRequestTime(),
+      ]);
+      $new_node->save();
+      $new_values[] = $new_node->id();
+    }
+    if (!empty($new_values)) {
+      $entity->set($new_field, array_map(fn($nid) => ['target_id' => $nid], $new_values));
+      $entity->save();
+      \Drupal::logger('digitalia_muni_herbaria_copy_fields')
+        ->info('Updated bibliography of @id', ['@id' => $entity->id()]);
+      echo "Updated bibliography of ".$entity->id().PHP_EOL;
+    }
+  }
+}
+
+function digitalia_muni_herbaria_copy_fields_bibliography_terms() {
+  $query = \Drupal::entityQuery('taxonomy_term')
+    ->condition('vid', ['botanical_name', 'work'], 'IN')
+    ->accessCheck(FALSE);
+  $tids = $query->execute();
+  $entities = !empty($tids) ? Term::loadMultiple($tids) : [];
+  if (!empty($entities)) {
+    digitalia_muni_herbaria_copy_fields_bibliography($entities);
+  }
+}
+
+function digitalia_muni_herbaria_copy_fields_bibliography_nodes() {
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', ['herbal_entry', 'manuscript', 'work_in_manuscript', 'medieval_herb'], 'IN')
+    ->accessCheck(FALSE);
+  $nids = $query->execute();
+  $entities = !empty($nids) ? Node::loadMultiple($nids) : [];
+  if (!empty($entities)) {
+    digitalia_muni_herbaria_copy_fields_bibliography($entities);
+  }
+}
+
+function digitalia_muni_herbaria_copy_fields_glosses() {
+  $old_field = 'field_gloses'; // language type gloss
+  $new_field = 'field_glosses';
+
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', 'herbal_entry')
+    ->accessCheck(FALSE);
+
+  $nids = $query->execute();
+  $nodes = !empty($nids) ? Node::loadMultiple($nids) : [];
+
+  foreach ($nodes as $node) {
+    $old_values = $node->get($old_field)->getValue();
+    if (!empty($old_values)) {
+      $new_values = [];
+      foreach ($old_values as $value) {
+        $language = '';
+        if (isset($value['language']) && !empty($value['language'])) {
+          $languageTerm = Term::load($value['language']);
+          if ($languageTerm) {
+            $language = $languageTerm->getName();
+          }
+        }
+        $type = '';
+        if (isset($value['type']) && !empty($value['type'])) {
+          $typeTerm = Term::load($value['type']);
+          if ($typeTerm) {
+            $type = $typeTerm->getName();
+          }
+        }
+        if ($language || $type || $value['gloss'] ?? '') {
+          $new_values[] = [
+            'gloss' => $value['gloss'] ?? '',
+            'language' => $language,
+            'type' => $type,
+          ];
+        }
+      }
+      $node->set('field_glosses', $new_values);
+      if (!empty($new_values)) {
+        $node->save();
+      }
+      \Drupal::logger('digitalia_muni_herbaria_copy_fields')
+        ->info('Updated glosses of node @nid', ['@nid' => $node->id()]);
+      echo "Updated glosses of node ".$node->id().PHP_EOL;
+    }
+  }
+}
+
+function digitalia_muni_herbaria_copy_fields_modern_identification() {
+  $old_field = 'field_botanical_identification'; # plant certainty user note
+  $new_field = 'field_modern_identification'; # simple_medicine_modern_identific : field_certainty  field_identified_by field_simple_medicine field_note
+
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', 'herbal_entry')
+    ->accessCheck(FALSE);
+
+  $nids = $query->execute();
+  $nodes = !empty($nids) ? Node::loadMultiple($nids) : [];
+
+  foreach ($nodes as $node) {
+    $old_values = $node->get($old_field)->getValue();
+    if (!empty($old_values)) {
+      $new_values = [];
+      foreach ($old_values as $value) {
+        if (!empty($value['plant']) && empty(Term::Load($value['plant']))) {
+          echo("SKIP ORPHAN\n");
+          continue;
+        }
+        $new_node = \Drupal\node\Entity\Node::create([
+          'type' => 'simple_medicine_modern_identific',
+          'title' => 'something',
+          'uid' => $node->getOwnerId(),
+          'field_simple_medicine' => $value['plant'] ? ['target_id' => $value['plant']] : NULL,
+          'field_certainty' => $value['certainty'] ? ['target_id' => $value['certainty']] : NULL,
+          'field_identified_by' => $value['user'] ? ['target_id' => $value['user']] : NULL,
+          'field_note' => $value['note'] ? [['value' => $value['note'], 'format' => 'plain_text']] : NULL,
+          'status' => 1,
+          'created' => \Drupal::time()->getRequestTime(),
+        ]);
+        $new_node->save();
+        $new_values[] = $new_node->id();
+      }
+      if (!empty($new_values)) {
+        $node->set($new_field, array_map(fn($nid) => ['target_id' => $nid], $new_values));
+        $node->save();
+        \Drupal::logger('digitalia_muni_herbaria_copy_fields')
+          ->info('Updated modern identification of node @nid', ['@nid' => $node->id()]);
+        echo "Updated modern identification of node ".$node->id().PHP_EOL;
+      }
+    }
+  }
+}

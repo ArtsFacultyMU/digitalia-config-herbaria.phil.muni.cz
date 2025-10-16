@@ -1,0 +1,7 @@
+uuid: dba715f0-72c7-4ce1-81ca-79cafee1be8e
+langcode: en
+status: false
+dependencies: {  }
+formId: node_herbal_entry_form
+captchaType: default
+label: node_herbal_entry_form

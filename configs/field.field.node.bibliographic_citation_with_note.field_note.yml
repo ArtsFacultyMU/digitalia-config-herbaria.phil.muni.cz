@@ -1,0 +1,24 @@
+uuid: a73e164e-f204-4d11-8cff-846c36aef175
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_note
+    - filter.format.plain_text
+    - node.type.bibliographic_citation_with_note
+  module:
+    - text
+id: node.bibliographic_citation_with_note.field_note
+field_name: field_note
+entity_type: node
+bundle: bibliographic_citation_with_note
+label: Note
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text_long

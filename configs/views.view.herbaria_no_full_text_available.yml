@@ -108,7 +108,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{% if field_member_of %} <strong> &nbsp;and collection: </strong> {{ field_member_of }}, {% else %}: {% endif %} {{ field_institution }} '
+            text: ': {{ field_institution }} '
             make_link: false
             path: ''
             absolute: false
@@ -148,7 +148,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: false
+            link: true
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -401,8 +401,8 @@ display:
           type: link
           settings:
             trim_length: 80
-            url_only: true
-            url_plain: false
+            url_only: false
+            url_plain: true
             rel: '0'
             target: '0'
           group_column: ''
@@ -412,8 +412,8 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: ul
-          separator: '</br>'
+          multi_type: separator
+          separator: ', '
           field_api_classes: false
         field_link_to_full_text:
           id: field_link_to_full_text

@@ -1,0 +1,29 @@
+uuid: c67d7388-76b4-448d-9975-85b5282d841e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annotated_bibliography
+    - node.type.bibliographic_citation_with_note
+    - node.type.medieval_herb
+id: node.medieval_herb.field_annotated_bibliography
+field_name: field_annotated_bibliography
+entity_type: node
+bundle: medieval_herb
+label: Bibliography
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bibliographic_citation_with_note: bibliographic_citation_with_note
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

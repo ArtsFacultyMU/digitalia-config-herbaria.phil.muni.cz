@@ -1,0 +1,11 @@
+uuid: 7271cf88-22ce-4138-b62e-9e766176cb3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simple_medicine_modern_identific
+id: node.simple_medicine_modern_identific
+target_entity_type_id: node
+target_bundle: simple_medicine_modern_identific
+default_langcode: site_default
+language_alterable: false

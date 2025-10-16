@@ -10,7 +10,7 @@ field_name: field_member_of
 entity_type: node
 bundle: instituce
 label: 'Mother institution'
-description: 'Select the mother institution'
+description: 'Select the mother institution. Add the name also as part of the name using the notation Mother institution » Collection'
 required: false
 translatable: false
 default_value: {  }

@@ -11,7 +11,7 @@ id: node.herbal_entry.field_botanical_identification
 field_name: field_botanical_identification
 entity_type: node
 bundle: herbal_entry
-label: 'Modern name of the simple medicine'
+label: 'DEPRACTED Modern name of the simple medicine'
 description: ''
 required: false
 translatable: false

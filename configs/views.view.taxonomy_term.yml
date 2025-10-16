@@ -2,6 +2,10 @@ uuid: 9e7d1d72-b47c-4f98-9877-446d8efd4402
 langcode: cs
 status: true
 dependencies:
+  config:
+    - node.type.bibliographic_citation_with_note
+    - node.type.simple_medicine_modern_identific
+    - node.type.work_in_manuscript
   module:
     - node
     - taxonomy
@@ -286,6 +290,50 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: 'not in'
+          value:
+            bibliographic_citation_with_note: bibliographic_citation_with_note
+            simple_medicine_modern_identific: simple_medicine_modern_identific
+            work_in_manuscript: work_in_manuscript
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
           is_grouped: false
           group_info:
             label: ''

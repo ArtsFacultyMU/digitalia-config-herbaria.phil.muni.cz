@@ -1,0 +1,18 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      fields:
+        delete_link:
+          label: smazat
+          text: smazat
+      exposed_form:
+        options:
+          submit_button: Apply
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        provider_field:
+          exception:
+            title: All

@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.herbal_entry.field_annotated_bibliography
     - field.field.node.herbal_entry.field_bibliography
     - field.field.node.herbal_entry.field_botanical_identification
     - field.field.node.herbal_entry.field_effects
     - field.field.node.herbal_entry.field_foliation
     - field.field.node.herbal_entry.field_gloses
+    - field.field.node.herbal_entry.field_glosses
     - field.field.node.herbal_entry.field_herbal
+    - field.field.node.herbal_entry.field_modern_identification
     - field.field.node.herbal_entry.field_note
     - field.field.node.herbal_entry.field_order_of_entry
     - field.field.node.herbal_entry.field_private_note
@@ -16,7 +19,7 @@ dependencies:
     - field.field.node.herbal_entry.field_unified_medieval_name
     - node.type.herbal_entry
   module:
-    - datafield
+    - digitalia_muni_view_field
     - layout_builder
     - text
 third_party_settings:
@@ -28,76 +31,24 @@ targetEntityType: node
 bundle: herbal_entry
 mode: default
 content:
-  field_botanical_identification:
-    type: data_field_table_formatter
-    label: visually_hidden
+  created:
+    type: timestamp
+    label: hidden
     settings:
-      formatter_settings:
-        plant:
-          format_type: entity_reference_label
-          link: '1'
-          weight: '0'
-          hidden: 0
-          show_label: 0
-        certainty:
-          format_type: entity_reference_label
-          weight: '0'
-          hidden: 0
-          show_label: 0
-          link: 0
-        user:
-          format_type: entity_reference_label
-          link: '1'
-          weight: '0'
-          hidden: 0
-          show_label: 0
-        note:
-          format_type: text_default
-          weight: '0'
-          hidden: 0
-          show_label: 0
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
-      number_column: false
-      number_column_label: №
-      direction: horizontal
-      mode: table
-      caption: ''
-      footer_text: ''
-      datatables_options:
-        bExpandable: true
-        bInfo: true
-        scrollX: true
-        bStateSave: false
-        paging: true
-        ordering: true
-        searching: true
-        show-export: true
-        bMultiFilter: false
-      bootstrap_table_options:
-        sticky-header: true
-        search: true
-        show-search-clear-button: true
-        show-refresh: true
-        show-toggle: true
-        show-fullscreen: true
-        show-columns: true
-        data-detail-view: true
-        show-columns-toggle-all: true
-        mobile-responsive: true
-        show-print: true
-        show-copy-rows: true
-        show-export: true
-        sortable: true
-        click-to-select: true
-        show-pagination-switch: true
-        pagination: true
-        cookie: true
-        show-footer: false
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
     third_party_settings: {  }
-    weight: 7
+    weight: 12
     region: content
   field_effects:
     type: entity_reference_label
@@ -115,51 +66,10 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  field_gloses:
-    type: data_field_table_formatter
+  field_glosses:
+    type: digitalia_muni_field_glosses_table
     label: above
-    settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
-      number_column: false
-      number_column_label: №
-      direction: horizontal
-      mode: table
-      caption: ''
-      footer_text: ''
-      datatables_options:
-        bExpandable: true
-        bInfo: true
-        scrollX: true
-        bStateSave: false
-        paging: true
-        ordering: true
-        searching: true
-        show-export: true
-        bMultiFilter: false
-      bootstrap_table_options:
-        sticky-header: true
-        search: true
-        show-search-clear-button: true
-        show-refresh: true
-        show-toggle: true
-        show-fullscreen: true
-        show-columns: true
-        data-detail-view: true
-        show-columns-toggle-all: true
-        mobile-responsive: true
-        show-print: true
-        show-copy-rows: true
-        show-export: true
-        sortable: true
-        click-to-select: true
-        show-pagination-switch: true
-        pagination: true
-        cookie: true
-        show-footer: false
+    settings: {  }
     third_party_settings: {  }
     weight: 5
     region: content
@@ -170,6 +80,15 @@ content:
       link: true
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_modern_identification:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_note:
     type: text_default
@@ -209,6 +128,11 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
+  render_bibliography_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
   title:
     type: string
     label: above
@@ -218,8 +142,10 @@ content:
     weight: 0
     region: content
 hidden:
-  created: true
+  field_annotated_bibliography: true
   field_bibliography: true
+  field_botanical_identification: true
+  field_gloses: true
   langcode: true
   links: true
   search_api_excerpt: true

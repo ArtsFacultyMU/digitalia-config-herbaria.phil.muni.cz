@@ -1,0 +1,10 @@
+status: 1
+pattern: '[node:field_bibliographic_citation:entity:title] [node:field_note:0:value]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - node.type.bibliographic_citation_with_note
+new_content_behavior: 0

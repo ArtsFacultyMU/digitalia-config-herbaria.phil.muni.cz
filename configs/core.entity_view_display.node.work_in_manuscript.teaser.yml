@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.work_in_manuscript.field_annotated_bibliography
     - field.field.node.work_in_manuscript.field_bibliography
     - field.field.node.work_in_manuscript.field_explicit
     - field.field.node.work_in_manuscript.field_foliation
@@ -22,12 +23,22 @@ targetEntityType: node
 bundle: work_in_manuscript
 mode: teaser
 content:
+  add_new_herbal_entry_button_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   bibliografies_related_to_texts_in_manuscript_entity_view_1:
     settings: {  }
     third_party_settings: {  }
     weight: 10
     region: content
   herbaria_no_full_text_available_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  included_herbs_entity_view_2:
     settings: {  }
     third_party_settings: {  }
     weight: 10
@@ -48,6 +59,7 @@ content:
     region: content
 hidden:
   created: true
+  field_annotated_bibliography: true
   field_bibliography: true
   field_explicit: true
   field_foliation: true

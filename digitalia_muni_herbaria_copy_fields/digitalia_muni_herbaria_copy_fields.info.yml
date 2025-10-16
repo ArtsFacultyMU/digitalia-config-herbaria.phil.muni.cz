@@ -1,0 +1,5 @@
+name: 'digitalia_muni_herbaria_copy_fields'
+type: module
+description: 'Copy existing values from deprecated fields into new ones.'
+package: custom
+core_version_requirement: ^10 || ^11

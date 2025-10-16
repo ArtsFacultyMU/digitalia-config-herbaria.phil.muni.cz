@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.manuscript.field_annotated_bibliography
     - field.field.node.manuscript.field_bibliography
     - field.field.node.manuscript.field_created_after
     - field.field.node.manuscript.field_created_before
@@ -18,7 +19,7 @@ dependencies:
     - field.field.node.manuscript.field_scribe
     - node.type.manuscript
   module:
-    - datafield
+    - inline_entity_form
     - link
     - text
 id: node.manuscript.default
@@ -26,14 +27,23 @@ targetEntityType: node
 bundle: manuscript
 mode: default
 content:
-  field_bibliography:
-    type: data_field_table_widget
-    weight: 11
+  field_annotated_bibliography:
+    type: inline_entity_form_complex
+    weight: 12
     region: content
     settings:
-      inline: false
-      field_reference: ''
-      widget_settings: {  }
+      form_mode: default
+      override_labels: true
+      label_singular: reference
+      label_plural: references
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: true
+      removed_reference: keep
     third_party_settings: {  }
   field_dating:
     type: string_textfield
@@ -107,6 +117,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  simple_sitemap:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 10
@@ -129,6 +144,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_bibliography: true
   field_created_after: true
   field_created_before: true
   field_reference: true

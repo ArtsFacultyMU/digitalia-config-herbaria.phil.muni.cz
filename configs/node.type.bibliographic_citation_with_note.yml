@@ -1,0 +1,18 @@
+uuid: 9199e50f-6584-4f1a-b6bc-3697732cb54f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Bibliographic Citation with Note'
+type: bibliographic_citation_with_note
+description: 'A helper structure for representing references to bibliographic citations with notes.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: true

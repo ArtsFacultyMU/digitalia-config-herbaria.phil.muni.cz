@@ -1,0 +1,45 @@
+uuid: 97c07a5d-5336-47bf-a802-0904c952f909
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.bibliographic_citation_with_note.body
+    - field.field.node.bibliographic_citation_with_note.field_bibliographic_citation
+    - field.field.node.bibliographic_citation_with_note.field_note
+    - node.type.bibliographic_citation_with_note
+  module:
+    - text
+id: node.bibliographic_citation_with_note.default
+targetEntityType: node
+bundle: bibliographic_citation_with_note
+mode: default
+content:
+  field_bibliographic_citation:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_note:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  simple_sitemap: true
+  status: true
+  sticky: true
+  title: true
+  uid: true

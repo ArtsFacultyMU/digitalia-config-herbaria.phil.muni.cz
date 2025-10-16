@@ -6,12 +6,14 @@ dependencies:
     - filter.format.basic_html
     - filter.format.full_html
     - node.type.bibliographic_citation
+    - node.type.bibliographic_citation_with_note
     - node.type.documentation
     - node.type.herbal_entry
     - node.type.instituce
     - node.type.manuscript
     - node.type.medieval_herb
     - node.type.page
+    - node.type.simple_medicine_modern_identific
     - node.type.user
     - node.type.work_in_manuscript
     - taxonomy.vocabulary.botanical_name
@@ -57,6 +59,7 @@ permissions:
   - 'access tour'
   - 'administer url aliases'
   - 'create bibliographic_citation content'
+  - 'create bibliographic_citation_with_note content'
   - 'create documentation content'
   - 'create field_botanical_identification'
   - 'create field_created_after'
@@ -66,6 +69,7 @@ permissions:
   - 'create instituce content'
   - 'create manuscript content'
   - 'create medieval_herb content'
+  - 'create simple_medicine_modern_identific content'
   - 'create terms in botanical_name'
   - 'create terms in country'
   - 'create terms in datation'
@@ -108,11 +112,13 @@ permissions:
   - 'delete terms in work'
   - 'delete work_in_manuscript revisions'
   - 'edit any bibliographic_citation content'
+  - 'edit any bibliographic_citation_with_note content'
   - 'edit any herbal_entry content'
   - 'edit any instituce content'
   - 'edit any manuscript content'
   - 'edit any medieval_herb content'
   - 'edit any page content'
+  - 'edit any simple_medicine_modern_identific content'
   - 'edit any user content'
   - 'edit any work_in_manuscript content'
   - 'edit field_botanical_identification'
@@ -120,6 +126,7 @@ permissions:
   - 'edit field_created_before'
   - 'edit field_private_note'
   - 'edit own bibliographic_citation content'
+  - 'edit own bibliographic_citation_with_note content'
   - 'edit own comments'
   - 'edit own documentation content'
   - 'edit own field_botanical_identification'
@@ -131,6 +138,7 @@ permissions:
   - 'edit own manuscript content'
   - 'edit own medieval_herb content'
   - 'edit own page content'
+  - 'edit own simple_medicine_modern_identific content'
   - 'edit own user content'
   - 'edit own user_picture'
   - 'edit own work_in_manuscript content'

@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.herbal_entry.field_annotated_bibliography
     - field.field.node.herbal_entry.field_bibliography
     - field.field.node.herbal_entry.field_botanical_identification
     - field.field.node.herbal_entry.field_effects
     - field.field.node.herbal_entry.field_foliation
     - field.field.node.herbal_entry.field_gloses
+    - field.field.node.herbal_entry.field_glosses
     - field.field.node.herbal_entry.field_herbal
+    - field.field.node.herbal_entry.field_modern_identification
     - field.field.node.herbal_entry.field_note
     - field.field.node.herbal_entry.field_order_of_entry
     - field.field.node.herbal_entry.field_private_note
@@ -28,38 +31,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings:
-        plant:
-          format_type: entity_reference_label
-          link: '1'
-          column_label: Plant
-          weight: '0'
-          hidden: 0
-          show_label: 0
-        certainty:
-          format_type: entity_reference_label
-          column_label: Certainty
-          weight: '0'
-          hidden: 0
-          show_label: 0
-          link: 0
-        user:
-          format_type: entity_reference_label
-          link: '1'
-          column_label: User
-          weight: '0'
-          hidden: 0
-          show_label: 0
-        note:
-          format_type: text_default
-          column_label: Note
-          weight: '0'
-          hidden: 0
-          show_label: 0
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -93,6 +64,38 @@ content:
         show-pagination-switch: 0
         pagination: 0
         show-footer: 0
+      formatter_settings:
+        plant:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: Plant
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        certainty:
+          format_type: entity_reference_label
+          column_label: Certainty
+          weight: '0'
+          hidden: 0
+          show_label: 0
+          link: 0
+        user:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: User
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        note:
+          format_type: text_default
+          column_label: Note
+          weight: '0'
+          hidden: 0
+          show_label: 0
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 1
     region: content
@@ -100,6 +103,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 100
+    region: content
+  render_bibliography_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
   title:
     type: title
@@ -112,11 +120,14 @@ content:
     region: content
 hidden:
   created: true
+  field_annotated_bibliography: true
   field_bibliography: true
   field_effects: true
   field_foliation: true
   field_gloses: true
+  field_glosses: true
   field_herbal: true
+  field_modern_identification: true
   field_note: true
   field_order_of_entry: true
   field_private_note: true

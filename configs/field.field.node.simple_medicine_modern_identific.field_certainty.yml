@@ -1,0 +1,29 @@
+uuid: fb91e7a2-6c24-4530-80a7-27fca145b98d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certainty
+    - node.type.simple_medicine_modern_identific
+    - taxonomy.vocabulary.certainty
+id: node.simple_medicine_modern_identific.field_certainty
+field_name: field_certainty
+entity_type: node
+bundle: simple_medicine_modern_identific
+label: Certainty
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      certainty: certainty
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

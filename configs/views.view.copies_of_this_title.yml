@@ -298,7 +298,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ title_1 }}{% if title_2 %}, {{ title_2 }} {% endif %} ({{ field_city }})'
+            text: '{{ title_1 }} ({{ field_city }})'
             make_link: false
             path: ''
             absolute: false
@@ -578,7 +578,7 @@ display:
       bundles:
         - work
       show_title: false
-      eva_hide_empty: 1
+      eva_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:

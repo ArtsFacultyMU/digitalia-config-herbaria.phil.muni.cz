@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_index
+    - field.field.node.herbal_entry.field_annotated_bibliography
     - field.field.node.herbal_entry.field_bibliography
     - field.field.node.herbal_entry.field_botanical_identification
     - field.field.node.herbal_entry.field_effects
     - field.field.node.herbal_entry.field_foliation
     - field.field.node.herbal_entry.field_gloses
+    - field.field.node.herbal_entry.field_glosses
     - field.field.node.herbal_entry.field_herbal
+    - field.field.node.herbal_entry.field_modern_identification
     - field.field.node.herbal_entry.field_note
     - field.field.node.herbal_entry.field_order_of_entry
     - field.field.node.herbal_entry.field_private_note
@@ -17,7 +20,7 @@ dependencies:
     - field.field.node.herbal_entry.field_unified_medieval_name
     - node.type.herbal_entry
   module:
-    - datafield
+    - digitalia_muni_view_field
     - manage_display
     - text
 id: node.herbal_entry.search_index
@@ -25,101 +28,21 @@ targetEntityType: node
 bundle: herbal_entry
 mode: search_index
 content:
-  field_bibliography:
-    type: data_field_table_formatter
+  field_glosses:
+    type: digitalia_muni_field_glosses_default
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
-      number_column: false
-      number_column_label: №
-      direction: horizontal
-      mode: table
-      caption: ''
-      footer_text: ''
-      datatables_options:
-        bExpandable: true
-        bInfo: true
-        scrollX: true
-        bStateSave: false
-        paging: true
-        ordering: true
-        searching: true
-        show-export: true
-        bMultiFilter: false
-      bootstrap_table_options:
-        sticky-header: true
-        search: true
-        show-search-clear-button: true
-        show-refresh: true
-        show-toggle: true
-        show-fullscreen: true
-        show-columns: true
-        data-detail-view: true
-        show-columns-toggle-all: true
-        mobile-responsive: true
-        show-print: true
-        show-copy-rows: true
-        show-export: true
-        sortable: true
-        click-to-select: true
-        show-pagination-switch: true
-        pagination: true
-        cookie: true
-        show-footer: false
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  field_gloses:
-    type: data_field_table_formatter
-    label: above
-    settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
-      number_column: false
-      number_column_label: №
-      direction: horizontal
-      mode: table
-      caption: ''
-      footer_text: ''
-      datatables_options:
-        bExpandable: true
-        bInfo: true
-        scrollX: true
-        bStateSave: false
-        paging: true
-        ordering: true
-        searching: true
-        show-export: true
-        bMultiFilter: false
-      bootstrap_table_options:
-        sticky-header: true
-        search: true
-        show-search-clear-button: true
-        show-refresh: true
-        show-toggle: true
-        show-fullscreen: true
-        show-columns: true
-        data-detail-view: true
-        show-columns-toggle-all: true
-        mobile-responsive: true
-        show-print: true
-        show-copy-rows: true
-        show-export: true
-        sortable: true
-        click-to-select: true
-        show-pagination-switch: true
-        pagination: true
-        cookie: true
-        show-footer: false
+      foo: bar
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_modern_identification:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_note:
     type: text_default
@@ -133,7 +56,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 3
     region: content
   field_unified_medieval_name:
     type: entity_reference_label
@@ -143,10 +66,10 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  links:
+  render_bibliography_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 5
     region: content
   title:
     type: title
@@ -159,12 +82,16 @@ content:
     region: content
 hidden:
   created: true
+  field_annotated_bibliography: true
+  field_bibliography: true
   field_botanical_identification: true
   field_effects: true
   field_foliation: true
+  field_gloses: true
   field_herbal: true
   field_order_of_entry: true
   field_private_note: true
   langcode: true
+  links: true
   search_api_excerpt: true
   uid: true

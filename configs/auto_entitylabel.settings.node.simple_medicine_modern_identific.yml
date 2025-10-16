@@ -1,0 +1,10 @@
+status: 1
+pattern: '[node:field_simple_medicine:entity:name], [node:field_certainty:entity:name], [node:field_identified_by:entity:title], [node:field_note:0]'
+escape: false
+preserve_titles: false
+save: true
+chunk: 50
+dependencies:
+  config:
+    - node.type.simple_medicine_modern_identific
+new_content_behavior: 0

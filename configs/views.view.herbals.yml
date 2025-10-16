@@ -7,7 +7,6 @@ dependencies:
     - field.storage.node.field_incipit
     - field.storage.node.field_institution
     - field.storage.node.field_manuscript
-    - field.storage.node.field_member_of
     - field.storage.node.field_work
     - node.type.work_in_manuscript
     - taxonomy.vocabulary.genre
@@ -230,69 +229,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_member_of:
-          id: field_member_of
-          table: node__field_member_of
-          field: field_member_of
-          relationship: field_institution
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_institution:
           id: field_institution
           table: node__field_institution
@@ -304,9 +240,9 @@ display:
           label: 'Institution and collection'
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: '{% if field_member_of %} {{ field_member_of }},{% endif %} {{ field_institution }} '
-            make_link: true
+            make_link: false
             path: '/node/{{ field_institution__target_id }}'
             absolute: false
             external: false
@@ -554,6 +490,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0
@@ -571,7 +508,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 3
-          pagination_heading_level: h4
       exposed_form:
         type: bef
         options:
@@ -614,15 +550,15 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               title:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_city_target_id:
                 plugin_id: default
                 advanced:
@@ -631,22 +567,22 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_incipit_value:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               title_1:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_text_language_target_id:
                 plugin_id: default
                 advanced:
@@ -655,8 +591,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_link_uri:
                 plugin_id: default
                 advanced:
@@ -665,8 +601,8 @@ display:
                     filter_rewrite_values: '- Any -|No'
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_type_target_id_1:
                 plugin_id: default
                 advanced:
@@ -675,8 +611,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_herbal_target_id:
                 plugin_id: default
                 advanced:
@@ -685,8 +621,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
       access:
         type: perm
         options:
@@ -1392,7 +1328,6 @@ display:
         - 'config:field.storage.node.field_incipit'
         - 'config:field.storage.node.field_institution'
         - 'config:field.storage.node.field_manuscript'
-        - 'config:field.storage.node.field_member_of'
         - 'config:field.storage.node.field_work'
   herbaria_herbals:
     id: herbaria_herbals
@@ -1438,5 +1373,4 @@ display:
         - 'config:field.storage.node.field_incipit'
         - 'config:field.storage.node.field_institution'
         - 'config:field.storage.node.field_manuscript'
-        - 'config:field.storage.node.field_member_of'
         - 'config:field.storage.node.field_work'

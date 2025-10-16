@@ -1,0 +1,22 @@
+uuid: 2c34d902-8d7f-4f5c-ae99-e20ea186b481
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_glosses
+    - node.type.herbal_entry
+  module:
+    - digitalia_muni_view_field
+id: node.herbal_entry.field_glosses
+field_name: field_glosses
+entity_type: node
+bundle: herbal_entry
+label: Glosses
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  bar: example
+field_type: digitalia_muni_field_glosses

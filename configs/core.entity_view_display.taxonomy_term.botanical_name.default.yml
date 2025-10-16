@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.botanical_name.field_annotated_bibliography
     - field.field.taxonomy_term.botanical_name.field_authority_link
     - field.field.taxonomy_term.botanical_name.field_bibliography
     - field.field.taxonomy_term.botanical_name.field_common_czech_name
@@ -26,6 +27,14 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_annotated_bibliography:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
   field_authority_link:
     type: authority_formatter_default
     label: above
@@ -42,11 +51,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -83,6 +87,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 3
     region: content

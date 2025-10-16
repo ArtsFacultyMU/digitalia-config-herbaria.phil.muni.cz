@@ -1,0 +1,29 @@
+uuid: 6cd9e23d-b40d-4ad5-b906-4348d03dc24a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_annotated_bibliography
+    - node.type.bibliographic_citation_with_note
+    - taxonomy.vocabulary.work
+id: taxonomy_term.work.field_annotated_bibliography
+field_name: field_annotated_bibliography
+entity_type: taxonomy_term
+bundle: work
+label: Bibliography
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bibliographic_citation_with_note: bibliographic_citation_with_note
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
