@@ -7,5 +7,5 @@ dependencies:
 id: footer_copyright
 title: 'Footer copyright'
 content:
-  value: '<p>©&nbsp;<script>const datey = new Date(); document.write(datey.getFullYear());</script><span> </span><a href="https://www.muni.cz/en" target="_blank">Masarykova univerzita</a><br><a href="mailto:digitalia@phil.muni.cz">Webmaster</a> | <a class="mc-open-dialog" href="#">Cookies</a></p>'
+  value: '<p>©&nbsp;<script>const datey = new Date(); document.write(datey.getFullYear());</script><a href="https://herbaria.phil.muni.cz/user/login" log="" a=""><span> </span></a><a href="https://www.muni.cz/en" target="_blank">Masarykova univerzita</a><br><a href="mailto:digitalia@phil.muni.cz">Webmaster</a> | <a class="mc-open-dialog" href="#">Cookies</a></p>'
   format: full_html

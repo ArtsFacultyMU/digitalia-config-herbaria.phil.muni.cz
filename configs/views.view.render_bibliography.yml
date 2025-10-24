@@ -203,8 +203,8 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: false
+          hide_empty: true
+          empty_zero: true
           hide_alter_empty: true
           click_sort_column: value
           type: text_default
@@ -240,20 +240,7 @@ display:
       cache:
         type: none
         options: {  }
-      empty:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: true
-          content:
-            value: 'There is no bibliography for this item.'
-            format: basic_html
-          tokenize: false
+      empty: {  }
       sorts:
         created:
           id: created
@@ -373,8 +360,9 @@ display:
       row:
         type: fields
         options:
-          default_field_elements: true
+          default_field_elements: false
           inline:
+            type: type
             field_note: field_note
             field_citation: field_citation
           separator: ''
@@ -417,7 +405,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '{% if field_citation %}<strong>{{ type }} Bibliography</strong> {% endif %}'
+            value: '{% if field_citation %}<strong>{{ type }} Bibliography</strong>{% endif %}'
             format: basic_html
           tokenize: true
       footer: {  }

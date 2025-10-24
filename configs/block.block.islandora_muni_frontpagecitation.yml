@@ -6,14 +6,13 @@ dependencies:
     - simple_block.simple_block.front_page_citation
   module:
     - context
-    - islandora
     - simple_block
   theme:
     - islandora_muni
 id: islandora_muni_frontpagecitation
 theme: islandora_muni
 region: content
-weight: -21
+weight: -22
 provider: null
 plugin: 'simple_block:front_page_citation'
 settings:
@@ -27,8 +26,3 @@ visibility:
     negate: false
     view_inclusion:
       view-herbals_with_entries-page_1: view-herbals_with_entries-page_1
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''

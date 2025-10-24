@@ -10,3 +10,4 @@ islandora.settings.yml
 
 # views with secrets, do not commit
 configs/recaptcha.settings.yml
+configs/openid_connect.client.einfra_aai.yml

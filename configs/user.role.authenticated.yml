@@ -10,8 +10,8 @@ dependencies:
     - field_permissions
     - media
     - rest
-    - shortcut
     - system
+    - toolbar
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
 id: authenticated
@@ -21,8 +21,8 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'access toolbar'
   - 'create user_picture'
   - 'restful get oai_pmh'
   - 'view media'

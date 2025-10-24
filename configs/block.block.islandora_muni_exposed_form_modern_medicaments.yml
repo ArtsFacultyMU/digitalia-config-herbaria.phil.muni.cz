@@ -6,7 +6,6 @@ dependencies:
     - views.view.botanical_identification
   module:
     - context
-    - islandora
     - views
   theme:
     - islandora_muni
@@ -28,8 +27,3 @@ visibility:
     negate: false
     view_inclusion:
       view-botanical_identification-herbaria_modern_medicaments: view-botanical_identification-herbaria_modern_medicaments
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''

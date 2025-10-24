@@ -6,14 +6,13 @@ dependencies:
     - views.view.herbaria_frontpage_statistics
   module:
     - context
-    - islandora
     - views
   theme:
     - islandora_muni
 id: islandora_muni_views_block__frontpage_statistics_block_1
 theme: islandora_muni
 region: content
-weight: -27
+weight: -29
 provider: null
 plugin: 'views_block:herbaria_frontpage_statistics-block_1'
 settings:
@@ -24,11 +23,6 @@ settings:
   views_label: ''
   items_per_page: none
 visibility:
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''
   view_inclusion:
     id: view_inclusion
     negate: false

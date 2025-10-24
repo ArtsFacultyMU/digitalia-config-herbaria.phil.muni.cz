@@ -35,6 +35,7 @@ dependencies:
     - filter
     - help
     - node
+    - openid_connect
     - path
     - system
     - taxonomy
@@ -152,6 +153,7 @@ permissions:
   - 'edit terms in language'
   - 'edit terms in type_of_recording'
   - 'edit terms in work'
+  - 'manage own openid connect accounts'
   - 'revert all revisions'
   - 'revert bibliographic_citation revisions'
   - 'translate botanical_name taxonomy_term'

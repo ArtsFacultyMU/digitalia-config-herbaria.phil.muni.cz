@@ -7,6 +7,7 @@ dependencies:
   module:
     - field_permissions
     - filter
+    - openid_connect
 _core:
   default_config_hash: e6W733rBSNmewsIQsvWQ-8mIE5H-CIeArLBwIbN5vVQ
 id: fedoraadmin
@@ -23,6 +24,7 @@ permissions:
   - 'edit own field_created_before'
   - 'edit own field_private_note'
   - 'edit own user_picture'
+  - 'manage own openid connect accounts'
   - 'use text format basic_html'
   - 'view field_created_after'
   - 'view field_created_before'

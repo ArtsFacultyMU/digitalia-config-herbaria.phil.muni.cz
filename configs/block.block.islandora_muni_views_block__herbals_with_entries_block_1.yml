@@ -6,7 +6,6 @@ dependencies:
     - views.view.herbals_with_entries
   module:
     - context
-    - islandora
     - system
     - views
   theme:
@@ -14,7 +13,7 @@ dependencies:
 id: islandora_muni_views_block__herbals_with_entries_block_1
 theme: islandora_muni
 region: content
-weight: -26
+weight: -27
 provider: null
 plugin: 'views_block:herbals_with_entries-block_1'
 settings:
@@ -30,11 +29,6 @@ visibility:
     negate: false
     view_inclusion:
       view-frontpage-page_1: view-frontpage-page_1
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''
   request_path:
     id: request_path
     negate: false

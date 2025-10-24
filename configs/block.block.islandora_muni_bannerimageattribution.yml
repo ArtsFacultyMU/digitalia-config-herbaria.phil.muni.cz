@@ -5,7 +5,6 @@ dependencies:
   config:
     - simple_block.simple_block.banner_image_attribution
   module:
-    - islandora
     - simple_block
     - system
   theme:
@@ -13,7 +12,7 @@ dependencies:
 id: islandora_muni_bannerimageattribution
 theme: islandora_muni
 region: content
-weight: -18
+weight: -20
 provider: null
 plugin: 'simple_block:banner_image_attribution'
 settings:
@@ -22,11 +21,6 @@ settings:
   label_display: '0'
   provider: simple_block
 visibility:
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''
   request_path:
     id: request_path
     negate: false

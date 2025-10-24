@@ -221,7 +221,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ nid }} {{ nothing }}<br>'
+            text: '<strong>{{ nid }}</strong> {{ nothing }}<br>'
             make_link: false
             path: ''
             absolute: false
@@ -372,18 +372,9 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: block-views-block-homepage-statistics-block-1
       group_by: true
-      header:
-        result:
-          id: result
-          table: views
-          field: result
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: result
-          empty: false
-          content: '<b> Herbaria contains</b>'
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:

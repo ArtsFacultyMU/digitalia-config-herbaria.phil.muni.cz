@@ -352,7 +352,7 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
+          multi_type: ul
           separator: '<br>'
           field_api_classes: false
         field_foliation:
@@ -540,15 +540,51 @@ display:
           row_class: ''
           default_row_class: true
           columns:
+            nid: nid
+            field_order_of_entry_value: field_order_of_entry_value
             title: title
+            field_glosses: field_glosses
+            field_modern_identification: field_modern_identification
+            field_foliation: field_foliation
           default: '-1'
           info:
+            nid:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_order_of_entry_value:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             title:
               sortable: false
               default_sort_order: asc
               align: views-align-left
               separator: ''
               empty_column: false
+              responsive: ''
+            field_glosses:
+              align: ''
+              separator: ''
+              empty_column: true
+              responsive: ''
+            field_modern_identification:
+              align: ''
+              separator: ''
+              empty_column: true
+              responsive: ''
+            field_foliation:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: true
               responsive: ''
           override: true
           sticky: false
@@ -963,7 +999,7 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
+          multi_type: ul
           separator: '<br>'
           field_api_classes: false
         field_foliation:

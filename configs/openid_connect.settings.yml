@@ -2,11 +2,14 @@ _core:
   default_config_hash: NFnOZU6VCOfURCAR4-O3V7eMHTx2LNqnCmDKRSNjjns
 always_save_userinfo: true
 connect_existing_users: false
-override_registration_settings: false
+override_registration_settings: true
 end_session_enabled: true
-user_login_display: hidden
+user_login_display: below
 redirect_login: user
 redirect_logout: ''
 userinfo_mappings:
   timezone: zoneinfo
-role_mappings: {  }
+role_mappings:
+  content_editor:
+    - a0ae53c6-13be-4137-b569-7ebde7df7c25
+    - f99f2e3f-1e16-4419-9b0e-eba2f3a790d0

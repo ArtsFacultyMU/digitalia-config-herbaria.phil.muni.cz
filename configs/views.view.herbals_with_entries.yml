@@ -158,7 +158,8 @@ display:
         type: mini
         options:
           offset: 0
-          items_per_page: 10
+          pagination_heading_level: h4
+          items_per_page: 9
           total_pages: null
           id: 0
           tags:
@@ -172,7 +173,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -392,6 +392,23 @@ display:
     display_plugin: page
     position: 2
     display_options:
+      style:
+        type: grid
+        options:
+          grouping: {  }
+          columns: 3
+          automatic_width: true
+          alignment: horizontal
+          row_class_custom: ''
+          row_class_default: true
+          col_class_custom: ''
+          col_class_default: true
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        style: false
+        row: false
       display_description: ''
       display_extenders:
         matomo:

@@ -6,7 +6,6 @@ dependencies:
     - views.view.herbals
   module:
     - context
-    - islandora
     - views
   theme:
     - islandora_muni
@@ -28,8 +27,3 @@ visibility:
     negate: false
     view_inclusion:
       view-herbals-herbaria_herbals: view-herbals-herbaria_herbals
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''

@@ -12,6 +12,7 @@ dependencies:
     - field_permissions
     - filter
     - node
+    - openid_connect
     - taxonomy
     - taxonomy_manager
 id: contributor
@@ -40,6 +41,7 @@ permissions:
   - 'edit own medieval_herb content'
   - 'edit own user_picture'
   - 'edit terms in botanical_name'
+  - 'manage own openid connect accounts'
   - 'translate botanical_name taxonomy_term'
   - 'use text format basic_html'
   - 'view field_botanical_identification'

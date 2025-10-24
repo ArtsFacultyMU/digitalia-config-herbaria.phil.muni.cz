@@ -5,6 +5,3 @@ display:
         nothing:
           alter:
             text: "{% if type == \"manuscript\" %}\r\n    rukopisů\r\n{% elseif type == \"work_in_manuscript\"  %}\r\n    herbářů\r\n{% elseif type == \"herbal_entry\"  %}\r\n    zpracovaných položek herbářů\r\n{% endif %}"
-      header:
-        result:
-          content: "<b> Herbaria obsahuje</b>\r\n"

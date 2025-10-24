@@ -6,7 +6,6 @@ dependencies:
     - views.view.works
   module:
     - context
-    - islandora
     - views
   theme:
     - islandora_muni
@@ -28,8 +27,3 @@ visibility:
     negate: false
     view_inclusion:
       view-works-herbaria_works: view-works-herbaria_works
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''

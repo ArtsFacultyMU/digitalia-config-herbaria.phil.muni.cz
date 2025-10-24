@@ -6,7 +6,6 @@ dependencies:
     - views.view.medieval_medicaments
   module:
     - context
-    - islandora
     - views
   theme:
     - islandora_muni
@@ -28,8 +27,3 @@ visibility:
     negate: false
     view_inclusion:
       view-medieval_medicaments-page_1: view-medieval_medicaments-page_1
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''

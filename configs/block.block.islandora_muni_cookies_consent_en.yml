@@ -5,7 +5,6 @@ dependencies:
   config:
     - simple_block.simple_block.cookies_consent_en
   module:
-    - islandora
     - language
     - simple_block
     - system
@@ -23,11 +22,6 @@ settings:
   label_display: '0'
   provider: simple_block
 visibility:
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''
   language:
     id: language
     negate: false

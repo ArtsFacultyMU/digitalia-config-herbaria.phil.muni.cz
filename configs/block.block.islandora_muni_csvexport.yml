@@ -6,7 +6,6 @@ dependencies:
     - simple_block.simple_block.csv_export
   module:
     - context
-    - islandora
     - simple_block
   theme:
     - islandora_muni
@@ -32,8 +31,3 @@ visibility:
       view-institutions-page_1: view-institutions-page_1
       view-medieval_medicaments-page_1: view-medieval_medicaments-page_1
       view-works-herbaria_works: view-works-herbaria_works
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''

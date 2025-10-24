@@ -5,7 +5,6 @@ dependencies:
   module:
     - advanced_search
     - context
-    - islandora
   theme:
     - islandora_muni
 id: islandora_muni_solrsearchcontentadvancedsearchforpage
@@ -25,11 +24,6 @@ settings:
     - linked_agent_name_fulltext
   context_filter: null
 visibility:
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''
   view_inclusion:
     id: view_inclusion
     negate: false

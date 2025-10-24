@@ -5,7 +5,6 @@ dependencies:
   config:
     - simple_block.simple_block.acknowledgment
   module:
-    - islandora
     - simple_block
     - system
   theme:
@@ -13,7 +12,7 @@ dependencies:
 id: islandora_muni_acknowledgments
 theme: islandora_muni
 region: content
-weight: -19
+weight: -21
 provider: null
 plugin: 'simple_block:acknowledgment'
 settings:
@@ -22,11 +21,6 @@ settings:
   label_display: '0'
   provider: simple_block
 visibility:
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''
   request_path:
     id: request_path
     negate: false

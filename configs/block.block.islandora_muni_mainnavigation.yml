@@ -5,7 +5,6 @@ dependencies:
   config:
     - system.menu.main
   module:
-    - islandora
     - superfish
   theme:
     - islandora_muni
@@ -34,6 +33,7 @@ settings:
   hoverintent: 1
   touch: 0
   touchbh: 2
+  touchdh: 0
   touchbp: 768
   touchua: 0
   touchual: ''
@@ -66,12 +66,9 @@ settings:
   hide_linkdescription: 0
   add_linkdescription: 0
   link_depth_class: 1
+  link_text_prefix: ''
+  link_text_suffix: ''
   custom_list_class: muni-menu
   custom_item_class: muni-menu-item
   custom_link_class: muni-menu-links
-visibility:
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''
+visibility: {  }
