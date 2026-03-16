@@ -52,6 +52,7 @@
     "drupal/field_report": "^2.1",
     "drupal/flood_control": "^3.0",
     "drupal/flysystem": "^2.0@alpha",
+    "drupal/gin": "^4.1",
     "drupal/hal": "^1.0||^2.0",
     "drupal/inline_entity_form": "^3.0@RC",
     "drupal/islandora": "^2.8.1",
@@ -144,6 +145,10 @@
       "drupal/core": {
         "Datafield error fix: display references in select list": "./patches/form.inc.patch",
         "Datafield error fix: save references in select list": "./patches/SqlContent.patch"
+      },
+      "drupal/openid_connect": {
+        "OpenID: make user group role mapping functional": "./patches/OpenIDConnect.patch",
+        "OpenID: change textarea field type": "./patches/OpenIDConnectSettingsForm.patch"
       }
     }
   },
