@@ -1,0 +1,18 @@
+uuid: cf487acd-4e88-4d57-aaf2-93e7abb4ae06
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simple_medicine_modern_identific
+id: node.simple_medicine_modern_identific.created
+field_name: created
+entity_type: node
+bundle: simple_medicine_modern_identific
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

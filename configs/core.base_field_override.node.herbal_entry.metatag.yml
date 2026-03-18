@@ -1,0 +1,20 @@
+uuid: 02ae0790-f874-4e0d-bb05-126f10dfa3a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.herbal_entry
+  module:
+    - metatag
+id: node.herbal_entry.metatag
+field_name: metatag
+entity_type: node
+bundle: herbal_entry
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

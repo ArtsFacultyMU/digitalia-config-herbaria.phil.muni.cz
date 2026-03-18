@@ -1,0 +1,22 @@
+uuid: 35eb875a-7887-4167-a5b4-fd5c7c7da1da
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simple_medicine_modern_identific
+id: node.simple_medicine_modern_identific.status
+field_name: status
+entity_type: node
+bundle: simple_medicine_modern_identific
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,27 @@
+uuid: 7eece448-69f7-434e-8b09-1698bcd93624
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.login_info
+  module:
+    - simple_block
+    - system
+  theme:
+    - islandora_muni
+id: islandora_muni_logininfo
+theme: islandora_muni
+region: content
+weight: -24
+provider: null
+plugin: 'simple_block:login_info'
+settings:
+  id: 'simple_block:login_info'
+  label: 'Login info'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /user/login

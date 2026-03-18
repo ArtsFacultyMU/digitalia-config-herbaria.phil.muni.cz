@@ -12,7 +12,7 @@ dependencies:
 id: islandora_muni_frontpagejumbotron
 theme: islandora_muni
 region: content
-weight: -30
+weight: -31
 provider: null
 plugin: 'simple_block:front_page_jumbotron'
 settings:

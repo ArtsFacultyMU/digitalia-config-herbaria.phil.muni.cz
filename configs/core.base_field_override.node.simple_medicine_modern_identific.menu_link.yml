@@ -1,0 +1,20 @@
+uuid: 493952da-87ea-448f-b9eb-f0d960eb633a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simple_medicine_modern_identific
+id: node.simple_medicine_modern_identific.menu_link
+field_name: menu_link
+entity_type: node
+bundle: simple_medicine_modern_identific
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

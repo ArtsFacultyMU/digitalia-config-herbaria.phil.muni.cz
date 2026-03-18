@@ -1,0 +1,22 @@
+uuid: 29b71c8d-8782-4c86-a4f1-2d6c89cec9ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simple_medicine_modern_identific
+id: node.simple_medicine_modern_identific.promote
+field_name: promote
+entity_type: node
+bundle: simple_medicine_modern_identific
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

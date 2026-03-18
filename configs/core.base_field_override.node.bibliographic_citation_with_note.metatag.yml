@@ -1,0 +1,20 @@
+uuid: f8ca88f9-8fe8-49e8-a5b4-f6758c4fb27f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bibliographic_citation_with_note
+  module:
+    - metatag
+id: node.bibliographic_citation_with_note.metatag
+field_name: metatag
+entity_type: node
+bundle: bibliographic_citation_with_note
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

@@ -1,0 +1,20 @@
+uuid: f77b4347-bdbe-40b8-b584-86483f2e7b0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.latin_name
+  module:
+    - metatag
+id: taxonomy_term.latin_name.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: latin_name
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

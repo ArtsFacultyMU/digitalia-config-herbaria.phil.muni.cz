@@ -1,0 +1,18 @@
+uuid: c0836e2b-764b-44ac-9814-83e5566cebd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.documentation
+id: node.documentation.title
+field_name: title
+entity_type: node
+bundle: documentation
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

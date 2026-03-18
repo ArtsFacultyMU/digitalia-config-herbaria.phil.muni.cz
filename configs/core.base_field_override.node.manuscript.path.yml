@@ -1,0 +1,20 @@
+uuid: 2831795f-678e-4e50-b66e-8b202771383d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.manuscript
+  module:
+    - path
+id: node.manuscript.path
+field_name: path
+entity_type: node
+bundle: manuscript
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

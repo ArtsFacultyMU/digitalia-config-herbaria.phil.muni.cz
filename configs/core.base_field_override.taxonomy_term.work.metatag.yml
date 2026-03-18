@@ -1,0 +1,20 @@
+uuid: 54445cf9-100d-4faa-95ad-534982a484d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.work
+  module:
+    - metatag
+id: taxonomy_term.work.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: work
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

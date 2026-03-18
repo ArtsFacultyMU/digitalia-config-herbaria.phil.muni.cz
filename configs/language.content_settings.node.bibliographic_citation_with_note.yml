@@ -4,6 +4,13 @@ status: true
 dependencies:
   config:
     - node.type.bibliographic_citation_with_note
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: node.bibliographic_citation_with_note
 target_entity_type_id: node
 target_bundle: bibliographic_citation_with_note
