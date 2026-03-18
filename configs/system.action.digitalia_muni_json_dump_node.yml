@@ -1,0 +1,13 @@
+uuid: f47da534-0c5d-4cf1-8ac4-82eec6066432
+langcode: en
+status: true
+dependencies:
+  module:
+    - digitalia_muni_json_dump
+_core:
+  default_config_hash: i7JoejBvwKzxqrCosOKPmPfDNLcAmdU3nT8isry99No
+id: digitalia_muni_json_dump_node
+label: 'Create JSON dump (node)'
+type: node
+plugin: digitalia_muni_json_dump_node
+configuration: {  }

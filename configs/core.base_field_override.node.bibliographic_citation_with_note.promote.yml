@@ -1,0 +1,22 @@
+uuid: 5e60dbf3-6a0c-4d4b-9d94-48c25e7ccbfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bibliographic_citation_with_note
+id: node.bibliographic_citation_with_note.promote
+field_name: promote
+entity_type: node
+bundle: bibliographic_citation_with_note
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

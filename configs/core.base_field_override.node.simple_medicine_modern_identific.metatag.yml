@@ -1,0 +1,20 @@
+uuid: 95a62793-ec5c-4626-b444-6d8aaa752488
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simple_medicine_modern_identific
+  module:
+    - metatag
+id: node.simple_medicine_modern_identific.metatag
+field_name: metatag
+entity_type: node
+bundle: simple_medicine_modern_identific
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

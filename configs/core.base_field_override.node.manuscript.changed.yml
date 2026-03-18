@@ -1,0 +1,18 @@
+uuid: 3b33935f-8d73-41c9-af77-7e30e4e5d383
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.manuscript
+id: node.manuscript.changed
+field_name: changed
+entity_type: node
+bundle: manuscript
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

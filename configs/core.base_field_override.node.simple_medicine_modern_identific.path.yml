@@ -1,0 +1,20 @@
+uuid: 776e96a0-eec4-4c6c-a872-cf08b77524bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simple_medicine_modern_identific
+  module:
+    - path
+id: node.simple_medicine_modern_identific.path
+field_name: path
+entity_type: node
+bundle: simple_medicine_modern_identific
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

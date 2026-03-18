@@ -1,0 +1,20 @@
+uuid: 433243f5-2752-40dc-988a-bc941720e453
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bibliographic_citation_with_note
+id: node.bibliographic_citation_with_note.menu_link
+field_name: menu_link
+entity_type: node
+bundle: bibliographic_citation_with_note
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

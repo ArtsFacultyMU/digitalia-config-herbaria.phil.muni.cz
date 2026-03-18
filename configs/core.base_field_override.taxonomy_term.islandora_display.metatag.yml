@@ -1,0 +1,20 @@
+uuid: 792f7a4b-531d-482f-af3e-238cb4a7a079
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.islandora_display
+  module:
+    - metatag
+id: taxonomy_term.islandora_display.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: islandora_display
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

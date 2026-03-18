@@ -1,0 +1,22 @@
+uuid: 1583077a-fcde-4a3d-99e9-d3ca94633493
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bibliographic_citation_with_note
+id: node.bibliographic_citation_with_note.sticky
+field_name: sticky
+entity_type: node
+bundle: bibliographic_citation_with_note
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

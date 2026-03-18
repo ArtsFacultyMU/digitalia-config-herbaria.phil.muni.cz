@@ -1,0 +1,20 @@
+uuid: 40d4b4d5-bf6d-45df-845c-51406ee2223b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simple_medicine_modern_identific
+id: node.simple_medicine_modern_identific.uid
+field_name: uid
+entity_type: node
+bundle: simple_medicine_modern_identific
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: abca8358-3ce2-4242-8b34-081f8f77657b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bibliographic_citation_with_note
+  module:
+    - path
+id: node.bibliographic_citation_with_note.path
+field_name: path
+entity_type: node
+bundle: bibliographic_citation_with_note
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

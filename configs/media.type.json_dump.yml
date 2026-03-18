@@ -1,0 +1,13 @@
+uuid: dfc28975-b53e-4068-b3c9-c1e5ac1afbfa
+langcode: en
+status: true
+dependencies: {  }
+id: json_dump
+label: 'JSON dump'
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

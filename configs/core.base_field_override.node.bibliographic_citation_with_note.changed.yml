@@ -1,0 +1,18 @@
+uuid: a142f2aa-cf72-4126-ab1e-cb3cd0a37420
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bibliographic_citation_with_note
+id: node.bibliographic_citation_with_note.changed
+field_name: changed
+entity_type: node
+bundle: bibliographic_citation_with_note
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

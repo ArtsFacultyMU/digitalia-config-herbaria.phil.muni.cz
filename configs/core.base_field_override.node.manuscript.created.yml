@@ -1,0 +1,18 @@
+uuid: ab218e75-3a9b-4225-9413-607c42ad1a61
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.manuscript
+id: node.manuscript.created
+field_name: created
+entity_type: node
+bundle: manuscript
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

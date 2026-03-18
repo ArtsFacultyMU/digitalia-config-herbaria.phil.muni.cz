@@ -12,7 +12,7 @@ dependencies:
 id: islandora_muni_frontpageintrotext
 theme: islandora_muni
 region: content
-weight: -28
+weight: -29
 provider: null
 plugin: 'simple_block:front_page_intro_text'
 settings:

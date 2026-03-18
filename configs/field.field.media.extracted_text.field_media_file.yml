@@ -6,14 +6,21 @@ dependencies:
     - field.storage.media.field_media_file
     - media.type.extracted_text
   module:
+    - content_translation
     - file
+third_party_settings:
+  content_translation:
+    translation_sync:
+      target_id: target_id
+      display: display
+      description: description
 _core:
   default_config_hash: QYFdk6Ti48HSzotIjNbsg1nR4vsqGrwZLc6hlm2Odi0
 id: media.extracted_text.field_media_file
 field_name: field_media_file
 entity_type: media
 bundle: extracted_text
-label: Soubor
+label: File
 description: ''
 required: true
 translatable: true

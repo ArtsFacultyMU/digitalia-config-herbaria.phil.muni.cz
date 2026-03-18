@@ -1,0 +1,13 @@
+uuid: 62f56778-b7f8-4048-86fd-4607eb0c529b
+langcode: en
+status: true
+dependencies:
+  module:
+    - digitalia_muni_json_dump
+_core:
+  default_config_hash: gcvFDuncXcWisZ66lcH_9v62wS-9hLoWleP-Kak9OCg
+id: digitalia_muni_json_dump_taxonomy_term
+label: 'Create JSON dump (taxonomy_term)'
+type: taxonomy_term
+plugin: digitalia_muni_json_dump_taxonomy_term
+configuration: {  }

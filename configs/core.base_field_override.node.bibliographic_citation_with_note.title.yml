@@ -1,0 +1,18 @@
+uuid: 57fe799b-1d76-4547-8d82-291488c4c726
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bibliographic_citation_with_note
+id: node.bibliographic_citation_with_note.title
+field_name: title
+entity_type: node
+bundle: bibliographic_citation_with_note
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

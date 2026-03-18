@@ -1,0 +1,20 @@
+uuid: 391f1b46-923f-4ba8-aba9-a62dee8b67ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.medieval_herb
+  module:
+    - metatag
+id: node.medieval_herb.metatag
+field_name: metatag
+entity_type: node
+bundle: medieval_herb
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

@@ -1,0 +1,11 @@
+uuid: 301db521-0bc1-4c78-b45c-25607f950b6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: login_info
+title: 'Login info'
+content:
+  value: '<p>Select your institution and you will be redirected to your institutional login page. If your institution is not available via e-INFRA login, you can use ORCID or Google login. If it is your first time logging in, the repository team will need to manually approve your application. In case of doubt, <a href="https://artsfacultymu.github.io/digitalia-documentation/000_General/N%C3%A1vod-pro-p%C5%99ihl%C3%A1%C5%A1en%C3%AD">reference this tutorial</a> (in Czech only).</p>'
+  format: basic_html
